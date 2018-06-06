@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>GNSDK C Sample Application Walkthrough</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">C</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_c.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor882"></a>GNSDK C Sample Application Walkthrough</h1>
+                                        <p><a name="kanchor883"></a>This topic steps through a GNSDK C sample application. This application shows how to do music identification using the MusicID module. We chose this sample for a walkthrough because it demonstrates several tasks that are common to (or can be extrapolated to) most GNSDK product use cases. </p>
+                                        <p>The sample application is called musicid_gdo_navigation/main.c and can be found in the /samples folder in the software package.</p>
+                                        <p><a name="kanchor884"></a><a name="kanchor885"></a>This application uses MusicID to look up Album content, navigate the hierarchy of data returned, and extract and display metadata results. As shown in the following image, most of the sample applications follow a similar pattern—authenticate/initialize, query Gracenote Service, parse and display results, and shut down.</p>
+                                        <p>This sample application:</p>
+                                        <ul>
+                                            <li value="1"><a name="kanchor886"></a>Initializes the GNSDK Manager, the MusicID library and local storage, enables logging, sets localization options, and registers the application user with the Gracenote Service.</li>
+                                            <li value="2">Performs album lookup queries using internal Gracenote identifiers.</li>
+                                            <li value="3">Parses returned Gracenote Data Objects (GDOs) and displays the results.</li>
+                                            <li value="4">Releases resources and shuts down the <span class="GeneralProductName">GNSDK</span> when done.</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../music-images/musicid-flow_600x178.jpg" style="width: 600;height: 178;" />
+                                        </p>
+                                        <p class="info"> In this topic, error handling is minimized and function calls are sometimes shown without some of their parameters. Refer to the sample application code to see how to implement error handling, and see the actual function call syntax.</p>
+                                        <h2>Albums That This Sample Queries On</h2>
+                                        <p>The sample application queries the Gracenote Service for the following albums:</p>
+                                        <ul>
+                                            <li value="1">Nelly -  Nellyville</li>
+                                            <li value="2">Dido -  Life for Rent</li>
+                                            <li value="3">Jean-Pierre Rampal  - Portrait Of Rampal</li>
+                                            <li value="4">Various Artists - Grieg: Piano  Concerto, Peer Gynth Suites  #1</li>
+                                            <li value="5">Stephen Kovacevich  - Brahms: Rhapsodies, Waltzes &amp;  Piano Pieces</li>
+                                            <li value="6">Nirvana - Nevermind</li>
+                                            <li value="7">Eminem  - Encore</li>
+                                            <li value="8">Japanese album: &lt;Japanese title&gt;</li>
+                                            <li value="9">Chinese album: &lt;Chinese title&gt;</li>
+                                        </ul>
+                                        <p>The following shows the metadata displayed for one album.</p>
+                                        <p><strong>Sample album output:</strong>
+                                        </p><pre class="prettyprint"><a name="kanchor887"></a><a name="kanchor888"></a><a name="kanchor889"></a><a name="kanchor890"></a><a name="kanchor891"></a><a name="kanchor892"></a><a name="kanchor893"></a><a name="kanchor894"></a><a name="kanchor895"></a><a name="kanchor896"></a><a name="kanchor897"></a><a name="kanchor898"></a>*****Sample MusicID Query*****
+Match.
+
+***Navigating  Result GDO***
+Album:
+  Package Language: English
+  Credit:
+    Contributor:
+      Name Official:
+        Display: Nirvana
+      Origin Level 1: North America
+      Origin Level 2: United States
+      Origin Level 3: Washington
+      Origin Level 4: Seattle
+      Era Level 1: 1990's
+      Era Level 2: 1990's
+      Era Level 3: 1990's
+      Artist Type  Level 1: Male
+      Artist Type  Level 2: Male Group
+  Title  Official:
+    Display: Nevermind
+  Year: 1991
+  Genre Level 1: Alternative &amp; Punk
+  Genre Level 2: Alternative
+  Genre Level 3: Grunge
+  Album Label: Geffen
+  Total In  Set: 1
+  Disc In Set: 1
+  Track  Count: 12
+  Track:
+    Track TUI: 12845136
+    Track Number: 1
+    Title  Official:
+      Display: Smells Like Teen Spirit
+    Year: 1991
+  Track:
+    Track TUI: 2897701
+    Track Number: 2
+    Title  Official:
+      Display: In Bloom
+  Track:
+    Track TUI: 12845138
+    Track Number: 3
+    Title  Official:
+      Display: Come As You Are
+    Year: 1991
+  Track:
+    Track TUI: 2897703
+    Track Number: 4
+    Title  Official:
+      Display: Breed
+  Track:
+    Track TUI: 2897704
+    Track Number: 5
+    Title  Official:
+      Display: Lithium
+  Track:
+    Track TUI: 2897705
+    Track Number: 6
+    Title  Official:
+      Display: Polly
+  Track:
+    Track TUI: 2897706
+    Track Number: 7
+    Title  Official:
+      Display: Territorial Pissings
+  Track:
+    Track TUI: 2897707
+    Track Number: 8
+    Title  Official:
+      Display: Drain You
+  Track:
+    Track TUI: 2897708
+    Track Number: 9
+    Title  Official:
+      Display: Lounge Act
+  Track:
+    Track TUI: 2897709
+    Track Number: 10
+    Title  Official:
+      Display: Stay Away
+  Track:
+    Track TUI: 2897710
+    Track Number: 11
+    Title  Official:
+      Display: On A Plain
+  Track:
+    Track TUI: 2897711
+    Track Number: 12
+    Title  Official:
+      Display: Something In The Way / [Hidden Track]  </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

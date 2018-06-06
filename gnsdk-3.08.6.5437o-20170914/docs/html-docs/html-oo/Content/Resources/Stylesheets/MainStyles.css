@@ -1,0 +1,2551 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+body
+{
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	mc-hyphenate: never;
+	color: #000000;
+	line-height: normal;
+	font-size: 16px;
+}
+
+a
+{
+	color: #E31B23;
+}
+
+a:link
+{
+	color: #E31B23;
+}
+
+a:visited
+{
+	color: #E31B23;
+}
+
+a:focus
+{
+	color: #000000;
+}
+
+a:hover
+{
+	color: #000000;
+}
+
+a:active
+{
+	color: #E31B23;
+}
+
+a.MCBreadcrumbsLink
+{
+	font-style: italic;
+	text-decoration: underline;
+}
+
+a.MCBreadcrumbsLink:visited
+{
+	color: #E31B23;
+}
+
+a.MCBreadcrumbsLink:hover
+{
+	color: #000000;
+}
+
+blockquote
+{
+	background-image: url('../Images/QuotationMark.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	border-bottom: none;
+	border-left-color: #808080;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #808080;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #808080;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 18px;
+	margin: 0;
+	padding-bottom: 0px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 12px;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-size: 1.1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+blockquote.name
+{
+	background-image: none;
+	border-bottom-color: #808080;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top: none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	margin-bottom: 0;
+	padding-bottom: 12px;
+	padding-right: 35px;
+	padding-top: 8px;
+	text-align: right;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+Div.GlossaryPageDefinition
+{
+	font-size: 1.2em;
+}
+
+Div.GlossaryPageHeading
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+Div.GlossaryPageTerm
+{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.4em;
+}
+
+div.ImagesFloatLeft
+{
+	clear: both;
+	float: left;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+div.ImagesFloatRight
+{
+	clear: both;
+	float: right;
+	margin-left: 10px;
+	padding: 5px;
+}
+
+div.TightContent
+{
+	margin: 0px;
+	padding: 0px;
+	line-height: 1em;
+}
+
+h1
+{
+	mc-hyphenate: never;
+	color: #E31B23;
+	font-weight: normal;
+	font-style: normal;
+	padding-bottom: 10px;
+	margin: 10px;
+	font-size: 1.3em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+h1.Appendix
+{
+	padding-bottom: 10px;
+	font-size: 1.3em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+h1.UserGuideBHeading
+{
+	padding-bottom: 10px;
+	font-size: 1.3em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+h2
+{
+	margin-bottom: 4px;
+	margin: 10px;
+	mc-hyphenate: never;
+	color: #808080;
+	font-weight: normal;
+	font-style: italic;
+	padding-bottom: 10px;
+	margin: 0;
+	font-size: 1.2em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+h3
+{
+	margin-bottom: 4px;
+	margin-top: 16px;
+	mc-hyphenate: never;
+	font-weight: normal;
+	font-style: normal;
+	padding-bottom: 10px;
+	margin: 10px;
+	font-size: 1.1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+h4
+{
+	margin-bottom: 4px;
+	margin-top: 16px;
+	mc-hyphenate: never;
+	color: #E31B23;
+	font-weight: normal;
+	font-style: normal;
+	padding-bottom: 10px;
+	margin: 10px;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+img
+{
+	border-style: none;
+	max-width: 600;
+}
+
+.FiftyPercentMaxWidth
+{
+	max-width: 50%;
+}
+
+img.AbsolutePosition
+{
+	padding: 5px;
+}
+
+img.ReduceButtonSize
+{
+	max-height: 18px;
+	max-width: auto;
+}
+
+img.Thumbnail
+{
+	mc-thumbnail: popup;
+}
+
+li
+{
+	margin-bottom: 6px;
+	margin-top: 6px;
+	orphans: 2;
+	widows: 2;
+	font-size: 1em;
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom: none;
+	font-style: italic;
+	mc-breadcrumbs-prefix: 'You are here: ';
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	font-size: 0.9em;
+}
+
+MadCap|dropDown
+{
+	margin-bottom: 6px;
+	margin-top: 6px;
+	mc-closed-image: url('../Images/DropDownClosed.png');
+	mc-disabled: false;
+	mc-open-image: url('../Images/DropDownOpen.png');
+}
+
+MadCap|dropDownBody
+{
+	border-bottom: solid 1px #bed230;
+	mc-disabled: false;
+}
+
+MadCap|dropDownBody.Final
+{
+	border-bottom: 0px;
+}
+
+MadCap|dropDownHead
+{
+	mc-disabled: false;
+}
+
+MadCap|dropDownHotspot
+{
+	color: #000000;
+	font-weight: bold;
+	mc-disabled: false;
+	font-size: 1em;
+}
+
+MadCap|dropDownHotspot:hover
+{
+	color: #E31B23;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1em;
+}
+
+MadCap|footnoteBlock
+{
+	
+}
+
+MadCap|footnotesBlock
+{
+	
+}
+
+MadCap|glossaryProxy
+{
+	
+}
+
+MadCap|indexProxy
+{
+	
+}
+
+MadCap|miniTocProxy
+{
+	border: solid 1px;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	background-color: #C4C7C8;
+	color: #FFFFFF;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	width: 33.33%;
+	mc-toc-depth: 2;
+}
+
+MadCap|popup
+{
+	color: #808080;
+}
+
+MadCap|popup:focus
+{
+	color: #808080;
+}
+
+MadCap|popup:hover
+{
+	color: #808080;
+}
+
+MadCap|popupHead
+{
+	font-weight: normal;
+	font-style: normal;
+	color: #808080;
+}
+
+MadCap|tocProxy
+{
+	visibility: collapse;
+}
+
+MadCap|xref
+{
+	mc-format: '{para}';
+	text-decoration: underline;
+	color: #E31B23;
+}
+
+MadCap|xref:hover
+{
+	color: #000000;
+}
+
+MadCap|xref.IndexPageNumber
+{
+	color: #E31B23;
+}
+
+ol
+{
+	list-style-image: none;
+	font-size: 1em;
+}
+
+ol.LowerAlpha
+{
+	margin-left: 30px;
+	font-size: 1em;
+}
+
+ol.LowerRoman
+{
+	margin-left: 30px;
+	font-size: 1em;
+}
+
+p
+{
+	mc-hyphenate: never;
+	color: #000000;
+	width: auto;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 1em;
+}
+
+p.CompanyInformation1
+{
+	margin-bottom: 4px;
+	margin-top: 14px;
+	font-weight: bold;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.CompanyInformation2
+{
+	color: #000000;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Copyright
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.CopyrightAddress
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.CopyrightHeading
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.CreatedUsingFlare
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.EmptyPageText
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Example
+{
+	border-bottom-color: #000000;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	margin-top: 0px;
+	padding-bottom: 14px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 6px;
+	background-color: #FFFFFF;
+	color: #E31B23;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.ExampleHead
+{
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #000000;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	letter-spacing: 5px;
+	margin-bottom: 0px;
+	margin-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 14px;
+	font-weight: normal;
+	font-style: normal;
+	background-color: #FFFFFF;
+	color: #E31B23;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.ExampleMiddleSection
+{
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 6px;
+	background-color: #FFFFFF;
+	color: #E31B23;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Figure
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.FirstPageOfChapter
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.FrameFooterText
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.FrameFooterText2
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.GlossaryPrintHead
+{
+	color: #000000;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.IndexHeading
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.IndexPrintHead
+{
+	color: #000000;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.ManualTitle1
+{
+	padding-top: 100px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.4em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.ManualTitle2
+{
+	padding-top: 100px;
+	font-size: 1.4em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.ManualVersionNumber
+{
+	font-size: 1.2em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.MiniTOC1
+{
+	
+}
+
+p.note
+{
+	background-image: url('../Images/NoteIcon.png');
+	background-repeat: no-repeat;
+	border: solid 1px #000000;
+	border-radius: 3px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-top: 10px;
+	width: 600px;
+	background-color: #FFFFFF;
+	color: #808080;
+	mc-auto-number-format: '{b}{color #E31B23}Note: {/color}{/b}';
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.noteBottom
+{
+	border-bottom-color: #000000;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-top: 0px;
+	background-color: #FFFFFF;
+	color: #E31B23;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.noteMiddle
+{
+	border-bottom: 0px;
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-top: 0px;
+	background-color: #FFFFFF;
+	color: #E31B23;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.noteTop
+{
+	background-image: url('../Images/NoteIcon.png');
+	background-repeat: no-repeat;
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #000000;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin-bottom: 0;
+	margin-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-top: 10px;
+	mc-auto-number-format: '{b}{color #4E00FF}Note: {/color}{/b}';
+	background-color: #FFFFFF;
+	color: #E31B23;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TableCaption
+{
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TableTextCenterDark
+{
+	color: #000000;
+	margin-bottom: 2px;
+	margin-top: 8px;
+	text-align: center;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TableTextDark
+{
+	color: #000000;
+	margin-bottom: 2px;
+	margin-top: 8px;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TableTextDarkEmphasis
+{
+	color: #000000;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 8px;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TableTextHeadDark
+{
+	color: #000000;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 8px;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TableTextLightEmphasis
+{
+	color: #ffffff;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 8px;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOCHeading
+{
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	font-size: 1.4em;
+}
+
+span.Emphasis
+{
+	font-weight: bold;
+}
+
+span.FigureNum
+{
+	
+}
+
+span.SetOffFirstLevel
+{
+	font-weight: bold;
+	color: #E31B23;
+}
+
+span.SetOffSecondLevel
+{
+	font-weight: bold;
+	color: #E31B23;
+}
+
+span.TableNum
+{
+	
+}
+
+td
+{
+	margin: 8px;
+	vertical-align: top;
+}
+
+th
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	color: #E31B23;
+}
+
+tr
+{
+	
+}
+
+ul
+{
+	list-style-image: url('../Images/Bullet1.png');
+}
+
+ul.FirstLevelLessIndentation
+{
+	list-style-image: url('../Images/Bullet1.png');
+	margin-left: -10px;
+}
+
+ul.SecondLevel
+{
+	list-style-image: url('../Images/Bullet2.png');
+	margin-left: -10px;
+}
+
+div.sideContent
+{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 33.33%;
+}
+
+MadCap|toggler:focus
+{
+	color: #E31B23;
+}
+
+MadCap|toggler:hover
+{
+	color: #E31B23;
+}
+
+MadCap|toggler
+{
+	color: #E31B23;
+}
+
+MadCap|slideThumbnail.active
+{
+	color: #E31B23;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4 > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(1)
+{
+	width: auto;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(2)
+{
+	width: auto;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(3)
+{
+	width: 16.667%;
+}
+
+div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(4)
+{
+	width: 33.333%;
+}
+
+big
+{
+	font-size: 1.2em;
+}
+
+sub
+{
+	font-size: 1em;
+	vertical-align: baseline;
+}
+
+small
+{
+	font-size: 1em;
+	vertical-align: baseline;
+}
+
+sup
+{
+	font-size: 1em;
+	vertical-align: baseline;
+}
+
+p.MiniTOC9
+{
+	
+}
+
+p.MiniTOC3
+{
+	
+}
+
+p.MiniTOC2
+{
+	
+}
+
+p.MiniTOC4
+{
+	
+}
+
+p.MiniTOC5
+{
+	
+}
+
+p.MiniTOC6
+{
+	
+}
+
+p.MiniTOC8
+{
+	
+}
+
+p.MiniTOC7
+{
+	
+}
+
+p.ConceptContext
+{
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Concept
+{
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.ListOf
+{
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+span.SearchHighlight
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight9
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight8
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight7
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight6
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight5
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight4
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight3
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight2
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight10
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+span.SearchHighlight1
+{
+	color: #000000;
+	background-color: #E31B23;
+}
+
+@media print
+{
+	body
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		mc-hyphenate: never;
+		line-height: normal;
+	}
+
+	Div.GlossaryPageDefinition
+	{
+		font-size: 1em;
+		color: #000000;
+	}
+
+	Div.GlossaryPageHeading
+	{
+		border-bottom-color: #E31B23;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		font-size: 1.1em;
+		color: #E31B23;
+	}
+
+	Div.GlossaryPageTerm
+	{
+		font-size: 1em;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		color: #E31B23;
+	}
+
+	h1
+	{
+		background-color: transparent;
+		border-bottom: none;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		border-bottom-style: none;
+		color: #E31B23;
+		padding-top: 10px;
+		font-weight: normal;
+		font-style: normal;
+		mc-auto-number-position: inside-head;
+		margin: 10px;
+		frame-break-after: avoid;
+		page-break-before: avoid;
+		mc-auto-number-class: ChapAutoNum;
+		mc-heading-level: 1;
+		mc-auto-number-format: 'CH:Chapter {chapnum} ';
+	}
+
+	h1.Appendix
+	{
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	h1.UserGuideBHeading
+	{
+		font-weight: normal;
+		font-style: normal;
+		mc-auto-number-position: none;
+		mc-heading-level: 0;
+		font-size: 1.6em;
+	}
+
+	h2
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-top: 10px;
+		margin: 10px;
+		padding-bottom: 10px;
+		frame-break-after: avoid;
+		page-break-before: avoid;
+		font-weight: normal;
+		font-style: normal;
+		color: #808080;
+		font-size: 1.2em;
+		mc-auto-number-position: inside-head;
+		mc-auto-number-class: ChapAutoNum;
+		mc-auto-number-format: 'CH:{chapnum}.{n+} ';
+	}
+
+	h3
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		frame-break-after: avoid;
+		page-break-before: avoid;
+		color: #000000;
+		font-size: 14pt;
+		font-weight: normal;
+		font-style: italic;
+		mc-auto-number-position: inside-head;
+		margin: 10px;
+		mc-auto-number-class: ChapAutoNum;
+		mc-auto-number-format: 'CH:{chapnum}.{n}.{n+} ';
+	}
+
+	h4
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		frame-break-after: avoid;
+		page-break-before: avoid;
+		font-weight: normal;
+		font-style: normal;
+		color: #E31B23;
+		font-size: 1em;
+		margin: 10px;
+		mc-auto-number-position: inside-head;
+		mc-auto-number-class: ChapAutoNum;
+		mc-auto-number-format: 'CH:{chapnum}.{n}.{n}.{n+} ';
+	}
+
+	h5
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		frame-break-after: avoid;
+		page-break-before: avoid;
+		font-style: normal;
+		color: #808080;
+		font-size: 1em;
+		text-decoration: none;
+		font-weight: bolder;
+		mc-auto-number-position: none;
+		margin: 10px;
+		mc-auto-number-class: ChapAutoNum;
+	}
+
+	h6
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding: 0px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		frame-break-after: avoid;
+		page-break-before: avoid;
+		text-decoration: none;
+		font-size: 1em;
+		font-variant: normal;
+		color: #000000;
+		font-style: italic;
+		font-weight: bolder;
+		mc-auto-number-position: none;
+		margin: 10px;
+		mc-auto-number-class: ChapAutoNum;
+	}
+
+	img.FiftyPercentThumbnail
+	{
+		max-width: 50%;
+	}
+
+	img.OneHundredPercent
+	{
+		max-width: 100%;
+	}
+
+	img.OneHundredPercentThumbnail
+	{
+		max-width: 100%;
+	}
+
+	img.SeventyFivePercent
+	{
+		max-width: 75%;
+	}
+
+	img.SeventyFivePercentThumbnail
+	{
+		max-width: 75%;
+	}
+
+	MadCap|dropDown.SecondLevel
+	{
+		background-color: transparent;
+		margin-left: 10px;
+	}
+
+	MadCap|dropDownBody
+	{
+		
+	}
+
+	MadCap|dropDownHead
+	{
+		margin-top: 16px;
+	}
+
+	MadCap|dropDownHotspot
+	{
+		font-size: 8pt;
+	}
+
+	MadCap|footnoteBlock
+	{
+		font-size: 7pt;
+	}
+
+	MadCap|footnotesBlock
+	{
+		border-top-color: #E31B23;
+	}
+
+	MadCap|glossaryProxy
+	{
+		border-top: none;
+		color: #C4C7C8;
+	}
+
+	MadCap|indexProxy
+	{
+		border-top: none;
+		color: #C4C7C8;
+	}
+
+	MadCap|miniTocProxy
+	{
+		border: solid 1px;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		background-color: #C4C7C8;
+		color: #FFFFFF;
+		mc-toc-depth: 2;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		width: 33.33%;
+	}
+
+	MadCap|tocProxy
+	{
+		border-top: none;
+		margin-right: auto;
+	}
+
+	MadCap|xref
+	{
+		font-weight: normal;
+		mc-format: '{quote}{para}{quote} {pageref}';
+		text-decoration: none;
+		color: #E31B23;
+		font-style: italic;
+	}
+
+	MadCap|xref.IndexPageNumber
+	{
+		color: #E31B23;
+	}
+
+	ol.LowerAlpha
+	{
+		margin-left: 30px;
+	}
+
+	ol.LowerRoman
+	{
+		margin-left: 30px;
+	}
+
+	p
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		mc-hyphenate: never;
+		font-size: 1em;
+	}
+
+	p.Copyright
+	{
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
+
+	p.CopyrightAddress
+	{
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	p.CopyrightHeading
+	{
+		margin-top: 1in;
+		page-break-before: always;
+	}
+
+	p.CreatedUsingFlare
+	{
+		font-weight: bold;
+		margin-top: 18px;
+	}
+
+	p.EmptyPageText
+	{
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+	p.Figure
+	{
+		color: #000000;
+		font-style: italic;
+		mc-auto-number-class: FigureNum;
+		mc-auto-number-format: 'CF:Figure {chapnum}-{n+} ';
+		padding-bottom: 10px;
+		margin-bottom: 1.12em;
+	}
+
+	p.FirstPageOfChapter
+	{
+		color: #000000;
+	}
+
+	p.FrameFooterText
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		font-size: 1em;
+	}
+
+	p.FrameFooterText2
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		font-size: 1em;
+	}
+
+	p.GlossaryPrintHead
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		mc-heading-level: 1;
+		page-break-before: always;
+		font-size: 1.5em;
+		color: #000000;
+	}
+
+	p.IndexHeading
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		font-size: 1.1em;
+		padding-top: 16px;
+		text-align: left;
+	}
+
+	p.IndexPrintHead
+	{
+		color: #E31B23;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		mc-heading-level: 1;
+		page-break-before: always;
+		font-size: 1.5em;
+	}
+
+	p.ManualTitle1
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		margin-bottom: 0;
+		color: #E31B23;
+		font-size: 1.5em;
+		margin-left: 0;
+		margin-top: 0;
+		margin-right: auto;
+		padding-top: 300px;
+	}
+
+	p.ManualTitle2
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		margin-bottom: 0;
+		margin-top: 0;
+		font-size: 1.5em;
+		color: #000000;
+		margin-left: 0;
+		padding-top: 0px;
+	}
+
+	p.ManualVersionNumber
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		font-size: 1.2em;
+		color: #000000;
+		margin-left: 0;
+		padding-top: 20px;
+	}
+
+	p.MiniTOC1
+	{
+		
+	}
+
+	p.TableCaption
+	{
+		color: #000000;
+		font-style: italic;
+		mc-auto-number-class: TableNum;
+		mc-auto-number-format: 'CT:Table {chapnum}-{n+} ';
+		padding-bottom: 0;
+		padding-top: 12px;
+	}
+
+	p.TOC1
+	{
+		font-size: 1em;
+		font-weight: bold;
+		font-style: normal;
+		color: #E31B23;
+		margin-top: auto;
+		margin-bottom: auto;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-bottom: 2px;
+		padding-top: 10px;
+		mc-pagenum-display: all;
+	}
+
+	p.TOC2
+	{
+		font-weight: normal;
+		margin-left: 0.25in;
+		font-size: 1em;
+		color: #000000;
+		margin-bottom: auto;
+		margin-top: auto;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-bottom: 2px;
+	}
+
+	p.TOC3
+	{
+		font-weight: normal;
+		color: #000000;
+		margin-left: .5in;
+		font-size: 1em;
+		margin-bottom: auto;
+		margin-top: auto;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-bottom: 2px;
+	}
+
+	p.TOC4
+	{
+		font-weight: normal;
+		margin-left: .75in;
+		color: #000000;
+		font-size: 1em;
+		margin-bottom: auto;
+		margin-top: auto;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		padding-bottom: 2px;
+	}
+
+	p.TOCHeading
+	{
+		letter-spacing: 0px;
+		margin: 0;
+		mc-heading-level: 0;
+		font-size: 1.4em;
+		color: #000000;
+	}
+
+	span.ChapAutoNum
+	{
+		color: #E31B23;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		letter-spacing: 0px;
+		font-size: inherit;
+	}
+
+	span.FigureNum
+	{
+		font-style: normal;
+		color: #E31B23;
+	}
+
+	span.TableNum
+	{
+		font-style: normal;
+		color: #E31B23;
+	}
+
+	tr
+	{
+		page-break-inside: avoid;
+	}
+
+	ul
+	{
+		
+	}
+
+	ul.FirstLevelLessIndentation
+	{
+		list-style-image: url('../Images/Bullet1.png');
+		margin-left: 30px;
+	}
+
+	ul.SecondLevel
+	{
+		list-style-image: url('../Images/Bullet2.png');
+		margin-left: 30px;
+	}
+
+	a.MCBreadcrumbsLink:visited
+	{
+		color: #E31B23;
+	}
+
+	MadCap|pageFooter
+	{
+		font-size: 1em;
+	}
+
+	MadCap|glossaryTerm
+	{
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		color: #808080;
+	}
+
+	MadCap|glossaryTerm.Popup
+	{
+		color: #808080;
+	}
+
+	p.TOC5
+	{
+		margin-left: 1.0in;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		color: #000000;
+		font-size: 1em;
+		margin-bottom: auto;
+		margin-top: auto;
+		padding-bottom: 2px;
+	}
+
+	p.TOC6
+	{
+		margin-left: 1.25in;
+		margin-bottom: auto;
+		margin-top: auto;
+		font-size: 1em;
+	}
+
+	p.TOC7
+	{
+		margin-left: 1.5in;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		color: #000000;
+		font-size: 1em;
+		margin-bottom: auto;
+		margin-top: auto;
+	}
+
+	p.TOC8
+	{
+		margin-left: 1.75in;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		color: #000000;
+		font-size: 1em;
+		margin-bottom: auto;
+		margin-top: auto;
+	}
+
+	p.TOC9
+	{
+		margin-left: 2.0in;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+		color: #000000;
+		font-size: 1em;
+		margin-bottom: auto;
+		margin-top: auto;
+	}
+
+	code
+	{
+		font-family: monospace;
+		mc-hyphenate: never;
+	}
+
+	p.note
+	{
+		background-color: #FFFFFF;
+		padding-bottom: 10px;
+		padding-left: 40px;
+		padding-right: 10px;
+		padding-top: 10px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		color: #808080;
+	}
+
+	p.Index1
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index2
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index3
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index4
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index5
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index6
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index7
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index8
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	p.Index9
+	{
+		color: #000000;
+		font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+	}
+
+	pre
+	{
+		font-family: monospace;
+		font-size: 0.8em;
+		margin: auto;
+		color: #000000;
+		mc-disable-glossary-terms: true;
+		mc-hyphenate: never;
+		white-space: pre-wrap;
+		background-color: #c4c7c8;
+		border-style: solid;
+		padding: 4px;
+		border-bottom-color: #000000;
+		border: solid 1px #000000;
+	}
+
+	MadCap|bodyProxy
+	{
+		background: transparent;
+	}
+
+	blockquote.name
+	{
+		color: #808080;
+	}
+
+	blockquote
+	{
+		color: #808080;
+	}
+
+	MadCap|helpControlMenuItem
+	{
+		color: #000000;
+	}
+
+	a.Popup
+	{
+		color: #E31B23;
+	}
+
+	a.MCBreadcrumbsLink:hover
+	{
+		color: #E31B23;
+	}
+
+	a.MCBreadcrumbsLink
+	{
+		color: #E31B23;
+	}
+
+	a.GlossaryPageTerm
+	{
+		color: #E31B23;
+	}
+
+	a:visited
+	{
+		color: #E31B23;
+	}
+
+	a:link
+	{
+		color: #E31B23;
+	}
+
+	a:hover
+	{
+		color: #E31B23;
+	}
+
+	a:focus
+	{
+		color: #E31B23;
+	}
+
+	a:active
+	{
+		color: #E31B23;
+	}
+
+	a
+	{
+		color: #E31B23;
+	}
+
+	p.CompanyInformation2
+	{
+		color: #808080;
+	}
+
+	ol
+	{
+		
+	}
+
+	img
+	{
+		border-style: none;
+		max-width: 6 in;
+	}
+}
+
+MadCap|glossaryTerm.Popup
+{
+	color: #808080;
+	font-weight: normal;
+	font-style: normal;
+}
+
+MadCap|glossaryTerm
+{
+	font-weight: normal;
+	font-style: normal;
+	color: #808080;
+}
+
+@media non-print
+{
+	h5
+	{
+		font-style: italic;
+	}
+
+	h6
+	{
+		
+	}
+
+	p.ManualTitle1
+	{
+		font-size: 1.4em;
+	}
+
+	pre
+	{
+		font-family: monospace;
+		font-size: 0.8em;
+		margin: auto;
+		color: #000000;
+		mc-disable-glossary-terms: true;
+		mc-hyphenate: never;
+		white-space: pre-wrap;
+		background-color: #c4c7c8;
+		border-style: solid;
+		padding: 4px;
+		border-bottom-color: #000000;
+		border: solid 1px #000000;
+	}
+
+	h2
+	{
+		font-style: italic;
+		margin: 10px;
+	}
+
+	h3
+	{
+		font-style: normal;
+		margin: 10px;
+	}
+}
+
+h5
+{
+	mc-hyphenate: never;
+	color: #808080;
+	font-weight: normal;
+	font-style: italic;
+	padding-bottom: 10px;
+	margin: 10px;
+	font-size: 1em;
+}
+
+h6
+{
+	mc-hyphenate: never;
+	font-weight: normal;
+	font-style: normal;
+	padding-bottom: 10px;
+	margin: 10px;
+	font-size: 1em;
+}
+
+pre
+{
+	font-family: monospace;
+	font-size: 0.8em;
+	margin: auto;
+	color: #000000;
+	mc-disable-glossary-terms: true;
+	mc-hyphenate: never;
+	white-space: pre-wrap;
+	background-color: #c4c7c8;
+	border-style: solid;
+	padding: 4px;
+	border-bottom-color: #000000;
+	border: solid 1px #000000;
+}
+
+MadCap|helpControlMenuItem
+{
+	background-color: transparent;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+MadCap|helpControlMenuItem.Highlighted
+{
+	background-color: #FFFFFF;
+	color: #E31B23;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+MadCap|slideshowCaption
+{
+	background-color: transparent;
+	font-size: 1em;
+	vertical-align: baseline;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+kbd
+{
+	color: #000000;
+	font-family: monospace;
+	font-size: 1em;
+}
+
+samp
+{
+	color: #000000;
+	font-size: 1em;
+	font-family: monospace;
+}
+
+tt
+{
+	color: #000000;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+code
+{
+	font-weight: normal;
+	font-style: normal;
+	font-family: monospace;
+	font-size: 1em;
+}
+
+MadCap|xref.ListOfPageNumber
+{
+	color: #E31B23;
+}
+
+MadCap|xref.ConceptPageNumber
+{
+	color: #E31B23;
+}
+
+MadCap|xref.RelLinkPageNumber
+{
+	color: #E31B23;
+}
+
+MadCap|xref.TOCPageNumber
+{
+	color: #E31B23;
+}
+
+MadCap|glossaryTerm:focus
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+MadCap|glossaryTerm.Hyperlink
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+MadCap|glossaryTerm:hover
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+a.Popup
+{
+	color: #E31B23;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+MadCap|relatedTopics:focus
+{
+	color: #000000;
+}
+
+MadCap|conceptLink:hover
+{
+	color: #000000;
+}
+
+MadCap|keywordLink:focus
+{
+	color: #000000;
+}
+
+MadCap|keywordLink
+{
+	color: #E31B23;
+}
+
+MadCap|keywordLink:hover
+{
+	color: #000000;
+}
+
+MadCap|conceptLink
+{
+	color: #E31B23;
+}
+
+MadCap|conceptLink:focus
+{
+	color: #000000;
+}
+
+MadCap|shortcut
+{
+	color: #E31B23;
+}
+
+MadCap|relatedTopics:hover
+{
+	color: #000000;
+}
+
+MadCap|relatedTopics
+{
+	color: #E31B23;
+}
+
+MadCap|xref:focus
+{
+	color: #000000;
+}
+
+MadCap|helpControlListItemLink:focus
+{
+	color: #000000;
+}
+
+MadCap|keywordLinkControlListItemLink:focus
+{
+	color: #000000;
+}
+
+MadCap|conceptLinkControlListItemLink:focus
+{
+	color: #000000;
+}
+
+MadCap|relatedTopicsControlListItemLink:focus
+{
+	color: #000000;
+}
+
+MadCap|keywordLinkControlListItemLink:hover
+{
+	color: #000000;
+}
+
+MadCap|helpControlListItemLink:hover
+{
+	color: #000000;
+}
+
+MadCap|conceptLinkControlListItemLink:hover
+{
+	color: #000000;
+}
+
+MadCap|relatedTopicsControlListItemLink:hover
+{
+	color: #000000;
+}
+
+MadCap|relatedTopicsControlListItemLink:link
+{
+	color: #E31B23;
+}
+
+MadCap|helpControlListItemLink:link
+{
+	color: #E31B23;
+}
+
+MadCap|keywordLinkControlListItemLink:link
+{
+	color: #E31B23;
+}
+
+MadCap|conceptLinkControlListItemLink:link
+{
+	color: #E31B23;
+}
+
+MadCap|helpControlListItemLink:visited
+{
+	color: #E31B23;
+}
+
+MadCap|conceptLinkControlListItemLink:visited
+{
+	color: #E31B23;
+}
+
+MadCap|keywordLinkControlListItemLink:visited
+{
+	color: #E31B23;
+}
+
+MadCap|relatedTopicsControlListItemLink:visited
+{
+	color: #E31B23;
+}
+
+MadCap|helpControlListItem
+{
+	color: #E31B23;
+}
+
+MadCap|relatedTopicsControlList
+{
+	color: #E31B23;
+}
+
+MadCap|helpControlListItemLink
+{
+	color: #E31B23;
+}
+
+MadCap|helpControlList
+{
+	color: #E31B23;
+}
+
+MadCap|keywordLinkControlListItemLink
+{
+	color: #E31B23;
+}
+
+MadCap|conceptLinkControlListItemLink
+{
+	color: #E31B23;
+}
+
+MadCap|keywordLinkControlListItem
+{
+	color: #E31B23;
+}
+
+MadCap|keywordLinkControlList
+{
+	color: #E31B23;
+}
+
+MadCap|conceptLinkControlListItem
+{
+	color: #E31B23;
+}
+
+MadCap|conceptLinkControlList
+{
+	color: #E31B23;
+}
+
+MadCap|relatedTopicsControlListItemLink
+{
+	color: #E31B23;
+}
+
+MadCap|relatedTopicsControlListItem
+{
+	color: #E31B23;
+}
+
+MadCap|slideThumbnail:hover
+{
+	color: #E31B23;
+}
+
+MadCap|relationshipsItem
+{
+	color: #000000;
+	font-size: 1em;
+}
+
+MadCap|bodyProxy
+{
+	padding-bottom: 10px;
+	padding: 5em;
+}
+
+p.TOC1
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC2
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC3
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC4
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC5
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC6
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC7
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC8
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.TOC9
+{
+	mc-leader-offset: 1em;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index1
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index2
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index3
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index4
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index5
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index6
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index7
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index8
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+p.Index9
+{
+	mc-hidden: unhidden;
+	font-size: 1em;
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, sans-serif;
+}
+
+h5
+{
+	
+}
+
+h6
+{
+	
+}
+
+p.ManualTitle1
+{
+	font-size: 1.4em;
+}
+
+pre
+{
+	font-family: monospace;
+	font-size: 0.8em;
+	margin: auto;
+	color: #000000;
+	mc-disable-glossary-terms: true;
+	mc-hyphenate: never;
+	white-space: pre-wrap;
+	background-color: #c4c7c8;
+	border-style: solid;
+	padding: 4px;
+	border-bottom-color: #000000;
+	border: solid 1px #000000;
+}
+
+MadCap|menuProxy
+{
+	font-size: 1em;
+	visibility: collapse;
+	mc-toc-depth: 4;
+}
+
+MadCap|relationshipsHeading.task
+{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.4em;
+}
+
+MadCap|relationshipsHeading.reference
+{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.4em;
+}
+
+MadCap|relationshipsHeading.concept
+{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.4em;
+}
+
+MadCap|relationshipsHeading
+{
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.4em;
+}
+
+MadCap|slideshowBullet.active
+{
+	background-color: #FFFFFF;
+	color: #E31B23;
+}
+
+MadCap|slideshowBullet:hover
+{
+	background-color: #FFFFFF;
+	color: #E31B23;
+}
+
+MadCap|slideshowBullet
+{
+	background-color: #FFFFFF;
+	color: #E31B23;
+}
+
+MadCap|model3D
+{
+	background-color: #FFFFFF;
+	color: #E31B23;
+}
+
+MadCap|helpControlMenu
+{
+	background-color: #FFFFFF;
+	color: #E31B23;
+}
+
+MadCap|popupBody
+{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+address
+{
+	font-size: 1em;
+}
+
+dt
+{
+	font-size: 1em;
+}
+
+dd
+{
+	font-size: 1em;
+}
+
+dl
+{
+	font-size: 1em;
+}
+
+li::marker
+{
+	font-size: 1em;
+}
+
+h3
+{
+	font-style: normal;
+	margin: 10px;
+}
+
+h2
+{
+	font-style: italic;
+	margin: 10px;
+}
+
+pre
+{
+	font-family: monospace;
+	font-size: 0.8em;
+	margin: auto;
+	color: #000000;
+	mc-disable-glossary-terms: true;
+	mc-hyphenate: never;
+	white-space: pre-wrap;
+	background-color: #c4c7c8;
+	border-style: solid;
+	padding: 4px;
+	border-bottom-color: #000000;
+	border: solid 1px #000000;
+}
+
+p.ManualTitle1
+{
+	font-size: 1.4em;
+}
+
+h6
+{
+	
+}
+
+h5
+{
+	font-style: italic;
+}
+
+@media only screen and (max-device-width: 1279px)
+{
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(1)
+	{
+		width: 33.33333%;
+	}
+
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(2)
+	{
+		width: 33.33333%;
+	}
+
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(3)
+	{
+		width: 33.33333%;
+	}
+
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(4)
+	{
+		width: 8.3333%;
+	}
+}
+
+@media only screen and (max-device-width: 767px)
+{
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(1)
+	{
+		width: auto;
+	}
+
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(2)
+	{
+		width: auto;
+	}
+
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(3)
+	{
+		width: auto;
+	}
+
+	div.Responsive-Row-4-cell-2-4-2-4 > div:nth-child(4)
+	{
+		width: auto;
+	}
+
+	blockquote
+	{
+		color: #808080;
+	}
+
+	blockquote.name
+	{
+		color: #808080;
+	}
+}
+

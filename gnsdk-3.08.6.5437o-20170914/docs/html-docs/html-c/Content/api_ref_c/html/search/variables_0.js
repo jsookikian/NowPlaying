@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['callback_5ferror',['callback_error',['../group___music___music_i_d_stream___callbacks.html#a9a9c170c229495b0aff8efa4f644d7ab',1,'_gnsdk_musicidstream_callbacks_s']]],
+  ['callback_5fget_5ffingerprint',['callback_get_fingerprint',['../group___music___music_i_d_file___callbacks.html#gae35d7eb9f87a124eae3f4b1d86a8c124',1,'_gnsdk_musicidfile_callbacks_s::callback_get_fingerprint()'],['../group___music___music_i_d_file___callbacks.html#gafd9ee1033838707211778836e6be8734',1,'_gnsdk_musicidfile_fileinfo_callbacks_s::callback_get_fingerprint()']]],
+  ['callback_5fget_5fmetadata',['callback_get_metadata',['../group___music___music_i_d_file___callbacks.html#ga9d2a0a90a9851680d8ade7d0e37f3842',1,'_gnsdk_musicidfile_callbacks_s::callback_get_metadata()'],['../group___music___music_i_d_file___callbacks.html#ga6673845297cddaec2ed836ad96e67bb4',1,'_gnsdk_musicidfile_fileinfo_callbacks_s::callback_get_metadata()']]],
+  ['callback_5fidentifying_5fstatus',['callback_identifying_status',['../group___music___music_i_d_stream___callbacks.html#aba197d874514505b62a482135a272f7f',1,'_gnsdk_musicidstream_callbacks_s']]],
+  ['callback_5fmusicid_5fcomplete',['callback_musicid_complete',['../group___music___music_i_d_file___callbacks.html#ga89fef21b707d4d82b5c4468b9ce1d3fa',1,'_gnsdk_musicidfile_callbacks_s']]],
+  ['callback_5fprocessing_5fstatus',['callback_processing_status',['../group___music___music_i_d_stream___callbacks.html#acacd9f99d77280a0612eb45c7ac52a17',1,'_gnsdk_musicidstream_callbacks_s']]],
+  ['callback_5fresult_5favailable',['callback_result_available',['../group___music___music_i_d_file___callbacks.html#gafb16ed10fc9e2486dc2308e04c416c09',1,'_gnsdk_musicidfile_callbacks_s::callback_result_available()'],['../group___music___music_i_d_stream___callbacks.html#a99fb96f310beb78c89d2cb5c4ab9bafe',1,'_gnsdk_musicidstream_callbacks_s::callback_result_available()']]],
+  ['callback_5fresult_5fnot_5ffound',['callback_result_not_found',['../group___music___music_i_d_file___callbacks.html#ga4243f805135549bfb30a9e612363403e',1,'_gnsdk_musicidfile_callbacks_s']]],
+  ['callback_5fstatus',['callback_status',['../group___music___music_i_d_file___callbacks.html#ga0cabafb659915c29a12e961c01ffc011',1,'_gnsdk_musicidfile_callbacks_s::callback_status()'],['../group___music___music_i_d_stream___callbacks.html#a9a26c50f66305c81bff2a6168baccc7f',1,'_gnsdk_musicidstream_callbacks_s::callback_status()']]]
+];

@@ -1,0 +1,1669 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+@media print
+{
+	mcTableStyle
+	{
+		cell-padding-left: 4px;
+		cell-padding-right: 4px;
+		cell-padding-top: 4px;
+		cell-padding-bottom: 4px;
+		mc-hide-bottom-ruling: true;
+		overflow: scroll;
+		page-break-before: avoid;
+		page-break-after: avoid;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	mcTableColumnStyle
+	{
+		
+	}
+
+	mcTableColumnStyle
+	{
+		
+	}
+
+	mcTableHeadStyle
+	{
+		
+	}
+
+	mcTableBodyStyle
+	{
+		
+	}
+
+	mcTableFootStyle
+	{
+		
+	}
+}
+
+mcTableStyle
+{
+	border-collapse: separate;
+	border-spacing-y: 0;
+	border-spacing-x: 0;
+	name: Standard;
+	cell-padding-left: 5px;
+	cell-padding-right: 5px;
+	cell-padding-top: 5px;
+	cell-padding-bottom: 5px;
+	max-id: 8;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	background-color: #f0f8ff;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Regular;
+	id: 0;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 8;
+	name: DarkShade;
+	type: Manual;
+	background-color: #8798b3;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #ffffff;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #000000;
+	background-color: #d63039;
+	name: Header1;
+	id: 2;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Row1;
+	id: 1;
+	background-color: #edf0f1;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+	text-align: left;
+	font-size: 9pt;
+	cell-padding-left: 4px;
+	cell-padding-right: 4px;
+	cell-padding-top: 4px;
+	cell-padding-bottom: 4px;
+	cell-content-style-tag: p;
+}
+
+mcTableFootStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-widte: 1px;
+	separator-color: #000000;
+	name: Footer1;
+	id: 3;
+	separator-width: 1px;
+	vertical-align: top;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+
+/* Cell Styles: */
+ 
+@media print
+{
+	.TableStyle-Standard
+	{
+		mc-hide-bottom-ruling: true;
+		overflow: scroll;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		page-break-before: avoid;
+		page-break-after: avoid;
+		border-spacing: 0px 0px;
+	}
+
+	.TableStyle-Standard-HeadI-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadE-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadF-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadH-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadD-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadC-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadB-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadA-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadG-Regular-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadI-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadE-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadF-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadH-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadD-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadC-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadB-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadA-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-HeadG-DarkShade-Header1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootI-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootE-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootF-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootH-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootD-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootC-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootB-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootA-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootG-Regular-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootI-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootE-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootF-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootH-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootD-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootC-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootB-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootA-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.TableStyle-Standard-FootG-DarkShade-Footer1
+	{
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+}
+
+.TableStyle-Standard
+{
+	border-collapse: separate;
+	background-color: #f0f8ff;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-Standard-Column-Regular
+{
+	
+}
+
+.TableStyle-Standard-Column-DarkShade
+{
+	
+}
+
+.TableStyle-Standard-Head-Header1
+{
+	
+}
+
+.TableStyle-Standard-HeadI-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadI-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadE-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-Standard-HeadE-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadF-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-Standard-HeadF-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadH-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadH-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadD-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-Standard-HeadD-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadC-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadC-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadB-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadB-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadA-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadA-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadG-Regular-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadG-Regular-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadI-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadI-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadE-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-Standard-HeadE-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadF-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-Standard-HeadF-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadH-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadH-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadD-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-Standard-HeadD-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadC-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadC-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadB-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadB-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadA-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadA-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-HeadG-DarkShade-Header1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d63039;
+}
+
+.TableStyle-Standard-HeadG-DarkShade-Header1 p
+{
+	color: #000000;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.TableStyle-Standard-Foot-Footer1
+{
+	
+}
+
+.TableStyle-Standard-FootI-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootI-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootE-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+}
+
+.TableStyle-Standard-FootE-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootF-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+}
+
+.TableStyle-Standard-FootF-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootH-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootH-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootD-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+}
+
+.TableStyle-Standard-FootD-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootC-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootC-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootB-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootB-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootA-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootA-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootG-Regular-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootG-Regular-Footer1 p
+{
+	font-size: 9pt;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootI-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootI-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootE-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+}
+
+.TableStyle-Standard-FootE-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootF-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+}
+
+.TableStyle-Standard-FootF-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootH-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootH-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootD-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+}
+
+.TableStyle-Standard-FootD-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootC-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootC-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootB-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootB-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootA-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootA-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-FootG-DarkShade-Footer1
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #8798b3;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	vertical-align: top;
+}
+
+.TableStyle-Standard-FootG-DarkShade-Footer1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+}
+
+.TableStyle-Standard-Body-Row1
+{
+	
+}
+
+.TableStyle-Standard-BodyI-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyI-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyE-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-Standard-BodyE-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyF-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyF-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyH-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-Standard-BodyH-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyD-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyD-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyC-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyC-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyB-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-Standard-BodyB-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyA-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyA-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyG-Regular-Row1
+{
+	text-align: left;
+	vertical-align: top;
+	background-color: #edf0f1;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyG-Regular-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyI-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #8798b3;
+}
+
+.TableStyle-Standard-BodyI-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyE-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	background-color: #8798b3;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+}
+
+.TableStyle-Standard-BodyE-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyF-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	background-color: #8798b3;
+}
+
+.TableStyle-Standard-BodyF-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyH-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #8798b3;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+}
+
+.TableStyle-Standard-BodyH-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyD-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	background-color: #8798b3;
+}
+
+.TableStyle-Standard-BodyD-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyC-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #8798b3;
+}
+
+.TableStyle-Standard-BodyC-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyB-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #8798b3;
+	border-right-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+}
+
+.TableStyle-Standard-BodyB-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyA-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #8798b3;
+}
+
+.TableStyle-Standard-BodyA-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+.TableStyle-Standard-BodyG-DarkShade-Row1
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #8798b3;
+}
+
+.TableStyle-Standard-BodyG-DarkShade-Row1 p
+{
+	font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+	font-size: 9pt;
+}
+
+

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gnsdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gnsdk_java/jar/j2se/gnsdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

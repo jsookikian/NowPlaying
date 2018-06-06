@@ -1,0 +1,27 @@
+var group___playlist___collection_summary_functions =
+[
+    [ "gnsdk_playlist_collection_add_gdo", "group___playlist___collection_summary_functions.html#ga0a20bda6b48dd9c3a3110679a05a7c6a", null ],
+    [ "gnsdk_playlist_collection_add_ident", "group___playlist___collection_summary_functions.html#ga4733f185d849f4068e9e54079ecdfd40", null ],
+    [ "gnsdk_playlist_collection_add_list_element", "group___playlist___collection_summary_functions.html#ga2260e12fb75caa93d3f9373e0f83f6bc", null ],
+    [ "gnsdk_playlist_collection_attributes_count", "group___playlist___collection_summary_functions.html#ga25848219ae55ca4bc89887d3c2d81131", null ],
+    [ "gnsdk_playlist_collection_attributes_enum", "group___playlist___collection_summary_functions.html#ga93075f8dac12a53c7b245dbdda2f5f88", null ],
+    [ "gnsdk_playlist_collection_create", "group___playlist___collection_summary_functions.html#gaba0664ccbc239bbfb8bffb3fad8be866", null ],
+    [ "gnsdk_playlist_collection_deserialize", "group___playlist___collection_summary_functions.html#ga49aee85267024e6182e0ad3c0c9c06f7", null ],
+    [ "gnsdk_playlist_collection_get_gdo", "group___playlist___collection_summary_functions.html#ga4a171dbdb02aeeedd0987f1c16f3bed7", null ],
+    [ "gnsdk_playlist_collection_get_name", "group___playlist___collection_summary_functions.html#ga6d67a9441bc3528f0b9f019509d5aa90", null ],
+    [ "gnsdk_playlist_collection_ident_count", "group___playlist___collection_summary_functions.html#gae15efc91ad4c30b997a22a087f34756e", null ],
+    [ "gnsdk_playlist_collection_ident_enum", "group___playlist___collection_summary_functions.html#gabc493155984ed6d5296e762bf15e0e0c", null ],
+    [ "gnsdk_playlist_collection_ident_find", "group___playlist___collection_summary_functions.html#ga4fc71cc2c63232cb6751b9452a47992f", null ],
+    [ "gnsdk_playlist_collection_ident_remove", "group___playlist___collection_summary_functions.html#gaa36b9b9de946f77c98f1634dab25a579", null ],
+    [ "gnsdk_playlist_collection_join", "group___playlist___collection_summary_functions.html#gac7d3499c716947d79516257d4130cb34", null ],
+    [ "gnsdk_playlist_collection_join_count", "group___playlist___collection_summary_functions.html#gaf72611ba74ffc88d50362f271947e3ea", null ],
+    [ "gnsdk_playlist_collection_join_enum", "group___playlist___collection_summary_functions.html#gaae623777d2ec42ce1c40475c6336b9a3", null ],
+    [ "gnsdk_playlist_collection_join_get", "group___playlist___collection_summary_functions.html#ga7eca551cbbb403f95c395b409c018ed7", null ],
+    [ "gnsdk_playlist_collection_join_remove", "group___playlist___collection_summary_functions.html#gac6633966b112e13babef92009d9587f6", null ],
+    [ "gnsdk_playlist_collection_release", "group___playlist___collection_summary_functions.html#ga699397da8c3f9192556f8a31afeb6d51", null ],
+    [ "gnsdk_playlist_collection_serialize", "group___playlist___collection_summary_functions.html#gaf328501313e5f2abbc3823e5821baf23", null ],
+    [ "gnsdk_playlist_collection_serialize_size", "group___playlist___collection_summary_functions.html#ga7643541372abe78ea45df4afba94e70a", null ],
+    [ "gnsdk_playlist_collection_sync_ident_add", "group___playlist___collection_summary_functions.html#ga657bcdb318e646338b9cf19565441a27", null ],
+    [ "gnsdk_playlist_collection_sync_process", "group___playlist___collection_summary_functions.html#gaab757f14575410c838e46a7f709f488f", null ],
+    [ "gnsdk_playlist_collection_update_name", "group___playlist___collection_summary_functions.html#ga0d3f272b34860f020239a5c81fef78b1", null ]
+];

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Configuring Logging</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">C</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_c.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1>Configuring Logging</h1>
+                                        <p>There are three approaches you can take to implementing logging using the GNSDK:</p>
+                                        <ol>
+                                            <li value="1"><strong>Enable GNSDK logging</strong><a name="kanchor190"></a> - This creates log file(s) that you and Gracenote can use to evaluate and debug any problems your application might encounter when using the SDK.</li>
+                                            <li value="2"><strong>Enable GNSDK logging and add to it</strong> - Use the *_logging_write() APIs to add your application's log entries to the GNSDK logs.</li>
+                                            <li value="3"><strong>Implement your own logging mechanism (via the logging callback)</strong>.</li>
+                                        </ol>
+                                        <p>The most typical use case for <span class="GeneralProductName">GNSDK</span> logging is to configure a single log file to capture all logged messages and errors from both your application and the SDK. </p>
+                                        <h2>Enabling GNSDK Logging</h2>
+                                        <p>To enable Gracenote SDK logging, use the gnsdk_manager_logging_enable() function. For example:</p><pre class="prettyprint">
+/*
+ * Enable SDK logging
+ */
+gnsdk_manager_logging_enable(
+    "sample.log",       // File path
+    GNSDK_LOG_PKG_GNSDK,  // Include all GNSDK package IDs, including your app's ID
+    GNSDK_LOG_LEVEL_ALL,  // Include all level entries (warning, info, debug and error)
+    GNSDK_LOG_OPTION_ALL,   // All logging options
+    0,            // Max size of log in bytes: 0 means a new log file will be created each run
+    GNSDK_FALSE       // GNSDK_TRUE = old logs will be renamed and saved
+);
+</pre>
+                                        <p>The GNSDK_LOG_OPTION_ALL define encompasses all logging options which include category (info, debug, warning and error), timestamp, source information (file and line number), package ID, thread ID, and if logging should be done asychronously. See the API reference for more information.</p>
+                                        <p>The GNSDK_LOG_PKG_GNSDK define means that all GNSDK package IDs will be logged. Use the GNSDK_LOG_PKG_GCSL if you just want all low-level Gracenote Client Standard Library (GCSL) package IDs. Use GNSDK_LOG_PKG_ALL for both GNSDK and GCSL package IDs. In most cases, GNSDK_LOG_PKG_GNSDK should be sufficient.</p>
+                                        <p>The GNSDK_LOG_LEVEL_ALL options means that all levels (error, warning, info, and debug) will be logged. There are options available if you just want messages for specific levels.</p>
+                                        <p>The <span class="GeneralProductName">GNSDK</span> logging system can manage multiple logs simultaneously. Each call to the enable API can enable a new log, if the provided log file name is unique. Additionally, each log can have its own filters and options.</p>
+                                        <h2>Adding to GNSDK Logs</h2>
+                                        <p>Your application can write to the GNSDK logs using the gnsdk_manager_logging_write() and gnsdk_manager_logging_vwrite() functions. Use the latter function to pass a variable number of parameters - see the API reference for more information.</p>
+                                        <p>The SDK allows an application to register one or more of its own package IDs into the GNSDK logging system with the gnsdk_manager_logging_register_package() call. The application can then enable, disable or filter its own logging messages based on the registered package IDs. For example:</p><pre class="prettyprint">
+/*
+ * Log entries are identified by the 'package' that logs them. Here we generate
+ * a package ID for our application to allow us to log entries of our own in the GNSDK log
+ * The package ID must be in the range GNSDKPKG_ID_APP_START to MAX_GNSDK_PKG_ID
+ */
+#define MYAPP_PACKAGE_ID   GNSDKPKG_ID_APP_START+0x01
+
+/*
+ * Register our package ID with the logging system - this will make our logging
+ * entries show up with the package description of "Sample App"
+ */
+gnsdk_manager_logging_register_package(MYAPP_PACKAGE_ID, "Sample App");
+
+/*
+ * Sample write to log file
+ */
+gnsdk_manager_logging_write(
+  150,          // Source line number(optional)
+  "main.c",         // Source file (optional)
+  MYAPP_PACKAGE_ID,     // Package ID of application making call
+  GNSDK_LOG_LEVEL_ERROR,  // Error mask for this logging message
+  "Error info: %s",     // Error message format
+  info          // Error message format argument
+  );
+</pre>
+                                        <p>The logging system determines the applicability of a log message for each enabled log, and, if appropriate, writes a log message to multiple enabled logs.</p>
+                                        <h2><a name="kanchor191"></a>Implementing Callback Logging</h2>
+                                        <p>You also have the option to direct <span class="GeneralProductName">GNSDK</span><a name="kanchor192"></a><a name="kanchor193"></a> to allow a logging callback, where you can determine how best to capture and disseminate specific logged messages. For example, your callback function could write to its own log files or pass the messages to an external logging framework, such as the Unix Syslog or the Windows Event Log.</p>
+                                        <p>Enabling callback is done with the gnsdk_manager_logging_enable_callback() API. The logging
+callback can be enabled alongside, or instead of, file logging. Your application can call this API multiple times with different Package IDs to enable multiple Package IDs. The package and filter
+will apply only to the logging message sent to the callback. To disable the logging callback, call gnsdk_manager_logging_enable_callback with the callback parameter set to GNSDK_NULL for each enabled PackageID.</p>
+                                        <p><b>For example:</b>
+                                        </p><pre class="prettyprint"><a name="kanchor194"></a>
+/*
+ * Register our callback with the GNSDK Manager
+ */
+gnsdk_manager_logging_enable_callback(
+  _logging_callback_fn,
+  GNSDK_NULL,      // Optional data passed to the callback
+  GNSDK_LOG_PKG_ALL,   // Messages from all libraries
+  GNSDK_LOG_LEVEL_ALL,   // Message of all levels
+  GNSDK_LOG_OPTION_ALL   // All logging options: timestamps, thread IDs, etc
+  );
+
+ ...
+      
+static gnsdk_void_t GNSDK_CALLBACK_API
+  _logging_callback_fn(
+    gnsdk_void_t*   user_data,
+    gnsdk_uint16_t  package_id,
+    gnsdk_uint32_t  mask,
+    gnsdk_cstr_t    format,
+    va_list       argptr
+    )
+{
+
+  /*
+   * Map the GNSDK level to the Syslog level and pass along the message
+   */
+  if (mask &amp; GNSDK_LOG_LEVEL_ERROR)
+  {
+    vsyslog(LOG_ERR, format, argptr);
+  }
+  else if (mask &amp; GNSDK_LOG_LEVEL_WARNING)
+  {
+    vsyslog(LOG_WARNING, format, argptr);
+  }
+  else if (mask &amp; GNSDK_LOG_LEVEL_INFO)
+  {
+    vsyslog(LOG_INFO, format, argptr);
+  }
+  else if (mask &amp; GNSDK_LOG_LEVEL_DEBUG)
+  {
+    vsyslog(LOG_DEBUG, format, argptr);
+  }
+
+} /* _logging_callback_fn() */
+
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

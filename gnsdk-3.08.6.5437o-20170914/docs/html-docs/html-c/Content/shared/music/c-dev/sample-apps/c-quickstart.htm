@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>GNSDK C Quick Start Tutorial</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">C</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_c.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1>GNSDK C Quick Start Tutorial</h1>
+                                        <p> </p>
+                                        <h2><a name="kanchor127"></a>Introduction</h2>
+                                        <p><a name="kanchor128"></a>This tutorial shows you how to build a simple GNSDK C application from scratch. The application does a track title text search to identify an album in the Gracenote database. The Gracenote SDK provides several methods to access Gracenote metadata from a C application, most of which are demonstrated in the C sample apps that come with GNSDK. </p>
+                                        <p><b>NOTE:</b> This tutorial application creates a very basic GNSDK application only, and is not meant to be used in a production environment. It does not include many other features and best practices found within the GNSDK and other sample applications. These include:</p>
+                                        <ul>
+                                            <li value="1">GNSDK logging</li>
+                                            <li value="2">Loading a locale - Locales are a convenient way to group locale-dependent metadata. The quick start application does not access any locale-dependent metadata here.</li>
+                                            <li value="3">Code for accessing an embedded database</li>
+                                            <li value="4"><a name="kanchor129"></a>Code for the SQLite module - Used for caching</li>
+                                            <li value="5">Decision code - Sometimes more than one match is returned or Gracenote is not entirely confident about the one match. This requires the user to pick one match or confirm the match. This application simply uses the first match.</li>
+                                            <li value="6"><a name="kanchor130"></a>Partial or full metadata code - A match can contain full or partial metadata. If partial, an additional call is needed to get full metadata. In this case, the album title is part of partial metadata, so there is no need for an additional check.</li>
+                                            <li value="7">SDK user object - Normally, this object should be saved and retrieved from disk after initial creation. Here, the application just creates a new one.</li>
+                                        </ul>
+                                        <p>Refer to the sample applications for examples of using these features in your application.</p>
+                                        <h2><a name="kanchor131"></a><a name="kanchor132"></a>Setting Up Your Development Environment</h2>
+                                        <p><a name="kanchor133"></a><a name="kanchor134"></a><a name="kanchor135"></a><a name="kanchor136"></a>The GNSDK is supports several different systems, including different flavors of Android, iOS, Linux, Macintosh, and Windows. Included with the SDK are the support files necessary to create a local build environment of your choosing.</p>
+                                        <h3>Include Files</h3>
+                                        <p>Include files for GNSDK&#160;applications are located in <code class="prettyprint">/include</code> under your installation directory. There are approximately 30 platform independent include files, and one platform dependent file, <code class="prettyprint">gnsdk_platform.h</code>. The different versions of the platform dependent file are stored under the<code class="prettyprint"> /include</code> directory in subdirectories named for  specific supported platforms, for example, <code class="prettyprint">linux_arm-32</code>. For proper compilation, ensure that the correct include files are made available to your build system. Although we mention these files for clarity, you should not need to include anything other than <code class="prettyprint">gnsdk.h </code>in your application for GNSDK. It will include the files necessary for compilation, based on the options you have defined.</p>
+                                        <h3><a name="kanchor137"></a>Library Files</h3>
+                                        <p>The library files necessary for linking are placed into two directories. The directory <code class="prettyprint">/lib</code> is for dynamically linked libraries, and <code class="prettyprint">/lib-static</code> is for statically linked libraries. There are approximately 15 (Windows has double, including DLLs)&#160;library files containing the binaries for GNSDK. For your application's link step to locate and include the GNSDK&#160;functionality, you must make these libraries available to your link process.</p>
+                                        <h3>Source Files</h3>
+                                        <p>The SDK&#160;comes with several C samples. They are located in the <code class="prettyprint">/samples</code> directory, with each sample having its own subdirectory. Most of these subdirectories consist of a <code class="prettyprint">main.c </code>file and a GNU makefile. You can use a sample makefile as a guide to creating a makefile for this tutorial. You can either add GNU software to your build system, such as with Cygwin on Windows, or you can build applications through native tools, such as Visual Studio. </p>
+                                        <h3>Executing The Application</h3>
+                                        <p>All the sample make files create a <code class="prettyprint">sample.exe</code> executable. For the quick start tutorial application, once you build successfully, you should be able to run the executable with the following command at a command prompt:</p><pre class="prettyprint">
+  &gt; sample &lt;clientID&gt; &lt;clientIDtag&gt; licfile.txt</pre>
+                                        <p><a name="kanchor138"></a>In this example, the license file text is in its own file as a single line of text. You get Client ID&#160;and license information from Gracenote.</p>
+                                        <h2>Coding the App</h2>
+                                        <p>Once your development environment is setup, you can begin coding the application. As in the other sample applications, the code is going to be in one <code class="prettyprint">main.c</code> file which you
+ can create in any text editor or IDE. The application performs the following steps:</p>
+                                        <ol>
+                                            <li value="1">Perform GNSDK initializations</li>
+                                            <li value="2">Look up an album in Gracenote's database from a single track</li>
+                                            <li value="3">Display the album title of the first match</li>
+                                            <li value="4">Shut down the GNSDK and exit the program</li>
+                                        </ol>
+                                        <h3>Code the Includes, Defines and Local Function Declarations</h3>
+                                        <p>First, code all your pre-<code class="prettyprint">main()</code> function
+ includes, defines and local function declarations:</p><pre class="prettyprint">
+  #define GNSDK_MUSICID         1
+  #include "gnsdk.h"  // Includes all GN SDK headers
+  /* Standard C headers - used by the sample app, but not required for GNSDK */
+  #include &lt;stdio.h&gt;
+  #include &lt;string.h&gt;
+  #include &lt;stdlib.h&gt;
+  /* Local function declarations */
+  static int _init_gnsdk(const char* client_id, const char* client_id_tag, const char* client_app_version,
+             const char* license_path, gnsdk_user_handle_t* p_user_handle);
+  static void _display_error(int line_num, const char* info, gnsdk_error_t error_code);
+  static void _shutdown_gnsdk(gnsdk_user_handle_t user_handle);
+  static void _query_album_lookup(gnsdk_user_handle_t user_handle);
+  static void _display_album_gdo(gnsdk_gdo_handle_t album_gdo);
+  </pre>
+                                        <p><a name="kanchor139"></a><a name="kanchor140"></a><a name="kanchor141"></a>A define is required for each module (MusicID, MusicID-File, DSP, and so on.) that the program uses. This application only uses MusicID. Including "gnsdk.h" will automatically include all the GNSDK headers. We are also including forward declarations for all our local functions except <code class="prettyprint">main()</code>.</p>
+                                        <h3>Code the main() Function</h3>
+                                        <p>The <code class="prettyprint">main()</code> function validates the command-line parameters and calls three other functions to perform initialization, lookup and display, and shutdown:</p><pre class="prettyprint">
+  int main(int argc, char* argv[])
+  {
+    gnsdk_user_handle_t user_handle     = GNSDK_NULL;
+    const char*     client_id       = NULL;
+    const char*     client_id_tag     = NULL;
+    const char*     client_app_version  = "1";   // Version of your application
+    const char*     license_path    = NULL;
+    if (argc != 4)
+    {
+      printf("\nUsage:\n%s clientid clientidtag license\n", argv[0]);
+      return -1;
+    }
+    client_id   = argv[1];
+    client_id_tag = argv[2];
+    license_path  = argv[3];
+    /* GNSDK initialization */
+    if ((_init_gnsdk(client_id, client_id_tag,client_app_version,license_path,&amp;user_handle)) == 0)
+    {
+      _query_album_lookup(user_handle);  /* Perform a sample album text search query - calls display function */
+      _shutdown_gnsdk(user_handle);    /* Clean up and shutdown */
+    }
+    return 0;
+  }
+</pre>
+                                        <h3>Code GNSDK Initializations</h3>
+                                        <p>The  <code class="prettyprint">_init_gnsdk()</code> function performs all necessary GNSDK initializations which include the following:</p>
+                                        <ul>
+                                            <li value="1"><a name="kanchor142"></a>Initialize the GNSDK manager with your license text</li>
+                                            <li value="2">Initialize the MusicID library</li>
+                                            <li value="3"><a name="kanchor143"></a>Initialize the SDK User object - Normally, you would save this to a file after creating it and save it again at program exit if it had changed. This tutorial, skips storage and just creates a new user object and releases it on exit without saving it. User ID's are consumable. &#160;Best practice is to create and save it, rather than discarding it.</li>
+                                        </ul>
+                                        <p>All the GNSDK functions
+return "GNSDK_SUCCESS" if completed successfully. The error handling function - <code class="prettyprint">_display_error()</code> grabs system error information and displays it to the console when an error occurs. </p><pre class="prettyprint"><a name="kanchor144"></a>
+
+static void _display_error(int line_num, const char* info, gnsdk_error_t error_code)
+{
+  const gnsdk_error_info_t* error_info = gnsdk_manager_error_info();
+  printf("\nerror 0x%08x - %s\n\tline %d, info %s\n", error_code, error_info-&gt;error_description, line_num, info);
+}
+
+static int _init_gnsdk(const char* client_id, const char* client_id_tag, const char* client_app_version, const char* license_path,
+             gnsdk_user_handle_t* p_user_handle)
+{
+  gnsdk_manager_handle_t sdkmgr_handle  = GNSDK_NULL;
+  gnsdk_error_t      error      = GNSDK_SUCCESS;
+  gnsdk_user_handle_t  user_handle  = GNSDK_NULL;
+  gnsdk_str_t      serialized_user   = GNSDK_NULL;
+
+  /* Initialize the GNSDK Manager */
+  if ((error = gnsdk_manager_initialize(&amp;sdkmgr_handle, license_path, GNSDK_MANAGER_LICENSEDATA_FILENAME)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_initialize()", error);
+  }
+
+  /* Initialize the MusicID Library */
+  else if ((error = gnsdk_musicid_initialize(sdkmgr_handle)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_musicid_initialize()", error);
+  }
+  else if (( error = gnsdk_manager_user_register(GNSDK_USER_REGISTER_MODE_ONLINE, client_id, client_id_tag, client_app_version, &amp;serialized_user)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_user_register()", error);
+  } 
+  else if (( error = gnsdk_manager_user_create(serialized_user, client_id, &amp;user_handle)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_user_create()", error);
+  }
+
+
+  if (error != GNSDK_SUCCESS)
+    _shutdown_gnsdk(user_handle);
+  else  *p_user_handle = user_handle;
+
+  return error;
+}</pre>
+                                        <h3>Code the Lookup Function</h3>
+                                        <p>The <code class="prettyprint">_query_album_lookup</code> function looks up an album using a track title ("I Wonder"), which returns "Graduation" by Kanye West. This function uses what are called "GDOs" (Gracenote Data Objects) that receive both metadata and queries. GDOs are an important part of the GNSDK. To find out more about them, see <a href="../../concepts/data-objects-gdos.htm">About Gracenote Data Objects (GDOs)</a>.</p><pre class="prettyprint"><a name="kanchor145"></a><a name="kanchor146"></a><a name="kanchor147"></a><a name="kanchor148"></a><a name="kanchor149"></a><a name="kanchor150"></a>
+static void _query_album_lookup( gnsdk_user_handle_t user_handle)
+{
+  gnsdk_error_t         error      = GNSDK_SUCCESS;
+  gnsdk_musicid_query_handle_t  query_handle   = GNSDK_NULL;
+  gnsdk_gdo_handle_t      response_gdo   = GNSDK_NULL;
+  gnsdk_gdo_handle_t      album_gdo    = GNSDK_NULL;
+  gnsdk_uint32_t        count      = 0;
+  printf("\nMusicID Text Search Query\n");
+  /* Create the query handle */
+  if ((error = gnsdk_musicid_query_create(user_handle, GNSDK_NULL, GNSDK_NULL, &amp;query_handle)) == GNSDK_SUCCESS)
+  {
+    if ((error = gnsdk_musicid_query_set_text( query_handle, GNSDK_MUSICID_FIELD_TITLE, "I Wonder")) != GNSDK_SUCCESS)
+    {
+      _display_error(__LINE__, "gnsdk_musicid_query_set_text()", error);
+    }
+    else if ((error = gnsdk_musicid_query_find_albums(query_handle, &amp;response_gdo)) != GNSDK_SUCCESS)
+    {
+      _display_error(__LINE__, "gnsdk_musicid_query_find_albums()", error);
+  }
+  /* Find number of matches */
+  else if ((error = gnsdk_manager_gdo_child_count(response_gdo, GNSDK_GDO_CHILD_ALBUM, &amp;count)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_gdo_child_count(GNSDK_GDO_CHILD_ALBUM)", error);
+  }
+  else if (count == 0)
+  {
+     printf("\nNo albums found for the input.\n");
+  }
+  /* Get first child Album GDO */
+  else if ((error = gnsdk_manager_gdo_child_get(response_gdo, GNSDK_GDO_CHILD_ALBUM, 1, &amp;album_gdo)) != GNSDK_SUCCESS)
+  {
+     _display_error(__LINE__, "gnsdk_manager_gdo_child_get(GNSDK_GDO_CHILD_ALBUM)", error);
+  }
+  else
+  {
+      _display_album_gdo(album_gdo);
+      gnsdk_manager_gdo_release(album_gdo);
+      album_gdo = GNSDK_NULL;
+  }
+  }
+  /* Clean up - release the query handle and results */
+  if (GNSDK_NULL != query_handle) gnsdk_musicid_query_release(query_handle);
+  if (GNSDK_NULL != response_gdo) gnsdk_manager_gdo_release(response_gdo);
+}
+</pre>
+                                        <h3>Code the Display Function</h3>
+                                        <p>This function parses the album title from our returned GDO structure and displays it to the console.</p><pre class="prettyprint"><a name="kanchor151"></a>
+static void _display_album_gdo(gnsdk_gdo_handle_t album_gdo)
+{
+  gnsdk_error_t    error    = GNSDK_SUCCESS;
+  gnsdk_gdo_handle_t title_gdo  = GNSDK_NULL;
+  gnsdk_cstr_t     value    = GNSDK_NULL;
+  /* Album Title */
+  if ((error = gnsdk_manager_gdo_child_get( album_gdo, GNSDK_GDO_CHILD_TITLE_OFFICIAL, 1, &amp;title_gdo )) == GNSDK_SUCCESS)
+  {
+    if ((error = gnsdk_manager_gdo_value_get( title_gdo, GNSDK_GDO_VALUE_DISPLAY, 1, &amp;value )) == GNSDK_SUCCESS)
+    {
+      printf( "%8s %s\n", "Album Title:", value );
+    }
+    else _display_error(__LINE__, "gnsdk_manager_gdo_value_get()", error);
+    gnsdk_manager_gdo_release(title_gdo);
+  }
+  else _display_error(__LINE__, "gnsdk_manager_gdo_child_get()", error);
+}
+
+</pre>
+                                        <h3>Code the Shutdown Function</h3>
+                                        <p>This function releases the user object handle and shuts down GNSDK libraries</p><pre class="prettyprint">
+static void _shutdown_gnsdk(gnsdk_user_handle_t user_handle)
+      
+{
+  gnsdk_error_t error               = GNSDK_SUCCESS;
+  /* Release our user handle */
+  if ((error = gnsdk_manager_user_release(user_handle)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_user_release()", error);
+  }
+  /* Shutdown the libraries *
+  gnsdk_manager_shutdown(); // you only need to call this. &#160;It will shut down all open libraries.
+}
+</pre>
+                                        <h2>Conclusion</h2>
+                                        <p>Once you successfully build and run the app, you should see the following output similar to the following:</p><pre class="prettyprint">
+MusicID Text Search Query
+Album Title: Graduation
+</pre>
+                                        <p>This quick start sample demonstrates only a very small portion of the GNSDK&#160;capabilities. Check out the full 
+  documentation and the samples included with GNSDK to see how to search for different types of metadata by audio fingerprint,
+ text, or existing file.</p>
+                                        <h2>Reference</h2>
+                                        <p>The complete <code class="prettyprint">main.c</code> file should look like this:</p><pre class="prettyprint">
+#define GNSDK_MUSICID         1
+
+#include "gnsdk.h"  // Includes all GN SDK headers
+
+/* Standard C headers - used by the sample app, but not required for GNSDK */
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+/* Local function declarations */
+static int _init_gnsdk(const char* client_id, const char* client_id_tag, const char* client_app_version,
+             const char* license_path, gnsdk_user_handle_t* p_user_handle);
+static void _display_error(int line_num, const char* info, gnsdk_error_t error_code);
+static void _shutdown_gnsdk(gnsdk_user_handle_t user_handle);
+static void _query_album_lookup(gnsdk_user_handle_t user_handle);
+static void _display_album_gdo(gnsdk_gdo_handle_t album_gdo);
+
+
+int main(int argc, char* argv[])
+{
+  gnsdk_user_handle_t user_handle     = GNSDK_NULL;
+  const char*     client_id       = NULL;
+  const char*     client_id_tag     = NULL;
+  const char*     client_app_version  = "1";
+  const char*     license_path    = NULL;
+
+  int         rc          = 0;
+
+  if (argc != 4)
+  {
+    printf("\nUsage:\n%s clientid clientidtag license\n", argv[0]);
+    return -1;
+  }
+
+  client_id   = argv[1];
+  client_id_tag = argv[2];
+  license_path  = argv[3];
+
+  /* GNSDK initialization */
+  if ((rc = _init_gnsdk(client_id, client_id_tag,client_app_version,license_path,&amp;user_handle)) == 0)
+  {
+    _query_album_lookup(user_handle);  /* Perform a sample album TOC query */
+    _shutdown_gnsdk(user_handle);    /* Clean up and shutdown */
+  }
+
+  return rc;
+}
+
+
+static void _display_error(int line_num, const char* info, gnsdk_error_t error_code)
+{
+  const gnsdk_error_info_t* error_info = gnsdk_manager_error_info();
+  printf("\nerror 0x%08x - %s\n\tline %d, info %s\n", error_code, error_info-&gt;error_description, line_num, info);
+}
+
+
+
+static int _init_gnsdk(const char* client_id, const char* client_id_tag, const char* client_app_version, const char* license_path,
+             gnsdk_user_handle_t* p_user_handle)
+{
+  gnsdk_manager_handle_t sdkmgr_handle  = GNSDK_NULL;
+  gnsdk_error_t      error      = GNSDK_SUCCESS;
+  gnsdk_user_handle_t  user_handle  = GNSDK_NULL;
+  gnsdk_str_t      serialized_user   = GNSDK_NULL;
+
+  /* Initialize the GNSDK Manager */
+  if ((error = gnsdk_manager_initialize(&amp;sdkmgr_handle, license_path, GNSDK_MANAGER_LICENSEDATA_FILENAME)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_initialize()", error);
+  }
+
+  /* Initialize the MusicID Library */
+  else if ((error = gnsdk_musicid_initialize(sdkmgr_handle)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_musicid_initialize()", error);
+  }
+  else if (( error = gnsdk_manager_user_register(GNSDK_USER_REGISTER_MODE_ONLINE, client_id, client_id_tag, client_app_version, &amp;serialized_user)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_user_register()", error);
+  }
+  else if (( error = gnsdk_manager_user_create(serialized_user, client_id, &amp;user_handle)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_user_create()", error);
+  }
+
+
+  if (error != GNSDK_SUCCESS)
+    _shutdown_gnsdk(user_handle);
+  else  *p_user_handle = user_handle;
+
+  return error;
+}
+
+
+static void _shutdown_gnsdk(gnsdk_user_handle_t user_handle)
+{
+  gnsdk_error_t error               = GNSDK_SUCCESS;
+
+  /* Release our user handle - note that if updated_serialized_user_string is not null, meaning */
+  /* the handle had changed during program execution, then you should save it out to disk again */
+  if ((error = gnsdk_manager_user_release(user_handle)) != GNSDK_SUCCESS)
+  {
+    _display_error(__LINE__, "gnsdk_manager_user_release()", error);
+  }
+
+  /* Shutdown the libraries */
+  gnsdk_manager_shutdown();
+}
+
+
+static void _query_album_lookup( gnsdk_user_handle_t user_handle)
+{
+  gnsdk_error_t         error      = GNSDK_SUCCESS;
+  gnsdk_musicid_query_handle_t  query_handle   = GNSDK_NULL;
+  gnsdk_gdo_handle_t      response_gdo   = GNSDK_NULL;
+  gnsdk_gdo_handle_t      album_gdo    = GNSDK_NULL;
+  gnsdk_uint32_t        count      = 0;
+
+  printf("\nMusicID Text Search Query\n");
+
+  /* Create the query handle */
+  if ((error = gnsdk_musicid_query_create(user_handle, GNSDK_NULL, GNSDK_NULL, &amp;query_handle)) == GNSDK_SUCCESS)
+  {
+    if ((error = gnsdk_musicid_query_set_text( query_handle, GNSDK_MUSICID_FIELD_TITLE, "I Wonder")) != GNSDK_SUCCESS)
+    {
+      _display_error(__LINE__, "gnsdk_musicid_query_set_text()", error);
+    }
+    else if ((error = gnsdk_musicid_query_find_albums(query_handle, &amp;response_gdo)) != GNSDK_SUCCESS)
+    {
+      _display_error(__LINE__, "gnsdk_musicid_query_find_albums()", error);
+    }
+    /* Find number of matches */
+    else if ((error = gnsdk_manager_gdo_child_count(response_gdo, GNSDK_GDO_CHILD_ALBUM, &amp;count)) != GNSDK_SUCCESS)
+    {
+      _display_error(__LINE__, "gnsdk_manager_gdo_child_count(GNSDK_GDO_CHILD_ALBUM)", error);
+    }
+    else if (count == 0)
+    {
+      printf("\nNo albums found for the input.\n");
+    }
+
+    /* Get first child Album GDO */
+    else if ((error = gnsdk_manager_gdo_child_get(response_gdo, GNSDK_GDO_CHILD_ALBUM, 1, &amp;album_gdo)) != GNSDK_SUCCESS)
+    {
+      _display_error(__LINE__, "gnsdk_manager_gdo_child_get(GNSDK_GDO_CHILD_ALBUM)", error);
+    }
+    else
+    {
+      _display_album_gdo(album_gdo);
+      gnsdk_manager_gdo_release(album_gdo);
+      album_gdo = GNSDK_NULL;
+    }
+  }
+  else
+  {
+    _display_error(__LINE__, "gnsdk_musicid_query_create", error);
+  }
+
+  /* Clean up - release the query handle and results */
+  if (GNSDK_NULL != query_handle) gnsdk_musicid_query_release(query_handle);
+  if (GNSDK_NULL != response_gdo) gnsdk_manager_gdo_release(response_gdo);
+
+}
+
+
+static void _display_album_gdo(gnsdk_gdo_handle_t album_gdo)
+{
+  gnsdk_error_t    error    = GNSDK_SUCCESS;
+  gnsdk_gdo_handle_t title_gdo  = GNSDK_NULL;
+  gnsdk_cstr_t     value    = GNSDK_NULL;
+
+  printf("\nIn display_album_gdo\n");
+  /* Album Title */
+  if ((error = gnsdk_manager_gdo_child_get( album_gdo, GNSDK_GDO_CHILD_TITLE_OFFICIAL, 1, &amp;title_gdo )) == GNSDK_SUCCESS)
+  {
+    if ((error = gnsdk_manager_gdo_value_get( title_gdo, GNSDK_GDO_VALUE_DISPLAY, 1, &amp;value )) == GNSDK_SUCCESS)
+    {
+      printf( "%8s %s\n", "Album Title:", value );
+    }
+    else _display_error(__LINE__, "gnsdk_manager_gdo_value_get()", error);
+
+    gnsdk_manager_gdo_release(title_gdo);
+  }
+  else _display_error(__LINE__, "gnsdk_manager_gdo_child_get()", error);
+}
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

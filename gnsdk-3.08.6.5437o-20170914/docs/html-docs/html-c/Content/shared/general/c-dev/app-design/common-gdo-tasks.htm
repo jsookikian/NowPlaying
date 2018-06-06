@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Common GDO Tasks</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">C</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_c.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor249"></a>Common GDO Tasks</h1>
+                                        <p> </p>
+                                        <h2><a name="Retrievi"></a><a name="kanchor250"></a><a name="kanchor251"></a>Retrieving a Track GDO from an Album GDO</h2>
+                                        <p>To retrieve a Track GDO from an Album GDO, use gnsdk_manager_gdo_child_get() and one of the following keys. For these keys, the term <i>track number</i> is the sequential number of the track on the album’s CD jacket. The <i>ordinal</i> is the track position (1-based) in the array of tracks in an Album GDO.</p>
+                                        <ul>
+                                            <li value="1">GNSDK_GDO_CHILD_TRACK retrieves a Track GDO based on the <i>ordinal</i> position of the track.</li>
+                                            <li value="2">GNSDK_GDO_CHILD_TRACK_BY_NUMBER retrieves a Track GDO that matches the provided <i>track number</i>.</li>
+                                            <li value="3">GNSDK_GDO_CHILD_TRACK_MATCHED returns one or more Track GDOs that were <i>matched</i> by the prior query. </li>
+                                        </ul>
+                                        <p>In general, when retrieving tracks, follow these guidelines:</p>
+                                        <ul>
+                                            <li value="1"><a name="kanchor252"></a>Write code to manage the return of Partial album GDOs. Although this is likely a rare occurrence, do not assume that an Album GDO will contain all of the tracks of that album. If the Album returned is Partial, make a second query to retrieve the Full Album GDO.</li>
+                                            <li value="2">When retrieving matched tracks, always use the helper keys: GNSDK_GDO_CHILD_TRACK_MATCHED, and GNSDK_GDO_CHILD_TRACK_MATCHED_NUM.</li>
+                                        </ul>
+                                        <p>The following are examples of retrieving Tracks from an Album GDO. In this case, we assume the Album GDO is Full, containing all tracks of the album.</p>
+                                        <p>Assume a hypothetical TOC lookup of an album with 5 tracks.  We get an album GDO that looks like:</p><pre class="prettyprint">&lt;album&gt;<br />  Ord 1   &lt;Track 1&gt;<br />  Ord 2   &lt;Track 2&gt;<br />  Ord 3   &lt;Track 3&gt;<br />  Ord 4   &lt;Track 4&gt;<br />  Ord 5   &lt;Track 5&gt;<br />&lt;/album&gt;</pre>
+                                        <p>In this case:</p>
+                                        <ul>
+                                            <li value="1">GNSDK_GDO_CHILD_TRACK with <i>ordinal</i> 4 returns Track 4.</li>
+                                            <li value="2">GNSDK_GDO_CHILD_TRACK_BY_NUMBER with <i>track number</i> 4 returns Track 4.</li>
+                                        </ul>
+                                        <p>The example below shows the Album GDO result after performing a match query, such as looking up a track by its fingerprint or title. Assuming this matched Track 4, we get an album GDO that looks like the following:</p><pre class="prettyprint">&lt;album&gt;<br />  Ord 1  &lt;track_matched&gt;4&lt;/track_matched&gt;<br />  Ord 1  &lt;Track 1&gt;<br />  Ord 2  &lt;Track 2&gt;<br />  Ord 3  &lt;Track 3&gt;<br />  Ord 4  &lt;Track 4&gt;<br />  Ord 5  &lt;Track 5&gt;<br />&lt;/album&gt;</pre>
+                                        <p>This GDO contains two arrays: </p>
+                                        <ul>
+                                            <li value="1">A track array: containing the actual tracks</li>
+                                            <li value="2">A matched_track array: containing track number of the matched track or tracks.</li>
+                                        </ul>
+                                        <p>The GNSDK_GDO_CHILD_TRACK* keys operate on this GDO as follows:</p>
+                                        <ul>
+                                            <li value="1">GNSDK_GDO_CHILD_TRACK with <i>ordinal</i> 4 returns Track 4.</li>
+                                            <li value="2">GNSDK_GDO_CHILD_TRACK_BY_NUMBER with <i>track number</i> 4 returns Track 4.</li>
+                                            <li value="3">GNSDK_GDO_CHILD_TRACK_MATCHED with <i>ordinal</i> 1 returns Track 4.</li>
+                                        </ul>
+                                        <p>Also, GNSDK_GDO_VALUE_TRACK_MATCHED_NUM with <i>ordinal</i> 1 returns its value, the<i>number 4</i> which is the <i>track number</i> of the matched track.</p>
+                                        <h2>Getting the Type for a GDO</h2>
+                                        <p>If needed, your application can get the type of a GDO using the gnsdk_manager_gdo_get_type() function. For example, your application might need to determine a GDO’s type after a text-based lookup:</p><pre class="prettyprint"><a name="kanchor253"></a><a name="kanchor254"></a>gnsdk_manager_gdo_get_type(match_gdo, &amp;gdo_type);
+
+if (0 == strcmp(gdo_type, GNSDK_GDO_TYPE_ALBUM))
+  /* Work with Album GDO */
+else if (0 == strcmp(gdo_type, GNSDK_GDO_TYPE_CONTRIBUTOR))
+  /* Work with Contributor GDO */
+</pre>
+                                        <h2><a name="kanchor255"></a>Checking for Full and Partial Results</h2>
+                                        <p>You can use the GNSDK_GDO_VALUE_FULL_RESULT value key to see if a child GDO contains full or partial metadata (GNSDK_VALUE_FALSE = partial, GNSDK_VALUE_TRUE = full).</p>
+                                        <p><b>For example:</b>
+                                        </p><pre class="prettyprint"><a name="kanchor256"></a>
+...Perform album query and get response GDO
+
+/* Get first child album GDO from response GDO and check if it contains partial data */
+gnsdk_manager_gdo_child_get(response_gdo, GNSDK_GDO_CHILD_ALBUM, 1, &amp;album_gdo);
+
+/* Is this a partial album? */
+gnsdk_manager_gdo_value_get(album_gdo, GNSDK_GDO_VALUE_FULL_RESULT, 1, &amp;value_string);
+
+if (atoi(value_string) == GNSDK_VALUE_FALSE)
+{
+  printf("retrieving FULL RESULT\n");
+      
+  /* Note that we are getting full results for the first child album GDO instead of
+   * presenting partial results from all child GDO matches to the end user to select from
+   */
+
+  /* Add child GDO back to the existing query handle to retrieve full result */
+  gnsdk_musicid_query_set_gdo(query_handle, album_gdo);
+
+  /* Query for this match in full*/
+  gnsdk_musicid_query_find_albums(query_handle, &amp;response_gdo);
+
+  /* Get child GDO with full album results */
+  gnsdk_manager_gdo_child_get(response_gdo, GNSDK_GDO_CHILD_ALBUM, 1, &amp;album_gdo);
+
+  ...
+  
+</pre>
+                                        <h2><a name="Checking"></a><a name="kanchor257"></a>Checking Whether a Match Needs a Decision</h2>
+                                        <p>You can use the GNSDK_GDO_VALUE_RESPONSE_NEEDS_DECISION boolean value key to see if a GDO needs a decision.</p>
+                                        <p>To resolve a decision, an application typically presents the end user with a subset of the matches' partial results (for example, album titles) and lets the user select the correct match or reject them all.  Alternatively, the application may automatically select the first match or reject them all .</p>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>In all cases, match results can be partial or full, so after selecting a match, the application should test it using GNSDK_GDO_VALUE_FULL_RESULT. </p>
+                                        <p><b>For example:</b>
+                                        </p><pre class="prettyprint">
+gnsdk_cstr_t  value      = (gnsdk_cstr_t)GNSDK_NULL;
+gnsdk_cstr_t  needs_decision   = 0;
+gnsdk_uint32_t  count      = 0;
+ 
+/*
+ * Get count and needs_decision values from response GDO
+ */
+gnsdk_manager_gdo_value_get(response_gdo, GNSDK_GDO_VALUE_RESPONSE_NEEDS_DECISION, 1, &amp;value);
+needs_decision = value;
+gnsdk_manager_gdo_value_get(response_gdo, GNSDK_GDO_VALUE_RESPONSE_RESULT_COUNT, 1, &amp;value)
+count = atoi(value);
+ 
+if (count &gt; 0)  // Either multiple matches or confidence in single match is not high
+{
+   int user_selection = 1;
+  
+   if (0 == strcmp(needs_decision, GNSDK_VALUE_TRUE))
+   (
+    /*
+     * Resolve match(es). Look at count to determine paging, depending on device.
+     * Typically, you would use partial results from matches (for example, album titles)
+     * and present them to end user to select from
+     *
+     * Set user_selection to user's choice or 0 if they do not make a selection
+     */
+      
+    ...
+      
+   }
+ 
+   if (user_selection)
+   {
+     /* There is a single match */
+     /* Test if GDO has full or partial metadata. If partial, get full (if desired) */
+      
+     ...
+      
+   }
+}
+else
+{
+   /* No match returned  */
+ 
+}</pre>
+                                        <h2>Serializing a GDO</h2>
+                                        <p>You can serialize a GDO to save it for later use in an application.  Serializing a GDO retains only key information needed for common GDO functions. Other information is discarded. </p>
+                                        <p>To restore the discarded information, your application must request the GDO again. An application can reconstitute (de-serialize) a serialized GDO and use it for subsequent processing.</p>
+                                        <p class="info"><a name="kanchor258"></a>For a list of values returned in a partial result, see the Data Model in the <span style="font-style: italic;" class="GeneralProductName">GNSDK</span><i><a name="kanchor259"></a><a name="kanchor260"></a> C API Reference</i>.</p>
+                                        <p class="warning"><b>Important</b>: A serialized GDO is not a static identifier. You cannot use it as a comparison identifier for any purposes, including straight comparisons, caching, indexing, and so on.</p>
+                                        <h2>Rendering a GDO as XML</h2>
+                                        <p><span class="GeneralProductName">GNSDK</span> supports rendering GDOs as XML.  This is an advanced feature, but may be useful to track user choices, retain query history, or provide data to other applications. Rendering to XML is also helpful when testing queries to see their results. For more information, see <a href="../../../music/c-dev/advanced/render-gdo-as-xml.htm" class="GNBasic MCXref xref xrefGNBasic" xrefformat="{para}">Rendering a GDO as XML</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Processing Returned Metadata Results</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">OO APIs</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_oo_all.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor409"></a><a name="kanchor410"></a>Processing Returned Metadata Results</h1>
+                                        <p>Processing returned metadata results is pretty straight-forward—objects returned can be traversed and accessed like any other objects. However, there are three things about returned results you need to be aware of:</p>
+                                        <ol>
+                                            <li value="1"><b>Needs decision</b>—A result could require an additional decision from an application or end user.</li>
+                                            <li value="2"><b>Full or partial results</b>—A result object could contain full or partial metadata</li>
+                                            <li value="3"><b><a name="kanchor411"></a>Locale-dependent data</b>—Some metadata requires that a locale be loaded.</li>
+                                        </ol>
+                                        <h2><a name="kanchor412"></a>Needs Decision</h2>
+                                        <p>Top-level response classes—<code class="prettyprint">GnResponseAlbums</code>, <code class="prettyprint">GnResponseTracks</code>, <code class="prettyprint">GnResponseContributors</code>, <code class="prettyprint">GnResponseDataMatches</code><a name="kanchor413"></a>—contain a "needs decision" flag. In all cases, Gracenote returns high-confidence results based on the identification criteria; however, even high-confidence results could require additional decisions from an application or end user. For example, all multiple match responses require the application (or end user) make a decision about which match to use and process to retrieve its metadata. Therefore, the GNSDK flags every multiple match response as "needs decision".</p>
+                                        <p>A single match response can also need a decision. Though it may be a good candidate, Gracenote could determine that it is not quite perfect.</p>
+                                        <p>In summary, responses that require a decision are:</p>
+                                        <ul>
+                                            <li value="1">Every multiple match response</li>
+                                            <li value="2">A single match response that Gracenote determines needs a decision from the application or end user, based on the quality of the match and/or the mechanism used to identify the match (such as text, TOC, fingerprints, and so on).</li>
+                                        </ul>
+                                        <p><b>Example needs decision check (C++):</b>
+                                        </p><pre class="prettyprint">GnResponseAlbums response = music_id.FindAlbums(albObject);
+needs_decision =response.NeedsDecision();
+if(needs_decision)
+{
+  /* Get user selection. Note that is not an SDK method */
+  user_pick = doMatchSelection(response); 
+}</pre>
+                                        <p><b>Objective-C:</b>
+                                        </p><pre class="prettyprint"><a name="kanchor414"></a>/* Perform the query */
+GnResponseAlbums *response = [musicId findAlbumsWithGnDataObject:dataAlbum error:&amp;error];
+  
+if ( [[response albums] allObjects].count != 0)
+{
+   needsDecision = [response needsDecision];
+    
+   /* See if selection of one of the albums needs to happen */
+   if (needsDecision)
+   {
+    // Get User selection. Note that is not an SDK method
+    choiceOrdinal = [self doMatchSelection:response];
+   }
+   // ...
+      
+}</pre>
+                                        <h2><a name="kanchor415"></a>Full and Partial Metadata Results</h2>
+                                        <p>A query response can return 0-n matches. As indicated with a <code class="prettyprint">fullResult</code> flag, a match can contain either full or partial metadata results. A partial result is a subset of the full metadata available, but enough to perform additional processing. One common use case is to present a subset of the partial results (for example, album titles) to the end user to make a selection. Once a selection is made, you can then do a secondary query, using the partial object as a parameter, to get the full results (if desired).</p>
+                                        <p><b>Example followup query (C++):</b>
+                                        </p><pre class="prettyprint">/* Get first match */
+GnAlbum album = response.Albums().at(0).next();    
+bool fullResult = album.IsFullResult();
+
+/* If partial result, do a follow-up query to retrieve full result */
+if (!fullResult)
+{
+  /* Do followup query to get full data - set partial album as query input. */
+  GnResponseAlbums followup_response = music_id.FindAlbums(album);
+
+  /* Now our first album has full data */ 
+  album = followup_response.Albums().at(0).next();      
+}</pre>
+                                        <p><b>Objective-C:</b>
+                                        </p><pre class="prettyprint">GnAlbum *album = [[[response albums] allObjects] objectAtIndex:choiceOrdinal];
+    
+BOOL fullResult = [album isFullResult];
+    
+/* if we only have a partial result, we do a follow-up query to retrieve the full album */
+if (!fullResult)
+{
+   /* do followup query to get full object. Setting the partial album as the query input. */
+   GnResponseAlbums *followupResponse = [musicId findAlbumsWithGnDataObject:dataAlbum error:&amp;error];
+      
+   /* now our first album is the desired result with full data */
+   album = [[followupResponse albums] nextObject];
+      
+   // ...
+      
+}</pre>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span><a name="kanchor416"></a><a name="kanchor417"></a>In many cases, the data contained in a partial result is more than enough for most users and applications. For a list of values returned in a partial result, see the Data Model in the GNSDK API Reference.</p>
+                                        <h2><a name="kanchor418"></a>Locale-Dependent Data</h2>
+                                        <p><a name="kanchor419"></a>GNSDK provides locales as a convenient way to group locale-dependent metadata specific to a region (such as Europe) and language that should be returned from the Gracenote service. A locale is defined by a group (such as Music), a language, a region and a descriptor (indicating level of metadata detail), which are identifiers to a specific set of lists in the Gracenote Service. </p>
+                                        <p>There are a number of metadata fields that require having a locale loaded. For more information, see <a href="load-locale.htm" class="MCXref xref" xrefformat="{para}">Loading a Locale</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

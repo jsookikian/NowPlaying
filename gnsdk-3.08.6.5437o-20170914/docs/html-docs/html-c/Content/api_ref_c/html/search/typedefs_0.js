@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['gnsdk_5fdsp_5ffeature_5fqualities_5ft',['gnsdk_dsp_feature_qualities_t',['../group___music___fingerprinting___types_enums.html#gac043b709d1c47a916bcf42215cce67bf',1,'gnsdk_dsp.h']]],
+  ['gnsdk_5ffp_5fdata_5fcallback_5ffn',['gnsdk_fp_data_callback_fn',['../group___status_callbacks___callbacks.html#ga33802cd67dc6db8da9a81f9287f7e9a6',1,'gnsdk_fp.h']]],
+  ['gnsdk_5fhandle_5fdelete_5ffn',['gnsdk_handle_delete_fn',['../group___manager___utility_functions.html#ga0bf87586564bc2471c1afbf4293998a2',1,'gnsdk_manager.h']]],
+  ['gnsdk_5flookup_5flocalstream_5fstatus_5ffn',['gnsdk_lookup_localstream_status_fn',['../group___music___lookup_local_stream___ingest___callbacks.html#ga981b699957cde529bcaaabf769660006',1,'gnsdk_lookup_localstream.h']]],
+  ['gnsdk_5fmanager_5flogging_5fcallback_5ffn',['gnsdk_manager_logging_callback_fn',['../group___setup___logging___callback.html#ga32c455836c6bb5156b9978e24d78fb11',1,'gnsdk_manager_logging.h']]],
+  ['gnsdk_5fmemory_5fwarn_5ffn',['gnsdk_memory_warn_fn',['../group___manager___g_n_s_d_k_metrics___functions.html#gabaef0f7fbe2399e70dc01b23d59b8e17',1,'gnsdk_manager.h']]],
+  ['gnsdk_5fmusicidfile_5fcallback_5fget_5ffingerprint_5ffn',['gnsdk_musicidfile_callback_get_fingerprint_fn',['../group___music___music_i_d_file___callbacks.html#ga66efe9f4254fa994a2ed8c5858faf0ac',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5fcallback_5fget_5fmetadata_5ffn',['gnsdk_musicidfile_callback_get_metadata_fn',['../group___music___music_i_d_file___callbacks.html#gaf99fa8ad5a32a3ff39598fb0f9a5006a',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5fcallback_5fmusicid_5fcomplete_5ffn',['gnsdk_musicidfile_callback_musicid_complete_fn',['../group___music___music_i_d_file___callbacks.html#gaf726c372b546d425d3010d496d5011f9',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5fcallback_5fresult_5favailable_5ffn',['gnsdk_musicidfile_callback_result_available_fn',['../group___music___music_i_d_file___callbacks.html#ga16cb29c2da186c3505c305eb89a18f85',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5fcallback_5fresult_5fnot_5ffound_5ffn',['gnsdk_musicidfile_callback_result_not_found_fn',['../group___music___music_i_d_file___callbacks.html#ga0e031abb31ce0d9180813a5e48cc5ae9',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5fcallback_5fstatus_5ffn',['gnsdk_musicidfile_callback_status_fn',['../group___music___music_i_d_file___callbacks.html#gab6ad324446767245b08b1ad2bbe910e4',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5fcallbacks_5ft',['gnsdk_musicidfile_callbacks_t',['../group___music___music_i_d_file___callbacks.html#ga5d53d5d0033b661f5126da134f6973cf',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5ffileinfo_5fcallbacks_5ft',['gnsdk_musicidfile_fileinfo_callbacks_t',['../group___music___music_i_d_file___callbacks.html#ga0d359ff6010c28d870ab4ac8239cf446',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidfile_5ffileinfo_5fuserdata_5fdelete_5ffn',['gnsdk_musicidfile_fileinfo_userdata_delete_fn',['../group___music___music_i_d_file___callbacks.html#gaa64057c6adb4d1a97a523a99592beb21',1,'gnsdk_musicid_file.h']]],
+  ['gnsdk_5fmusicidstream_5fcallbacks_5ft',['gnsdk_musicidstream_callbacks_t',['../group___music___music_i_d_stream___callbacks.html#ga396a37549a170689b0efb44fbefda924',1,'gnsdk_musicid_stream.h']]],
+  ['gnsdk_5fmusicidstream_5fcompleted_5fwith_5ferror_5fcallback_5ffn',['gnsdk_musicidstream_completed_with_error_callback_fn',['../group___music___music_i_d_stream___callbacks.html#ga554f99cbf263ce69eb5eb0d8e3a4fcfd',1,'gnsdk_musicid_stream.h']]],
+  ['gnsdk_5fmusicidstream_5fidentifying_5fstatus_5fcallback_5ffn',['gnsdk_musicidstream_identifying_status_callback_fn',['../group___music___music_i_d_stream___callbacks.html#ga23cd1741a36f5ab93dc4fe0f2fe38c4f',1,'gnsdk_musicid_stream.h']]],
+  ['gnsdk_5fmusicidstream_5fprocessing_5fstatus_5fcallback_5ffn',['gnsdk_musicidstream_processing_status_callback_fn',['../group___music___music_i_d_stream___callbacks.html#ga9943c40187df40c5155e57ee5c6570c4',1,'gnsdk_musicid_stream.h']]],
+  ['gnsdk_5fmusicidstream_5fresult_5favailable_5fcallback_5ffn',['gnsdk_musicidstream_result_available_callback_fn',['../group___music___music_i_d_stream___callbacks.html#gaeedc6f777f0569f5e1225cfb3abb963f',1,'gnsdk_musicid_stream.h']]],
+  ['gnsdk_5fplaylist_5fupdate_5fcallback_5ffn',['gnsdk_playlist_update_callback_fn',['../group___playlist___callbacks.html#ga54cf72f8d6bff3524a3c8a4aa6017cde',1,'gnsdk_playlist.h']]],
+  ['gnsdk_5fsubmit_5fgdo_5fvalidate_5fcallback_5ffn',['gnsdk_submit_gdo_validate_callback_fn',['../group___submit___metadata_editable_g_d_os___callbacks.html#ga0ba7390d1df9a4f0a3dc132847896746',1,'gnsdk_submit_gdo.h']]],
+  ['gnsdk_5fuser_5fstore_5ffn',['gnsdk_user_store_fn',['../group___setup___users___functions.html#ga4aacfb1d837f275d900be227685b3daf',1,'gnsdk_manager.h']]]
+];

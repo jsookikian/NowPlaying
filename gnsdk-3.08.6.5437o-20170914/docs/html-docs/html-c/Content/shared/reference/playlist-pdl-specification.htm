@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Playlist PDL Specification</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Standard.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">C</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_c.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor96"></a><a name="kanchor97"></a>Playlist PDL Specification</h1>
+                                        <p>The <span class="GeneralProductName">GNSDK</span><a name="kanchor98"></a><a name="kanchor99"></a> Playlist Definition Language (PDL) is a query syntax, similar to Structured Query Language (SQL), that enables flexible custom playlist generation using human-readable text strings. PDL allows developers to dynamically create custom playlists. By storing individual PDL statements, applications can create and manage multiple preset and user playlists for later use.<br /></p>
+                                        <p><a name="kanchor100"></a>PDL statements express the playlist definitions an application uses to determine what items are included in resulting playlists. PDL supports logic operators, operator precedence and in-line arithmetic. PDL is based on Search Query Language (SQL). This section assumes you understand SQL and can write SQL statements.</p>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span> Before implementing PDL statement functionality for your application, carefully consider if the provided More Like This function, gnsdk_playlist_generate_morelikethis( ) meets your design requirements. Using the More Like This function eliminates the need to create and validate PDL statements.</p>
+                                        <h2>PDL Syntax</h2>
+                                        <p>This topic discusses PDL keywords, operators, literals, attributes, and functions.</p>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>Not all keywords support all operators. Use gnsdk_playlist_statement_validate() to check a PDL Statement, which generates an error for invalid operator usage.</p>
+                                        <h3>Keywords</h3>
+                                        <p>PDL supports these keywords:</p>
+                                        <table class="TableStyle-Standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/Standard.css');">
+                                            <thead>
+                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Keyword</th>
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Description</th>
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Required or Optional</th>
+                                                    <th class="TableStyle-Standard-HeadD-Regular-Header1"><a name="kanchor101"></a>PDL Statement Order</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>GENERATE PLAYLIST</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p> </p>
+                                                        <p>All PDL statements must begin with either GENERATE PLAYLIST or its abbreviation,</p>
+                                                        <p>GENPL</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>Required</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>1</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>WHERE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p> </p>
+                                                        <p>Specifies the attributes and threshold criteria used to generate the playlist.</p>
+                                                        <p>If a PDL statement does not include the WHERE keyword, Playlist</p>
+                                                        <p>operates on the entire collection.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>Optional</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>2</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>ORDER</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p> </p>
+                                                        <p>Specifies the criteria used to order the results' display.</p>
+                                                        <p>If a PDL statement does not include the ORDER keyword, Playlist</p>
+                                                        <p>returns results in random order.</p>
+                                                        <p>Example: Display results in based on a calculated similarity value; tracks having greater similarity values to input criteria display higher in the results.</p>
+                                                        <p>The expression format is: &lt;identifier&gt; &lt;operator&gt; &lt;identifier&gt;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>Optional</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>3</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>LIMIT</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p> </p>
+                                                        <p>Specifies criteria used to restrict the number of returned results.</p>
+                                                        <p>Also uses the keywords RESULT and PER.</p>
+                                                        <p>Example: Limiting the number of tracks displayed in a playlist to 30 results with a maximum of two tracks per artist.</p>
+                                                        <p>The expression format is: &lt;identifier&gt; &lt;operator&gt; &lt;identifier&gt;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>Optional</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>4</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>SEED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p> </p>
+                                                        <p><a name="kanchor102"></a>Specifies input data criteria from one or more idents. Typically, a Seed is the This in a More Like This playlist request.</p>
+                                                        <p>Example: Using a Seed of Norah Jones' track Don't Know Why to generate a playlist of female artists of a similar genre.</p>
+                                                        <p>The expression format is: &lt;identifier&gt; &lt;operator&gt; &lt;identifier&gt;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>Optional</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                        <p>NA</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h4 class="example">Example: Keyword Syntax</h4>
+                                        <p>This PDL statement example shows the syntax for each keyword. In addition to &lt;att_imp&gt;, &lt;expr&gt;, and &lt;score&gt; discussed above, this example shows:</p>
+                                        <ul>
+                                            <li value="1">&lt;math_op&gt; is one of the valid PDL mathematical operators.</li>
+                                            <li value="2">&lt;number&gt; is positive value.</li>
+                                            <li value="3"><a name="kanchor103"></a>&lt;attr_name&gt; is a valid attribute, either a Gracenote-delivered attribute or an implementation-specific attribute.</li>
+                                        </ul><pre class="prettyprint">GENERATE PLAYLIST<br /> WHERE &lt;att_imp&gt; [&lt;math_op&gt; &lt;score&gt;][ AND|OR &lt;att_imp&gt;]<br />ORDER &lt;expr&gt;[ &lt;math_op&gt; &lt;expr&gt;]<br /> LIMIT [number RESULT | PER &lt;attr_name&gt;][,number [ RESULT | PER &lt;attr_name&gt;]]</pre>
+                                        <h3>Operators</h3>
+                                        <p>PDL supports these operators:</p>
+                                        <table class="TableStyle-Standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/Standard.css');">
+                                            <thead>
+                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Operator Type</th>
+                                                    <th class="TableStyle-Standard-HeadD-Regular-Header1">Available Operators</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>Comparison</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>&gt;, &gt;=, &lt;, &lt;=, ==, !=, LIKE</p>
+                                                        <p>LIKE is for fuzzy matching, best used with strings; see PDL Examples</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>Logical</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>AND, OR</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>Mathematical</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                        <p>+, -, *, /</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p> </p>
+                                        <h3><a name="kanchor104"></a>Literals</h3>
+                                        <p>PDL supports the use of single (') and double (") quotes, as shown:</p>
+                                        <ul>
+                                            <li value="1">Single quotes: 'value one'</li>
+                                            <li value="2">Double quotes: "value two"</li>
+                                            <li value="3">Single quotes surrounded by double quotes: "'value three'"</li>
+                                        </ul>
+                                        <p class="info">You must enclose a literal in quotes or Playlist evaluates it as an attribute.</p>
+                                        <h3>Attributes</h3>
+                                        <p><a name="kanchor105"></a><a name="kanchor106"></a>Most attributes require a Gracenote-defined numeric identifier value or GDO (GnDataObject in object-oriented languages) for Seed.</p>
+                                        <ul>
+                                            <li value="1">Identifier: Gracenote-defined numeric identifier value is typically a 5-digit value; for example, the genre identifier 24045 for Rock. These identifiers are maintained in lists in Gracenote Service; download the lists using <span class="GeneralProductName">GNSDK</span><a name="kanchor107"></a> Manager's Lists and List Types APIs</li>
+                                            <li value="2">GDO Seed: Use GNSDK Manager's GDO APIs to access XML strings for Seed input.</li>
+                                        </ul>
+                                        <p><a name="kanchor108"></a>The following table shows the supported system attributes and their respective required input. The first four attributes are the GOET attributes.</p>
+                                        <p class="info">The delivered attributes have the prefix GN_ to denote they are Gracenote standard attributes. You can extend the attribute functionality in your application by implementing custom attributes; however, do not use the prefix GN_.</p>
+                                        <table class="TableStyle-Standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/Standard.css');">
+                                            <thead>
+                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Name</th>
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Attribute</th>
+                                                    <th class="TableStyle-Standard-HeadD-Regular-Header1">Required Input</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p><a name="kanchor109"></a><a name="kanchor110"></a><a name="kanchor111"></a>Genre Origin Era</p>
+                                                        <p><a name="kanchor112"></a><a name="kanchor113"></a><a name="kanchor114"></a>Artist Type Mood Tempo</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>GN_Genre GN_Origin GN_Era GN_ArtistType GN_Mood GN_Tempo</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p> </p>
+                                                        <p>Gracenote-defined numeric identifier value</p>
+                                                        <p>GDO Seed XML string</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p><a name="kanchor115"></a>Artist Name</p>
+                                                        <p><a name="kanchor116"></a>Album Name</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>GN_ArtistName</p>
+                                                        <p>GN_AlbumName</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                        <p><a name="kanchor117"></a>Text string</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p> </p>
+                                        <h3>Functions</h3>
+                                        <p>PDL supports these functions:</p>
+                                        <ul>
+                                            <li value="1">RAND(max value)</li>
+                                            <li value="2">RAND(max value, seed)</li>
+                                        </ul>
+                                        <h3>PDL Statements</h3>
+                                        <p>This topic discusses PDL statements and their components.</p>
+                                        <h4>Attribute Implementation &lt;att_imp&gt;</h4>
+                                        <p>A PDL statement is comprised of one or more attribute implementations that contain attributes, operators, and literals. The general statement format is:</p>
+                                        <p>"GENERATE PLAYLIST WHERE &lt;attribute&gt; &lt;operator&gt; &lt;criteria&gt;"</p>
+                                        <p>You can write attribute implementations in any order, as shown:</p>
+                                        <p>GN_ArtistName == "ACDC"</p>
+                                        <p>or</p>
+                                        <p>"ACDC" == GN_ArtistName</p>
+                                        <p>WHERE and ORDER statements can evaluate to a score; for example:</p>
+                                        <p>"GENERATE PLAYLIST WHERE LIKE SEED &gt; 500"</p>
+                                        <p>WHERE statements that evaluate to a non-zero score determine what idents are in the playlist results. ORDER statements that evaluate to a non-zero score determine how idents display in the playlist results.</p>
+                                        <h4>Expression &lt;expr&gt;</h4>
+                                        <p>An expression performs a mathematical operation on the score evaluated from a attribute implementation.</p>
+                                        <p>[&lt;number&gt; &lt;math_op&gt;] &lt;att_imp&gt;</p>
+                                        <p>For example:</p>
+                                        <p>3 * (GN_Era LIKE SEED)</p>
+                                        <h4><a name="kanchor118"></a>Score &lt;score&gt;</h4>
+                                        <p>Scores can range between -1000 and 1000.</p>
+                                        <p>For boolean evaluation, True equals 1000 and False equals 0.</p>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>For more complex statement scoring, concatenate attribute implementations and add weights to a PDL statement.</p>
+                                        <h2 class="example">Example: PDL Statements</h2>
+                                        <p>The following PDL example generates results that have a genre similar to and on the same level as the seed input. For example, if the Seed genre is a Level 2: Classic R&amp;B/Soul, the matching results will include similar Level 2 genres, such as Neo-Soul.</p><pre class="prettyprint"> "GENERATE PLAYLIST WHERE GN_Genre LIKE SEED"</pre>
+                                        <p>This PDL example generates results that span a 20-year period. Matching results will have an era value from the years 1980 to 2000.</p><pre class="prettyprint"> "GENERATE PLAYLIST WHERE GN_Era &gt;= 1980 AND GN_Era &lt; 2000"</pre>
+                                        <p>This PDL example performs fuzzy matching with Playlist, by using the term LIKE and enclosing a string value in single (') or double (") quotes (or both, if needed). It generates results where the artist name may be a variation of the term ACDC, such as:</p>
+                                        <ul>
+                                            <li value="1">ACDC</li>
+                                            <li value="2">AC/DC</li>
+                                            <li value="3">AC*DC</li>
+                                        </ul><pre class="prettyprint"> "GENERATE PLAYLIST WHERE (GN_ArtistName LIKE 'ACDC')"</pre>
+                                        <p>The following PDL example generates results where:</p>
+                                        <ul>
+                                            <li value="1">The tempo value must be less than 120 BPM.</li>
+                                            <li value="2">The ordering displays in descending order value, from greatest to least (119, 118, 117, and so on).</li>
+                                            <li value="3">The genre is similar to the Seed input.</li>
+                                        </ul><pre class="prettyprint"> "GENERATE PLAYLIST WHERE GN_Tempo &gt; 120 ORDER GN_Genre LIKE SEED"</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

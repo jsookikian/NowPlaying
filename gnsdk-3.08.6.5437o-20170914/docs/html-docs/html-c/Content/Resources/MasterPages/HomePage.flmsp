@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="47" MadCap:lastWidth="790">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Gracenote Documentation" />
+        <meta name="author" content="Gracenote, Inc." /><title></title>
+        <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7045754/7789972/css/fonts.css" />
+        <link href="../Stylesheets/StylesForHomePage.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="contentBody">
+            <MadCap:bodyProxy />
+        </div>
+    </body>
+</html>

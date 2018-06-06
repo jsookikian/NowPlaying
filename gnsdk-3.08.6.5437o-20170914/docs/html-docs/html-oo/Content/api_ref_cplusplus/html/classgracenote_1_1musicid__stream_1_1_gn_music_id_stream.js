@@ -1,0 +1,25 @@
+var classgracenote_1_1musicid__stream_1_1_gn_music_id_stream =
+[
+    [ "GnMusicIdStream", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a2fe68edfa5548532dca62d7ea723c47a", null ],
+    [ "GnMusicIdStream", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a795b0a9bd579fc35534c4b761ccb7ba0", null ],
+    [ "GnMusicIdStream", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a6397a79cc327300c0c847142463ad61d", null ],
+    [ "GnMusicIdStream", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a407cda812bc87d164a03facbb73c3130", null ],
+    [ "~GnMusicIdStream", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a7796a520b8f2a3ece852b1c4c93dc29b", null ],
+    [ "AudioProcess", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#ad43593aac8e6f1ab61265c8f511b7508", null ],
+    [ "AudioProcessStart", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a0ba35764a969333471b0b416e24f059f", null ],
+    [ "AudioProcessStart", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a45dde0a6908d5cb9ef62590d680b92f4", null ],
+    [ "AudioProcessStop", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#aaadafe497be9e4dcd894402d22ce3961", null ],
+    [ "AutomaticIdentification", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#ab38f2553cda9474995a7fcde0c76f68b", null ],
+    [ "AutomaticIdentification", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a7972d06ec7cb6f435b6dc3e3dc9f964f", null ],
+    [ "BuildDate", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#aec422c4734f350d9f5b8c81cf00ecca6", null ],
+    [ "EventHandler", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a3222503b342b09440df0b6ce1558f049", null ],
+    [ "IdentifyAlbum", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#af3172f6ab9df4ca9bc0a269203b978d1", null ],
+    [ "IdentifyAlbumAsync", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#ac6fce768ea5b38711cf6ec54fb0d18d5", null ],
+    [ "IdentifyCancel", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a731f4b21c91522f6e3b6c48968481e7f", null ],
+    [ "InfoGet", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a9770af0f0d4da4455566712a32f22c04", null ],
+    [ "NextQueryTime", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a988e533783ce7629f4e1e7cfe964998a", null ],
+    [ "Options", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#aea33cb5c6bc83ae39acf814e1fa8735e", null ],
+    [ "Text", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a6b5dedc410e8959a02b3840fbe82df82", null ],
+    [ "Version", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#a65b74daa6e3d6f61fcd4dfcb13020d33", null ],
+    [ "WaitForIdentify", "classgracenote_1_1musicid__stream_1_1_gn_music_id_stream.html#adab908694abba302aae4437bd1ca7c37", null ]
+];

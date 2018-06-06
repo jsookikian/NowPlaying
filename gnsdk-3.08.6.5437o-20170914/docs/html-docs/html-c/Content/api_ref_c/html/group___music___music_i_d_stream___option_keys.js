@@ -1,0 +1,25 @@
+var group___music___music_i_d_stream___option_keys =
+[
+    [ "GNSDK_MUSICIDSTREAM_AUDIO_QUALITY_CUSTOM", "group___music___music_i_d_stream___option_keys.html#ga5c976b1f8140822f8ab84008f5034e9b", null ],
+    [ "GNSDK_MUSICIDSTREAM_AUDIO_QUALITY_MICROPHONE", "group___music___music_i_d_stream___option_keys.html#gad5159868194376b9d1cf5a2738c7d360", null ],
+    [ "GNSDK_MUSICIDSTREAM_AUDIO_QUALITY_TUNER", "group___music___music_i_d_stream___option_keys.html#gabd4e9085715f8502ed5e6625f2e9259a", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ADDITIONAL_CREDITS", "group___music___music_i_d_stream___option_keys.html#ga5bd393b164c9e4fe94fdefc17f058e95", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_AUDIO_QUALITY", "group___music___music_i_d_stream___option_keys.html#ga19309d9056081794de5a445f2050d99c", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_AUDIO_SUITABILITY_PROCESSING", "group___music___music_i_d_stream___option_keys.html#ga181b225b49e9dadb088bfed8d15a0474", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_CLASSICAL_DATA", "group___music___music_i_d_stream___option_keys.html#gaac3f5e50ecd2244e41eb33f186619c40", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_CONTENT_DATA", "group___music___music_i_d_stream___option_keys.html#gaf8ccd667d7b7ae149f6e4fe511eefe5f", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_DSP_DATA", "group___music___music_i_d_stream___option_keys.html#ga279aafef9b0d2329d16ed98ca0a97400", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_EXTERNAL_IDS", "group___music___music_i_d_stream___option_keys.html#ga00cfd83037abd69414678f5857b7fd3b", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_GLOBALIDS", "group___music___music_i_d_stream___option_keys.html#ga4561898645ce8217c3b0f850c5d1a50d", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_LINK_DATA", "group___music___music_i_d_stream___option_keys.html#ga077b615db64da585fe3c9ed75bae75bc", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_PLAYLIST", "group___music___music_i_d_stream___option_keys.html#gaeda1cde21ea89651bf035995d42e37ae", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_SONIC_DATA", "group___music___music_i_d_stream___option_keys.html#gabeb121de076799048f9b587467bb8121", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_ENABLE_SORTABLE", "group___music___music_i_d_stream___option_keys.html#gaa2725b44d3cf8d6af42876064bae9580", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_LOOKUP_MODE", "group___music___music_i_d_stream___option_keys.html#gac93b7e6c107a5550067c1a9c2516ebf9", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_PREFERRED_LANG", "group___music___music_i_d_stream___option_keys.html#ga5653ced0676ac55bbfb46238dd441766", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_RESULT_PREFER_COVERART", "group___music___music_i_d_stream___option_keys.html#gab43d9a3b22cda865d1fbd6b0a401cc46", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_RESULT_PREFER_XID", "group___music___music_i_d_stream___option_keys.html#ga728df024a8a621a1bc88aac0a762a223", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_RESULT_RANGE_SIZE", "group___music___music_i_d_stream___option_keys.html#ga8f5366eae473928684a4a39ea8b07859", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_RESULT_RANGE_START", "group___music___music_i_d_stream___option_keys.html#gad72857f479e1ced9c245530634446676", null ],
+    [ "GNSDK_MUSICIDSTREAM_OPTION_RESULT_SINGLE", "group___music___music_i_d_stream___option_keys.html#gadcb5a8125a808ef73f63e3c16e5a26b5", null ]
+];

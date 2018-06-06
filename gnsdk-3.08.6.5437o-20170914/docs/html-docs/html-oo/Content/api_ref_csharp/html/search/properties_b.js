@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['maintitle',['MainTitle',['../class_gracenote_s_d_k_1_1_gn_title.html#aeccf6b1cdb0aeea186362fdab7482663',1,'GracenoteSDK::GnTitle']]],
+  ['matchconfidence',['MatchConfidence',['../class_gracenote_s_d_k_1_1_gn_track.html#a98f5417392a66d326bdafb271de4c547',1,'GracenoteSDK::GnTrack']]],
+  ['matchedidents',['MatchedIdents',['../class_gracenote_s_d_k_1_1_gn_track.html#abb32b93f28e3a278f340d10a310a639f',1,'GracenoteSDK::GnTrack']]],
+  ['matches',['Matches',['../class_gracenote_s_d_k_1_1_gn_response_matches.html#af6274c7d1d0a1323d5dfa67daf6d1f9d',1,'GracenoteSDK::GnResponseMatches']]],
+  ['matchinfo',['MatchInfo',['../class_gracenote_s_d_k_1_1_gn_match.html#adb5cc65ea555304f4772e4e6004102a3',1,'GracenoteSDK::GnMatch']]],
+  ['matchlookuptype',['MatchLookupType',['../class_gracenote_s_d_k_1_1_gn_track.html#a2dccd225ae9a11715c83d8d63d0157a9',1,'GracenoteSDK::GnTrack']]],
+  ['matchscore',['MatchScore',['../class_gracenote_s_d_k_1_1_gn_album.html#a24c7be3f1fa1b60454ad70ee1af5a1d7',1,'GracenoteSDK.GnAlbum.MatchScore()'],['../class_gracenote_s_d_k_1_1_gn_track.html#ab33b63d7e83105143bd179f284071058',1,'GracenoteSDK.GnTrack.MatchScore()']]],
+  ['maximumcachefilesize',['MaximumCacheFileSize',['../class_gracenote_s_d_k_1_1_gn_storage_sqlite.html#a5518f5c7a31cd48c88c6b36e8c7065f4',1,'GracenoteSDK::GnStorageSqlite']]],
+  ['maximumcachememory',['MaximumCacheMemory',['../class_gracenote_s_d_k_1_1_gn_storage_sqlite.html#ab262293e85a3a7ff934ba7806394cd7e',1,'GracenoteSDK::GnStorageSqlite']]],
+  ['mediaid',['MediaId',['../class_gracenote_s_d_k_1_1_gn_music_id_file_info.html#a992bc39de01d6d7f4bef9fd47f567d14',1,'GracenoteSDK::GnMusicIdFileInfo']]],
+  ['mediaidentifier',['MediaIdentifier',['../class_gracenote_s_d_k_1_1_gn_moodgrid_identifier.html#aa6293f542cadec21aed1282fe2cac241',1,'GracenoteSDK.GnMoodgridIdentifier.MediaIdentifier()'],['../class_gracenote_s_d_k_1_1_gn_playlist_identifier.html#a6711dc68baa39d72193d073feb7b5feb',1,'GracenoteSDK.GnPlaylistIdentifier.MediaIdentifier()']]],
+  ['mediaidentifiers',['MediaIdentifiers',['../class_gracenote_s_d_k_1_1_gn_playlist_collection.html#a73b85a87761b78ddce13780267bd39b1',1,'GracenoteSDK::GnPlaylistCollection']]],
+  ['mediaspace',['MediaSpace',['../class_gracenote_s_d_k_1_1_gn_contributor.html#a0d232e1ff70d3d45eee55e37060b8a4a',1,'GracenoteSDK::GnContributor']]],
+  ['mimetype',['MimeType',['../class_gracenote_s_d_k_1_1_gn_content.html#a6ffdceffa97920b4f0891556523716c9',1,'GracenoteSDK::GnContent']]],
+  ['mood',['Mood',['../class_gracenote_s_d_k_1_1_gn_playlist_attributes.html#a6be7c57a661d2da45aa4fd50e5953ea4',1,'GracenoteSDK::GnPlaylistAttributes']]],
+  ['moods',['Moods',['../class_gracenote_s_d_k_1_1_gn_moodgrid_presentation.html#a84098ec563ab0d7ca7b8868ddabfc82c',1,'GracenoteSDK::GnMoodgridPresentation']]],
+  ['mui',['Mui',['../class_gracenote_s_d_k_1_1_gn_music_id_file_info.html#a56c4d4f60b19460a194d7102f7abf427',1,'GracenoteSDK::GnMusicIdFileInfo']]]
+];

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Advanced Music Identification using MusicID-File</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">C</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_c.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor53"></a><a name="kanchor54"></a><a name="kanchor55"></a>Advanced Music Identification using MusicID-File</h1>
+                                        <p><a name="kanchor56"></a>MusicID-File provides three processing methods enabling advanced file-based media recognition. Each method utilizes the same population and result management APIs, so which method to use is determined by the application's requirement at the time of processing. MusicID-File returns a GDO for each result – providing as many as needed.</p>
+                                        <h2><a name="kanchor57"></a>TrackID</h2>
+                                        <p>The gnsdk_musicidfile_query_do_trackid() API provides TrackID processing.</p>
+                                        <h3 class="example">Example: Implementing TrackID</h3>
+                                        <p><a name="kanchor58"></a>Sample Application: musicid_file_trackid/main.c</p>
+                                        <p>Application Steps:</p>
+                                        <ol>
+                                            <li value="1"><a name="kanchor59"></a><a name="kanchor60"></a>Authenticate caller, initialize GNSDK Manager, enable logging, and initialize local lookup.</li>
+                                            <li value="2"><a name="kanchor61"></a><a name="kanchor62"></a><a name="kanchor63"></a>Initialize MusicID File and DSP, get a User handle and load a locale.</li>
+                                            <li value="3">Create a MusicID-File query handle</li>
+                                            <li value="4"><a name="kanchor64"></a>Get a FileInfo object for each media file and add to query handle. </li>
+                                            <li value="5"><a name="kanchor65"></a>Fingerprint and set metadata for each media file in its FileInfo object.</li>
+                                            <li value="6">Perform two MusicID-File TrackID lookups, first with RETURN_SINGLE, second with RETURN_ALL.</li>
+                                            <li value="7">Display results.</li>
+                                            <li value="8">Release resources and shutdown GNSDK and MusicID File module.</li>
+                                        </ol>
+                                        <p><b>Sample output:</b>
+                                        </p><pre class="prettyprint"><a name="kanchor66"></a><a name="kanchor67"></a><a name="kanchor68"></a>GNSDK Product Version  : 3.05.0.721   (built 2013-04-02 22:29-0700)
+-------TrackID with 'RETURN_SINGLE' option:-------
+Warning: input file does not contain enough data to generate a fingerprint:
+data\kardinal_offishall_01_3s.wav
+
+Printing results for 6 files:
+
+*File 1 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 2 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 3 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 4 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Sugar Baby
+
+*File 5 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Quest For Fire
+
+*File 6 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Firestarter Volume 1 - Quest For Fire
+
+
+-------TrackID with 'RETURN_ALL' option:-------
+Warning: input file does not contain enough data to generate a fingerprint:
+data\kardinal_offishall_01_3s.wav
+
+Printing results for 6 files:
+
+*File 1 of 6*
+
+  Multiple results.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 2 of 6*
+
+  Multiple results.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 3 of 6*
+
+  Multiple results.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 4 of 6*
+
+  Multiple results.
+  Album count: 3
+  Match 1 - Album title:    Country Blues
+  Match 2 - Album title:    SÃ¥nger Om KÃ¤rlek [Disc 2]
+  Match 3 - Album title:    His Folkways Years 1963-1968 [Disc 2]
+
+*File 5 of 6*
+
+  Multiple results.
+  Album count: 1
+  Match 1 - Album title:    Quest For Fire
+
+*File 6 of 6*
+
+  Multiple results.
+  Album count: 6
+  Match 1 - Album title:    Firestarter Volume 1 - Quest For Fire
+  Match 2 - Album title:    New English File Advanced
+  Match 3 - Album title:    Jazzblues
+  Match 4 - Album title:    èµ·ãã¦ã‹ã‚‰å¯ã‚‹ã¾ã§è‹±ä¼šè©±ã¾ã‚‹ã”ã¨ç·´ç¿’å¸³2
+  Match 5 - Album title:    ç¬¬66å›ž ä¸­å›½èªžæ¤œå®šè©¦é¨“ 3ç´š
+  Match 6 - Album title:    Quest For Fire     </pre>
+                                        <h2><a name="kanchor69"></a>AlbumID</h2>
+                                        <p>The gnsdk_musicidfile_query_do_albumid() API provides AlbumID processing.</p>
+                                        <h3 class="example">Example: Implementing AlbumID</h3>
+                                        <p>Sample Application: musicid_file_albumid/main.c</p>
+                                        <p>Application steps:</p>
+                                        <ol>
+                                            <li value="1">Authenticate caller, initialize GNSDK Manager, enable logging, and initialize local lookup</li>
+                                            <li value="2">Initialize MusicID File and DSP, get a User handle and load a locale</li>
+                                            <li value="3">Create a MusicID-File query handle</li>
+                                            <li value="4">Get a FileInfo object for each media file and add to query handle</li>
+                                            <li value="5">Fingerprint and set metadata for each media file in its FileInfo object</li>
+                                            <li value="6">Perform two MusicID-File Album ID lookups, first with RETURN_SINGLE, second with RETURN_ALL</li>
+                                            <li value="7">Display results</li>
+                                            <li value="8">Release resources and shutdown GNSDK and MusicID File module</li>
+                                        </ol>
+                                        <p><b>Sample output:</b>
+                                        </p><pre class="prettyprint">
+GNSDK Product Version  : 3.05.0.721   (built 2013-04-02 22:29-0700)
+-------AlbumID with 'RETURN_SINGLE' option:-------
+Warning: input file does contain enough data to generate a fingerprint:
+data\kardinal_offishall_01_3s.wav
+
+Printing results for 6 files:
+
+*File 1 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Quest For Fire
+
+*File 2 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Quest For Fire
+
+*File 3 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Sugar Baby
+
+*File 4 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 5 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 6 of 6*
+
+  Single result.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+
+-------AlbumID with 'RETURN_ALL' option:-------
+Warning: input file does contain enough data to generate a fingerprint:
+data\kardinal_offishall_01_3s.wav
+
+Printing results for 6 files:
+
+*File 1 of 6*
+
+  Multiple results.
+  Album count: 6
+  Match 1 - Album title:    Firestarter Volume 1 - Quest For Fire
+  Match 2 - Album title:    New English File Advanced
+  Match 3 - Album title:    Jazzblues
+  Match 4 - Album title:    èµ·ãã¦ã‹ã‚‰å¯ã‚‹ã¾ã§è‹±ä¼šè©±ã¾ã‚‹ã”ã¨ç·´ç¿’å¸³2
+  Match 5 - Album title:    ç¬¬66å›ž ä¸­å›½èªžæ¤œå®šè©¦é¨“ 3ç´š
+  Match 6 - Album title:    Quest For Fire
+
+*File 2 of 6*
+
+  Multiple results.
+  Album count: 2
+  Match 1 - Album title:    Firestarter Volume 1 - Quest For Fire
+  Match 2 - Album title:    Quest For Fire
+
+*File 3 of 6*
+
+  Multiple results.
+  Album count: 3
+  Match 1 - Album title:    Country Blues
+  Match 2 - Album title:    SÃ¥nger Om KÃ¤rlek [Disc 2]
+  Match 3 - Album title:    His Folkways Years 1963-1968 [Disc 2]
+
+*File 4 of 6*
+
+  Multiple results.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 5 of 6*
+
+  Multiple results.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+*File 6 of 6*
+
+  Multiple results.
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]      </pre>
+                                        <h2><a name="kanchor70"></a>LibraryID</h2>
+                                        <p>The gnsdk_musicidfile_query_do_libraryid() API provides LibraryID processing.</p>
+                                        <p><a name="kanchor71"></a>Response GDOs from LibraryID queries are only available via status and result callbacks. This is because all LibraryID GDOs are freed after the process finishes.</p>
+                                        <h3 class="example">Example: Implementing LibraryID</h3>
+                                        <p>Sample Application: musicid_file_libraryid/main.c</p>
+                                        <p>Application steps:</p>
+                                        <ol>
+                                            <li value="1">Authenticate caller, initialize the GNSDK, enable logging, and initialize local lookup</li>
+                                            <li value="2">Initialize DSP and MusicID File, load a locale, and get a User handle</li>
+                                            <li value="3">Create a MusicID-File query handle</li>
+                                            <li value="4">Perform LibraryID query, passing callbacks</li>
+                                            <li value="5">Fingerprint media file in callback</li>
+                                            <li value="6">Add metadata to media file in callback</li>
+                                            <li value="7">Handle and display statuses and results in callbacks</li>
+                                            <li value="8">Release resouces and shutdown GNSDK and MusicID-File</li>
+                                        </ol>
+                                        <p><b>Sample output:</b>
+                                        </p><pre class="prettyprint"><a name="kanchor72"></a>
+GNSDK Product Version  : 3.05.0.798   (built 2013-05-08 16:09-0700)
+
+MID-File Status: 1 of 6 - fileinfo_processing_begin - data\01_stone_roses.wav
+
+MID-File Status: 2 of 6 - fileinfo_processing_begin - data\04_stone_roses.wav
+
+MID-File Status: 3 of 6 - fileinfo_processing_begin - data\Dock Boggs - Sugar Baby - 01.wav
+
+MID-File Status: 4 of 6 - fileinfo_processing_begin - data\Kardinal Offishall - Quest For Fire - 15 - Go Ahead Den.wav
+
+MID-File Status: 5 of 6 - fileinfo_processing_begin - data\kardinal_offishall_01_3s.wav
+
+MID-File Status: 6 of 6 - fileinfo_processing_begin - data\stone roses live.wav
+
+MID-File Status: 1 of 6 - fileinfo_query - data\Kardinal Offishall - Quest For Fire - 15 - Go Ahead Den.wav
+
+MID-File Status: 1 of 6 - fileinfo_query - data\Kardinal Offishall - Quest For Fire - 15 - Go Ahead Den.wav
+
+MID-File Status: 2 of 6 - fileinfo_query - data\Dock Boggs - Sugar Baby - 01.wav
+
+MID-File Status: 2 of 6 - fileinfo_query - data\Dock Boggs - Sugar Baby - 01.wav
+
+MID-File Status: 3 of 6 - fileinfo_query - data\04_stone_roses.wav
+
+MID-File Status: 4 of 6 - fileinfo_query - data\01_stone_roses.wav
+Warning: input file does not contain enough data to generate a fingerprint:
+data\kardinal_offishall_01_3s.wav
+
+MID-File Status: 5 of 6 - fileinfo_query - data\stone roses live.wav
+
+MID-File Status: 2 of 6 - fileinfo_query - data\Dock Boggs - Sugar Baby - 01.wav
+
+MID-File Result: 
+  Album count: 1
+  Match 1 - Album title:    Crimson Tonight [Live]
+
+MID-File Result: 
+  Album count: 1
+  Match 1 - Album title:    Sugar Baby
+
+MID-File Result: 
+  Album count: 1
+  Match 1 - Album title:    Firestarter Volume 1 - Quest For Fire
+
+MID-File Status: 1 of 6 - (null) - data\Kardinal Offishall - Quest For Fire - 15 - Go Ahead Den.wav
+
+MID-File Status: 2 of 6 - (null) - data\Dock Boggs - Sugar Baby - 01.wav
+
+MID-File Status: 3 of 6 - (null) - data\04_stone_roses.wav
+
+MID-File Status: 4 of 6 - (null) - data\01_stone_roses.wav
+
+MID-File Status: 5 of 6 - (null) - data\stone roses live.wav
+
+MID-File Status: 6 of 6 - (null) - data\kardinal_offishall_01_3s.wav
+    </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

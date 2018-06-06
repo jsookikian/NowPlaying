@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Identifying Streaming Music (MusicID Stream)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">OO APIs</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_oo_all.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor531"></a><a name="kanchor532"></a>Identifying Streaming Music (MusicID Stream)</h1>
+                                        <p>The functionality for identifying streaming music is contained in the MusicID Stream module. This module contains the  <code class="prettyprint">GnMusicIdStream</code> class that is designed to identify raw audio received in a continuous stream. You should instantiate one instance of this class for each audio stream you are using. Using this class, your application primarily needs to provide two things:</p>
+                                        <ol>
+                                            <li value="1">Code an <code class="prettyprint">IGnMusicIdStreamEvents</code> events delegate object (<code class="prettyprint">GnMusicIdStreamEventsDelegate</code> in Objective-C) that receives callbacks for results, status messages, and other events.</li>
+                                            <li value="2">Code a class that implements the <code class="prettyprint">IGnAudioSource</code> (<code class="prettyprint">GnAudioSource</code> in Objective-C) interface.</li>
+                                        </ol>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span><a name="kanchor533"></a><a name="kanchor534"></a><a name="kanchor535"></a>For some platforms (for example, iOS and Android), Gracenote provides the <code class="prettyprint"><a name="kanchor536"></a>GnMic</code> helper class that implements the <code class="prettyprint">IGnAudioSource</code> interface. If available, your application can use this class to process streaming audio from a device microphone. </p>
+                                        <p><b>To identify streaming audio from an audio source (<code class="prettyprint">IGnAudioSource</code> implementation):</b>
+                                        </p>
+                                        <ol>
+                                            <li value="1">Code a <code class="prettyprint">IGnMusicIdStreamEvents</code> delegate class (<code class="prettyprint">GnMusicidStreamEventsDelegate</code> in Objective-C) to handle results, statuses, and other events.</li>
+                                            <li value="2"><a name="kanchor537"></a>Instantiate a <code class="prettyprint">GnMusicIdStream</code><a name="kanchor538"></a> object with your User object and events delegate object. This establishes a MusicID-Steam audio channel.</li>
+                                            <li value="3" data-mc-conditions="Default.auto-gen-cndt,Default.desk-gen-cndt,Default.mobl-gen-cndt">Instantiate an audio source object representing the audio source you wish to identify. On some platforms, Gracenote provides the <code class="prettyprint">GnMic</code> class, which is an <code class="prettyprint">IGnAudioSource</code> implementation for the device microphone.</li>
+                                            <li value="4" data-mc-conditions="Default.auto-gen-cndt,Default.desk-gen-cndt,Default.mobl-gen-cndt">Call the <code class="prettyprint">GnMusicIdStream</code> instance's <code class="prettyprint">AudioProcessStart</code> method with your <code class="prettyprint">IGnAudioSource</code> object. This starts the retrieval and processing of audio.
+        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;" data-mc-conditions="Default.auto-gen-cndt,Default.desk-gen-cndt,Default.mobl-gen-cndt"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>
+          Note that, as an alternative to the above two steps, you could call the <code class="prettyprint">GnMusicIdStream</code> instance's <code class="prettyprint">audioProcess</code><a name="kanchor539"></a> method with PCM string data that you have captured through any means.</p></li>
+                                            <li value="5" data-mc-conditions="Default.auto-gen-cndt,Default.desk-gen-cndt,Default.mobl-gen-cndt">To identify audio, call the <code class="prettyprint">GnMusicIdStream</code>'s <code class="prettyprint">IdentifyAlbumAsync</code> or <code class="prettyprint">IdentifyAlbum</code><a name="kanchor540"></a> method. Results are delivered asynchronously as audio is received. The synchronous call blocks until enough audio is buffered in order to make an adequate identification attempt.</li>
+                                            <li value="6">Handle results and statuses in your event delegate callbacks.</li>
+                                        </ol>
+                                        <h2>Implementation Notes</h2>
+                                        <ul>
+                                            <li value="1">At any point, your application can request an identification of buffered audio.  The identification process spawns a thread and completes asynchronously. Two <code class="prettyprint">GnMusicIdStream</code> identification methods are provided, one synchronous and one asynchronous (<code class="prettyprint">IdentifySync</code> and <code class="prettyprint">IdentifyAsync</code>). If <code class="prettyprint">IdentifySync</code> is invoked, the identification is still performed asynchronously and the results delivered via a delegate. However, the method does not return until the identification is complete.</li>
+                                            <li value="2"><a name="kanchor541"></a>
+         Audio is identified using either a local database or the Gracenote online service. The default is to attempt a local identification first before going online. Local matches are only possible if  <code class="prettyprint">GnLookupLocalStream</code> is enabled and a MusicID Stream  fingerprint bundle ingested. See <a href="use-local-fp-db.htm" class="MCXref xref" xrefformat="{para}">Using a Local Fingerprint Database</a> for more information.See <a name="kanchor542"></a>Using Local Audio Fingerprint Bundles  for more information.</li>
+                                            <li value="3">You can call <code class="prettyprint">IdentifyCancel</code> to stop an identification operation. If synchronous identification had been invoked, the method returns. Note that canceling does not cease audio processing and your application can continue requesting identifications.</li>
+                                            <li value="4">At any point, your application can stop audio processing. When stopped, automatic data fetching ceases or,
+          if audio data is being provided manually, attempts to write data for processing
+          will fail. Internally, <code class="prettyprint">GnMusicIdStream</code> clears and releases all buffers and audio
+        processing modules. Audio processing can be restarted at any time.</li>
+                                            <li value="5">You can instantiate a <code class="prettyprint">GnMusicIdStream</code> object with a locale. Locales are a convenient way to group locale-dependent metadata specific to a region (such as Europe) and language that should be returned from the Gracenote service. See <a href="load-locale.htm" class="MCXref xref" xrefformat="{para}">Loading a Locale</a> for more information.</li>
+                                            <li value="6"><a name="kanchor543"></a>To aid in identification, you have the option to send broadcast data (Radio Data System (RDS) info, artist track/title, etc.) with your query using the <code class="prettyprint">GnMusicIdStream</code>'s <code class="prettyprint">text</code> method.</li>
+                                        </ul>
+                                        <h2><a name="kanchor544"></a>Setting Options for Streaming Audio Queries</h2>
+                                        <p>You can use <code class="prettyprint">GnMusicIdStreamOptions</code> methods to set options for streaming audio queries. For example, you can set an option for local lookup. By default, a lookup is done online, but many applications will want to start with a local query first then, if no match is found, go online.</p>
+                                        <p><b><code class="prettyprint">GnMusicIdStreamOptions</code><a name="kanchor545"></a> Query Option Methods:</b>
+                                        </p>
+                                        <ul>
+                                            <li value="1"><code class="prettyprint"><b>AudioSuitabilityProcessing</b></code>—Specifies whether <code>GnMusicIdStream</code> processes received audio is suitable for performing identification queries. If you enable this, the GNSDK will determine if the audio is good enough for a query. If not, an error is returned indicating that it is not.<p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>There are other options available that can give you finer control over defining, controlling, and assessing suitability. To implement this, contact your Gracenote customer representative.</p></li>
+                                            <li value="2"><code class="prettyprint"><b>LookupData</b></code>—Set <code class="prettyprint">GnLookupData</code> options to enable what data can be returned, for example, classical data, mood and tempo data, playlist, external IDs, and so on.</li>
+                                            <li value="3"><code class="prettyprint"><b>LookupMode</b></code>—Set a lookup option with one of the <code class="prettyprint">GnLookupMode</code> enums. These include ones for local only, online only, online nocache, and so on.</li>
+                                            <li value="4"><code class="prettyprint"><b>NetworkInterface</b></code>—Set, or get, a specific network interface to use with this object's connections.</li>
+                                            <li value="5"><code class="prettyprint"><b>PreferResultLanguage</b></code>—Use one of the <code class="prettyprint">GnLanguage</code> enums to set the preferred language for results.</li>
+                                            <li value="6"><code class="prettyprint"><b>PreferResultExternalId</b></code>—Specifies preference for results with external IDs. External IDs are 3rd party IDs used to cross link this metadata to 3rd party services.</li>
+                                            <li value="7"><code class="prettyprint"><b>PreferResultCoverart</b></code>—Specifies preference for results with cover art.</li>
+                                            <li value="8"><code class="prettyprint"><b>ResultSingle</b></code>—Specifies whether a response must return only the single best result. Default is <code class="prettyprint">true</code>.</li>
+                                            <li value="9"><code class="prettyprint"><b>ResultRangeStart</b></code>— Specifies the result range start value. This must be less than or equal to the total number of results. If greater than the total number, no results are returned.</li>
+                                            <li value="10"><code class="prettyprint"><b>ResultCount</b></code>— Specifies the result range count value.</li>
+                                            <li value="11"><code class="prettyprint"><b>RevisionCheck</b></code>— Use this option if you have a full album object and you want to see if Gracenote has updated data for it.</li>
+                                        </ul>
+                                        <p data-mc-conditions="Default.auto-gen-cndt,Default.desk-gen-cndt,Default.mobl-gen-cndt" />
+                                        <h2 data-mc-conditions="Default.auto-gen-cndt,Default.desk-gen-cndt,Default.mobl-gen-cndt">Music-ID Stream Code Samples</h2>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Android Java </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">MusicIDStreamEvents musicIDStreamEvents = new MusicIDStreamEvents();
+
+/**
+ * GNSDK <MadCap:conditionalText data-mc-conditions="Default.mobl-gen-cndt,Default.acr-gen-cndt,Default.desk-gen-cndt">MusicID Stream </MadCap:conditionalText><a name="kanchor546"></a> event delegate
+ */
+private class MusicIDStreamEvents extends GnMusicIdStreamEventsListener {
+
+  HashMap&lt;String, String&gt; gnStatus_to_displayStatus;
+
+  public MusicIDStreamEvents(){
+    gnStatus_to_displayStatus = new HashMap&lt;String,String&gt;();
+    gnStatus_to_displayStatus.put("kStatusStarted", "Identification started");
+    gnStatus_to_displayStatus.put("kStatusFpGenerated", "Fingerprinting complete");
+
+    //gnStatus_to_displayStatus.put("kStatusIdentifyingOnlineQueryStarted", "Online query started");
+    gnStatus_to_displayStatus.put("kStatusIdentifyingEnded", "Identification complete");
+  }
+
+  @Override
+  public void statusEvent( GnStatus status, long percentComplete, long bytesTotalSent, long bytesTotalReceived, IGnCancellable cancellable ) {
+    //setStatus( String.format("%d%%",percentComplete), true );
+  }
+
+  @Override
+  public void musicIdStreamStatusEvent( GnMusicIdStreamStatus status, IGnCancellable cancellable ) {
+    if(gnStatus_to_displayStatus.containsKey(status.toString())){
+       setStatus( String.format("%s", gnStatus_to_displayStatus.get(status.toString())), true );
+    }
+  }
+
+  @Override
+  public void musicIdStreamResultAvailable( GnResponseAlbums result, IGnCancellable cancellable ) {
+    activity.runOnUiThread(new UpdateResultsRunnable( result ));
+    setStatus( "Success", true );
+    setUIState( UIState.READY );
+  }
+}
+
+private void startContinuousListening() throws GnException{
+
+  if ( gnMicrophone == null ){
+    gnMicrophone = new GnMic();
+    gnMicrophone.start();
+  } else {
+    gnMicrophone.resume();
+  }
+
+  GnMusicIdStream = new GnMusicIdStream( gnUser, musicIDStreamEvents );
+  queryObjects.add( GnMusicIdStream.canceller() ); // retain event object so we can cancel if requested
+  GnMusicIdStream.options().resultSingle( true );
+
+  Thread audioProcessThread = new Thread(new AudioProcessRunnable());
+  audioProcessThread.start();
+}
+
+/**
+ * GnMusicIdStream object processes audio read directly from GnMic object
+ */
+class AudioProcessRunnable implements Runnable {
+
+  @Override
+  public void run() {
+    try {
+
+        GnMusicIdStream.audioProcessStart( gnMicrophone );
+
+    } catch (GnException e) {
+      Log.e( appString, e.getErrorCode() + ", " + e.getErrorDescription() + ", " + e.getErrorModule() );
+      showError( e.getErrorAPI() + ": " +  e.getErrorDescription() );
+
+    }
+  }
+}
+</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Objective-C </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">
+-(void) setupMusicIDStream
+{
+  __block NSError *musicIDStreamError = nil;
+  self.gnMusicIDStream = [[GnMusicIDStream alloc] initWithUser:self.gnUser musicIDStreamEventsDelegate:self error:&amp;musicIDStreamError];
+
+  musicIDStreamError = nil;
+  [self.gnMusicIDStream optionResultSingle:YES error:&amp;musicIDStreamError];
+
+  musicIDStreamError = nil;
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
+     {
+       [self.gnMusicIDStream audioProcessStartWithAudioSource:self.gnMic error:&amp;musicIDStreamError];
+
+       if(musicIDStreamError)
+       {
+         dispatch_async(dispatch_get_main_queue(), ^
+         {
+
+           NSLog(@"Error while starting Audio Process With AudioSource - %@", [musicIDStreamError localizedDescription]);
+        });
+       }
+
+     });
+}
+#pragma mark - GnMusicIDStreamEventsDelegate Methods
+
+-(void) midstreamStatusEvent:(GnMusicIDStream*) gnMusicIDStream status:(GnAudioStatus) status
+{
+  NSString *statusString = nil;
+
+  switch (status)
+  {
+    case  AudioStatusInvalid:
+      statusString = @"Error";
+      [self performSelectorOnMainThread:@selector(updateStatus:) withObject:statusString waitUntilDone:NO];
+
+      break;
+    case AudioStatusIdentifyingStarted:
+      statusString = @"Identifying";
+      [self performSelectorOnMainThread:@selector(updateStatus:) withObject:statusString waitUntilDone:NO];
+      break;
+
+    /*... More audio statuses */
+
+  }
+}
+
+   </pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" name="kanchor547"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Windows Phone C# </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor549"></a>// Create and setup gracenote musicid stream instance        
+App.mMusicIDStream = new GnMusicIdStream(App.mGnUser, this);
+App.mMusicIDStream.Options.ResultSingle(true);
+App.mMusicIDStream.Options.LookupData(GnLookupData.kLookupDataContent,true);
+App.mDispatcherTimer.Start();
+App.mMicrophone.Start();
+App.mMusicIDStream.AudioProcessStart((uint)App.mMicrophone.SampleRate, 16, 1);
+          
+#region IGnMusicIdStreamEvents
+
+void IGnMusicIdStreamEvents.MusicIdStreamResultAvailable(GnResponseAlbums result, IGnCancellable canceller)
+{
+   ClearResults();
+   ShowAlbums(result, true, false);
+}
+
+void IGnMusicIdStreamEvents.MusicIdStreamStatusEvent(GnMusicIdStreamStatus status_, IGnCancellable canceller)
+{
+   return;
+}
+
+void IGnMusicIdStreamEvents.StatusEvent(GnStatus status_, uint percent_complete, uint bytes_total_sent, uint bytes_total_received, IGnCancellable canceller)
+{
+   Deployment.Current.Dispatcher.BeginInvoke(() =&gt;
+   {
+    string status = null;
+    switch (status_)
+    {
+     case GnStatus.kStatusDisconnected: status = "Disconnected"; break;
+     case GnStatus.kStatusBegin:   status = "Begin";       break;
+     case GnStatus.kStatusComplete:  status = "Complete";    break;
+     case GnStatus.kStatusConnecting:status = "Connecting";    break;
+     case GnStatus.kStatusProgress:  status = "Progress";    break;
+     case GnStatus.kStatusReading:   status = "Reading";     break;
+     case GnStatus.kStatusSending:   status = "Sending";     break;
+     case GnStatus.kStatusUnknown:   status = "Unknown";     break;
+     case GnStatus.kStatusWriting:   status = "Writing";     break;
+     case GnStatus.kStatusErrorInfo: status = "ErrorInfo";     break;
+
+    }
+
+     TBStatus.Text = "Status : " + status + "\t(" + percent_complete.ToString() + "%)"; 
+   });
+      
+ }
+#endregion          
+</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />C++</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint lang-cpp"><a name="kanchor550"></a><a name="kanchor551"></a><a name="kanchor552"></a>  /*-----------------------------------------------------------------------------
+*  do_musicid_stream
+*/
+static void
+do_musicid_stream(GnUser&amp; user)
+{
+   std::cout &lt;&lt; std::endl &lt;&lt; "*****Sample MID-Stream Query*****" &lt;&lt; std::endl;
+
+   MusicIDStreamEvents* mids_events = new MusicIDStreamEvents;
+
+   try
+   {
+    GnMusicIdStream mids(user, mids_events);
+
+    /* create microphone to use as audio source */
+    GnMic    mic(44100, 16, 1);
+    /* pass Mic through GnWavCapture to record audio for testing (optional) */
+    GnWavCapture wavrec(mic, "mic_record.wav");
+
+    /* We want to add Content (eg: image URLs) data to our lookups */
+    mids.Options().LookupData(kLookupDataContent, true);
+
+    /* starts identification in background thread - will wait for audio if none yet */
+    mids.IdentifyAsync();
+
+    /* provide audio continuously until GnMusicIdStream::AudioProcessStop() is called */
+    mids.AudioProcessStart(wavrec);
+
+    /* We called GnMusicIdStream::AudioProcessStop() on 'gnsdk_mids_identifying_ended'
+     * status callback which caused the above to return */
+   }
+   catch (GnError&amp; e)
+   {
+    std::cout &lt;&lt; e.ErrorAPI() &lt;&lt; "\t" &lt;&lt; std::hex &lt;&lt; e.ErrorCode() &lt;&lt; "\t" &gt;&gt;  e.ErrorDescription() &lt;&lt; std::endl;
+   }
+
+   delete mids_events;
+}
+
+/* IGnStatusEvents : overrider methods of this class to get delegate callbacks */
+class MusicIDStreamEvents : public IGnMusicIdStreamEvents
+{
+   /*-----------------------------------------------------------------------------
+  *  StatusEvent
+  */
+   void
+   StatusEvent(gracenote::GnStatus status, gnsdk_uint32_t percent_complete, gnsdk_size_t bytes_total_sent, gnsdk_size_t bytes_total_received, IGnCancellable&amp; canceller)
+   {
+    std::cout &lt;&lt; "status (";
+
+    switch (status)
+    {
+     case gnsdk_status_unknown:
+        std::cout &lt;&lt;"Unknown ";
+        break;
+
+     case gnsdk_status_begin:
+        std::cout &lt;&lt;"Begin ";
+        break;
+
+     //...more statuses
+    }
+   }
+
+   /*-----------------------------------------------------------------------------
+  *  MidStreamStatusEvent
+  */
+   virtual void
+    MusicIdStreamStatusEvent(GnMusicIdStreamStatus status, IGnCancellable&amp; canceller)
+    {
+     switch (status)
+     {
+      case gnsdk_mids_status_invalid:
+      std::cout &lt;&lt;"Invalid status!" &lt;&lt; std::endl;
+      break;
+
+      case gnsdk_mids_identifying_started:
+      std::cout &lt;&lt;"Identification: started" &lt;&lt; std::endl;
+      break;
+
+      //...more statuses      
+
+     }
+    }
+
+/*-----------------------------------------------------------------------------
+ *  MidStreamResultAvailable
+ */
+virtual void
+  MusicIdStreamResultAvailable(GnResponseAlbums&amp; result, IGnCancellable&amp; canceller)
+  {
+     if (result.ResultCount() &gt; 0)
+     {
+      metadata::album_iterator it_album = result.Albums().begin();
+
+      for (; it_album != result.Albums().end(); ++it_album)
+      {
+       GnAlbum album = *it_album;
+
+       /* Get Track Artist, if not available, use Album Artist */
+       gnsdk_cstr_t artist_name = album.TracksMatched()[0]-&gt;Artist().Name().Display();
+       if (artist_name == GNSDK_NULL)
+        artist_name = album.Artist().Name().Display();
+
+       /* Get cover art URL for 'small' image */
+       gnsdk_cstr_t cover_url = album.Content(kContentTypeImageCover).Asset(kImageSizeSmall).Url();
+       if (cover_url == GNSDK_NULL)
+        cover_url = "no url";
+
+       std::cout &lt;lt; std::endl;
+       std::cout &lt;lt; "    Track : " &lt;lt; album.TracksMatched()[0]-&gt;Title().Display() &lt;lt; std::endl;
+       std::cout &lt;lt; "    Artist: " &lt;lt; artist_name &lt;lt; std::endl;
+       std::cout &lt;lt; "    Cover : " &lt;lt; cover_url &lt;lt; std::endl;
+      }
+     }
+     else
+     {
+      std::cout &lt;lt; "    No match found" &lt;lt; std::endl;
+     }
+     std::cout &lt;lt; std::endl;
+  
+     GNSDK_UNUSED(canceller);
+  }
+};</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

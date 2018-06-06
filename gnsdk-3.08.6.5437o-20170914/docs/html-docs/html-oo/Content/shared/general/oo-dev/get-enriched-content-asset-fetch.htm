@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Accessing Enriched Content using Asset Fetch</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">OO APIs</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_oo_all.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor420"></a><a name="kanchor421"></a>Accessing Enriched Content using Asset Fetch</h1>
+                                        <p><a name="kanchor422"></a>To access enriched metadata content, such as cover art and artist images, you can purchase additional metadata entitlements, and then use the Manager Asset Fetch APIs to get enriched content from  response objects (<code class="prettyprint">GnAlbum</code>, <code class="prettyprint">GnTrack</code>, etc). </p>
+                                        <p><b>To access enriched content:</b>
+                                        </p>
+                                        <ul>
+                                            <li value="1">Purchase additional entitlements for enriched content.</li>
+                                            <li value="2">Enable the query option for retrieving enriched content.</li>
+                                            <li value="3">For each match object returned, iterate through its <code class="prettyprint">GnContent</code> objects.</li>
+                                            <li value="4">For each <code class="prettyprint">GnContent</code> object, iterate through its <code class="prettyprint">GnAsset</code> objects.</li>
+                                            <li value="5">For each <code class="prettyprint">GnAsset</code><a name="kanchor423"></a> object, get its content URL and use that for accessing the Gracenote service.</li>
+                                        </ul>
+                                        <h2><a name="kanchor424"></a>Setting the Query Option for Enriched Content</h2>
+                                        <p>To get enriched content returned from your queries, you need to enable the query option for this. You can do this using the <code class="prettyprint">LookupData</code> method and the <code class="prettyprint">kLookupDataContent</code> enum.</p>
+                                        <p>C++ example:</p><pre class="prettyprint">/* Enable retrieval of enriched content */
+musicid.Options().LookupData(kLookupDataContent, true);
+</pre>
+                                        <p>Objective-C example:</p><pre class="prettyprint">GnMusicIdStreamOptions *options = [self.gnMusicIDStream options];
+[options lookupData:kLookupDataContent enable:YES error:&amp;musicIDStreamError];</pre>
+                                        <h2>Processing Enriched Content</h2>
+                                        <p>Enriched content is returned in <code class="prettyprint">GnContent</code> objects. As indicated with these <code class="prettyprint">GnContentType</code> enums, the following types of content can be returned:</p>
+                                        <ul>
+                                            <li value="1"><b><code class="prettyprint">kContentTypeImageCover</code></b>—Cover art</li>
+                                            <li value="2"><b><code class="prettyprint">kContentTypeImageArtist</code></b>—Artist image</li>
+                                            <li value="3"><b><code class="prettyprint">kContentTypeImageVideo</code></b>—Video image</li>
+                                            <li value="4"><b><code class="prettyprint">kContentTypeBiography</code></b>—Artist biography</li>
+                                            <li value="5"><b><code class="prettyprint">kContentTypeReview</code></b>—Review</li>
+                                        </ul>
+                                        <p>Each <code class="prettyprint">GnContent</code> object can contain one or more elements of these types as a <code class="prettyprint">GnAsset</code> object.</p>
+                                        <p>Not all enriched content can be retrieved from every metadata object. Different objects have different types of enriched content available. The following classes contain these <code class="prettyprint">GnContent</code> objects:</p>
+                                        <ul>
+                                            <li value="1"><code class="prettyprint">GnTrack - Review</code>
+                                            </li>
+                                            <li value="2"><code class="prettyprint">GnAlbum - CoverArt</code>
+                                            </li>
+                                            <li value="3"><code class="prettyprint">GnAlbum - Review</code>
+                                            </li>
+                                            <li value="4"><code class="prettyprint">GnContributor - Image</code>
+                                            </li>
+                                            <li value="5"><code class="prettyprint">GnContributor - Biography</code>
+                                            </li>
+                                        </ul>
+                                        <p>The <code class="prettyprint">GnContributor</code> class also has a <code class="prettyprint">BiographyVideo</code> field as a <code class="prettyprint">String</code>.</p>
+                                        <p>Each <code class="prettyprint">GnAsset</code> object contains the following fields:</p>
+                                        <ul>
+                                            <li value="1"><b><code class="prettyprint">Dimension</code></b>—Asset dimension</li>
+                                            <li value="2"><b><code class="prettyprint">Bytes</code></b><a name="kanchor425"></a>—Size of content asset in bytes</li>
+                                            <li value="3"><b><code class="prettyprint">Size</code></b>—Pixel image size as defined with a <code class="prettyprint">GnImageSize</code> enum, for example, <code class="prettyprint">kImageSize110</code> (110x110) </li>
+                                            <li value="4"><b><code class="prettyprint">Url</code></b>—URL for retrieval of asset from Gracenote service.</li>
+                                        </ul>
+                                        <h2>Retrieving a Content Asset</h2>
+                                        <p>You can use the <code class="prettyprint">GnAssetFetch</code> class to access an asset from local storage, the Gracenote service, or any Internet location with a <code class="prettyprint">GnAsset</code> <code class="prettyprint">urlHttp</code> field or <code class="prettyprint">urlHttps</code> field or <code class="prettyprint">urlLocal</code> field (for local fetches) and retrieve its content as raw byte data. Note that the <code class="prettyprint">GnAsset</code> class has a <code class="prettyprint">url</code> field, but that has been deprecated.</p>
+                                        <p>The asset is retrieved with a <code class="prettyprint">GnAssetFetch</code> object constructor:</p>
+                                        <p><pre class="prettyprint">
+GnAssetFetch(GnUser user, String url, IGnStatusEvents pEventHandler)     
+</pre>
+                                        </p>
+                                        <p>This call takes your User object, the URL as a string, and a <code class="prettyprint">IGnStatusEvents</code> delegate callback object for handling operation statuses</p>
+                                        <p>When the operation completes, the asset data is stored in the <code class="prettyprint">GnAssetFetch</code> object's <code class="prettyprint">data</code> field as a byte array.</p>
+                                        <h3> Retrieving Local or Online Content</h3>
+                                        <p>Whether your asset is retrieved locally or online depends on how your lookup mode is set. See <a href="../../music/oo-dev/set-local-online-lookup-modes.htm">Setting Local and Online Lookup Modes</a> for more information. You can also set local or online lookup mode when you instantiate a <code class="prettyprint">GnAssetFetch</code> object with a <code class="prettyprint">lookupMode</code> parameter:</p>
+                                        <p><b>C++</b>
+                                        </p><pre class="prettyprint">GnAssetFetch   gnAssetFetch(user, url, kLookupModeLocal, eventHandler);</pre>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>Retrieving an asset online could result in some network delay depending on asset size.<br /> <br />If your lookup mode is set for online and the provided URL is local, you will get an unsupported functionality error.  </p>
+                                        <h2>Retrieving and Parsing Enriched Content Code Samples:</h2>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" name="kanchor426"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Android Java</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">/**
+* Helpers to load and set cover art image in the application display
+*/
+private void loadAndDisplayCoverArt( GnAlbum album, ImageView imageView ){
+  Thread runThread = new Thread( new CoverArtLoaderRunnable( album, imageView ) );
+  runThread.start();
+}
+          
+class CoverArtLoaderRunnable implements Runnable {
+  GnAlbum album;
+  ImageView imageView;
+  CoverArtLoaderRunnable( GnAlbum album, ImageView imageView){
+    this.album = album;
+    this.imageView = imageView;
+  }
+          
+  @Override
+  public void run() {
+    String coverArtUrl = album.content(GnContentType.
+         kContentTypeImageCover).
+         asset(GnImageSize.kImageSizeSmall).urlHttp();
+      Drawable coverArt = null;
+      if (coverArtUrl != null &amp;&amp; !coverArtUrl.isEmpty()) {
+         URL url;
+         try {
+            url = new URL("http://" + coverArtUrl);
+            InputStream input = new 
+       BufferedInputStream(url.openStream());
+         coverArt = 
+          Drawable.createFromStream(input, "src");
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      }
+      if (coverArt != null) {
+        setCoverArt(coverArt, imageView);
+      } else {
+        setCoverArt(getResources().getDrawable(R.drawable.no_cover_art),imageView);
+      }
+     }
+  }
+  private void setCoverArt( Drawable coverArt, ImageView coverArtImage ){
+    activity.runOnUiThread(new SetCoverArtRunnable(coverArt, coverArtImage));
+  }
+  class SetCoverArtRunnable implements Runnable {
+    Drawable coverArt;
+    ImageView coverArtImage;
+    SetCoverArtRunnable( Drawable locCoverArt, ImageView locCoverArtImage) {
+    coverArt = locCoverArt;
+   coverArtImage = locCoverArtImage;
+   }
+   @Override
+   public void run() {
+     coverArtImage.setImageDrawable(coverArt);
+  }
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Objective-C</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">for(GnAlbum* album in albums)
+{
+   /* Get CoverArt */
+   GnContent *coverArtContent = [album content:kContentTypeImageCover];
+   GnAsset *coverArtAsset = [coverArtContent asset:kImageSizeSmall];
+   NSString *URLString = [NSString stringWithFormat:@"http://%@", [coverArtAsset urlhttp]];
+   GnContent *artistImageContent = nil;//[album content:kContentTypeImageArtist];
+   GnAsset *artistImageAsset = [artistImageContent asset:kImageSizeSmall];
+   NSString *artistImageURLString = [NSString stringWithFormat:@"http://%@", [artistImageAsset urlHttp]];
+   GnContent *artistBiographyContent = [album content:kContentTypeBiography];
+   NSString *artistBiographyURLString = [NSString stringWithFormat:@"http://%@", [[[artistBiographyContent assets] nextObject] url]];
+   GnContent *albumReviewContent = [album content:kContentTypeReview];
+   NSString *albumReviewURLString = [NSString stringWithFormat:@"http://%@", [[[albumReviewContent assets] nextObject] url]];
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" name="kanchor427"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Windows Phone C#</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor429"></a><a name="kanchor430"></a>public RespAlbum(gnsdk_cppcx.GnAlbum gnAlbum, bool bTakeMachedTrack)
+{
+   this.Title = gnAlbum.Title.Display;
+   if (false == bTakeMachedTrack)
+   {
+    if(0 != gnAlbum.Tracks.Count())
+     this.TrackTitle = gnAlbum.Tracks.ElementAt(0).Title.Display;
+    else
+     this.TrackTitle = "";
+   }
+   else
+   {
+    if(0 != gnAlbum.TracksMatched.Count())
+     this.TrackTitle = gnAlbum.TracksMatched.ElementAt(0).Title.Display;
+    else
+     this.TrackTitle = "";
+   }
+   this.ArtistName = gnAlbum.Artist.Name.Display;
+   this.Genre = gnAlbum.Genre(gnsdk_cppcx.GnDataLevel.kDataLevel_1);
+   this.ImageUrl = "http://" + gnAlbum.Content(gnsdk_cppcx.GnContentType.kContentTypeImageCover).Asset(gnsdk_cppcx.GnImageSize.kImageSizeSmall).UrlHttp;
+   if ("http://" == ImageUrl)
+   {
+    this.ImageUrl =  "/Assets/emptyImage.png";
+   }
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />C++</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint lang-cpp">  static void fetchCoverArtfromUrl(GnUser&amp;amp; user, gnsdk_cstr_t url)
+{
+
+  static gnsdk_uint32_t count         = 1;
+  gnsdk_char_t      buf[MAX_BUF_SIZE]   = {0};
+  gnsdk_byte_t      *img = NULL;
+  gnsdk_size_t      size = 0;
+  GnAssetFetch      gnAssetFetch(user, url);
+
+  snprintf(buf, MAX_BUF_SIZE, "cover_art_%d.jpg",count);
+  std::ofstream coverart(buf , std::ios::out | std::ios::binary);
+
+  if (coverart.is_open())
+  {
+    img = gnAssetFetch.Data();
+    size = gnAssetFetch.Size();
+    if (img &amp;amp;&amp;amp; size)
+    {
+      std::cout&amp;lt;&amp;lt;"Url:"&amp;lt;&amp;lt;url&amp;lt;&amp;lt;"as "&amp;lt;&amp;lt;buf&amp;lt;&amp;lt;std::endl&amp;lt;&amp;lt;std::endl;
+      coverart.write((const char *)img, size);
+    }
+    count++;
+  }
+}
+          
+static void navigateAlbumResponse(GnUser&amp;amp; user, GnAlbum&amp;amp; album)
+{
+  content_iterator Iter = album.Contents().begin();
+
+  for (; Iter != album.Contents().end(); ++Iter)
+  {
+     GnContent content = *Iter;
+     asset_iterator aIter = content.Assets().begin();
+     for (; aIter != content.Assets().end(); ++aIter)
+     {
+        GnAsset asset = *aIter;
+        if (kContentTypeImageCover == content.ContentType() )
+        {
+          fetchCoverArtfromUrl(user, asset.UrlHttp());
+
+        }
+     }
+  }
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />C#</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor431"></a><a name="kanchor432"></a><a name="kanchor433"></a><a name="kanchor434"></a><a name="kanchor435"></a>/*-----------------------------------------------------------------------------
+*  FetchCoverArt
+*/
+private static void
+FetchCoverArt(GnUser user)
+{
+  Console.WriteLine("\n*****Sample Link Album Query*****");
+
+  using (LookupStatusEvents linkStatusEvents = new LookupStatusEvents())
+      {
+   // The below serialized GDO was an 1-track album result from another GNSDK query. 
+  string serializedGdo = "WEcxAbwX1+DYDXSI3nZZ/L9ntBr8EhRjYAYzNEwlFNYCWkbGGLvyitwgmBccgJtgIM/dkcbDgrOqBMIQJZMmvysjCkx10ppXc68ZcgU0SgLelyjfo1Tt7Ix/cn32BvcbeuPkAk0WwwReVdcSLuO8cYxAGcGQrEE+4s2H75HwxFG28r/yb2QX71pR";
+
+   // Typically, the GDO passed in to a Link query will come from the output of a GNSDK query. 
+   // For an example of how to perform a query and get a GDO please refer to the documentation 
+   // or other sample applications. 
+        
+
+  GnMusicId gnMusicID = new GnMusicId(user);
+  gnMusicID.Options().LookupData(GnLookupData.kLookupDataContent, true);
+
+  GnResponseAlbums responseAlbums = gnMusicID.FindAlbums(GnDataObject.Deserialize(serializedGdo));
+  GnAlbum      gnAlbum    = responseAlbums.Albums.First&lt;GnAlbum&gt;();
+
+  GnLink link = new GnLink(gnAlbum, user, null);
+  if (link != null)
+  {
+    // Cover Art 
+    GnLinkContent coverArt  = link.CoverArt(GnImageSize.kImageSize170, GnImagePreferenceType.kImagePreferenceSmallest);
+    byte[]    coverData = coverArt.DataBuffer;
+
+    // save coverart to a file.
+    fetchImage(coverData.Length.ToString(), "cover art");
+    if (coverData != null)
+      File.WriteAllBytes("cover.jpeg", coverData);
+      
+    // Artist Image 
+    GnLinkContent imageArtist = link.ArtistImage(GnImageSize.kImageSize170, GnImagePreferenceType.kImagePreferenceSmallest);
+    byte[]    artistData = imageArtist.DataBuffer;
+          
+    // save artist image to a file.
+    fetchImage(artistData.Length.ToString(), "artist");
+    if (artistData != null)
+      File.WriteAllBytes("artist.jpeg", artistData);
+   }
+  }
+
+</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Java code sample</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor436"></a>//=============================================================================================
+// fetchImage
+//  Display file size
+//  
+void
+fetchImage( GnLink link, GnLinkContentType contentType, String imageTypeStr )
+{
+  GnImagePreferenceType imgPreference = GnImagePreferenceType.kImagePreferenceSmallest;
+  GnImageSize       imageSize     = GnImageSize.kImageSize170;
+  String        fileName    = null;
+  GnLinkContent     linkContent    = null;
+
+  // Perform the image fetch
+  try
+  {
+    // For image to be fetched, it must exist in the size specified and you must be entitled to fetch images.
+    switch ( contentType )
+    {
+    case kLinkContentCoverArt:
+      linkContent = link.coverArt( imageSize, imgPreference );
+      fileName  = "cover.jpg";
+      break;
+
+    case kLinkContentImageArtist:
+      linkContent = link.artistImage( imageSize, imgPreference );
+      fileName  = "artist.jpg";
+      break;
+    }
+
+    // Do something with the image, e.g. display, save, etc. Here we just print the size.
+    long dataSize = linkContent.dataSize();
+    System.out.printf( "\nRETRIEVED: %s: %d byte JPEG\n", imageTypeStr, dataSize );
+
+    // get image data
+    byte[] imageData = new byte[(int) dataSize];
+    linkContent.dataBuffer(imageData);
+
+    // Save image to file.
+    DataOutputStream os = new DataOutputStream( new FileOutputStream(fileName) );
+    os.write( imageData );
+    os.close();
+  }
+  catch ( GnException e ) 
+  {
+    System.out.println( e.errorAPI() + "\t" + e.errorCode() + "\t" +  e.errorDescription() );
+  } catch (IOException e) {
+    System.out.println( e.getMessage() );
+  }
+}</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

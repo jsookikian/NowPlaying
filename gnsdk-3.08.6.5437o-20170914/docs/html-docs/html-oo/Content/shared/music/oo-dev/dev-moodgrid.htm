@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Implementing Mood</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">OO APIs</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_oo_all.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor337"></a>Implementing Mood</h1>
+                                        <p><a name="kanchor338"></a>The Mood library allows applications to generate playlists and user interfaces based on Gracenote Mood descriptors. Mood provides Mood descriptors to the application in a two-dimensional grid that represents varying degrees of moods across each axis. One axis represents energy (calm to energetic) and the other axis represents valence (dark to positive). When the user selects a mood from the grid, the application can provide a playlist of music that corresponds to the selected mood. Additional filtering support is provided for genre, origin, and era music attributes.</p>
+                                        <p>For more information on Moodgrid, see the <i><a name="kanchor339"></a>Moodgrid Overview</i></p>
+                                        <p>The Moodgrid APIs:</p>
+                                        <ul>
+                                            <li value="1">Encapsulate Gracenote’s Mood Editorial Content (mood layout and ids).</li>
+                                            <li value="2">Simplify access to Mood results through x,y coordinates.</li>
+                                            <li value="3"><a name="kanchor340"></a>Allow for multiple local and online data sources through Mood Providers.</li>
+                                            <li value="4">Enable pre-filtering of results using genre, origin, and era attributes.</li>
+                                            <li value="5">Support 5x5 or 10x10 MoodGrids.</li>
+                                            <li value="6">Provide the ability to go from a cell of a 5x5 Mood to any of its expanded four Moods in a 10x10 grid.</li>
+                                        </ul>
+                                        <p><b>Mood terminology</b>
+                                        </p>
+                                        <ul>
+                                            <li value="1"><b>Mood Provider</b><a name="kanchor341"></a><a name="kanchor342"></a>—A collection of audio tracks  such as a Playlist Collection Summary (<code class="prettyprint">GnPlaylistCollectionSummary</code>)</li>
+                                            <li value="2"><b>Mood Presentation</b>—An instance of <code class="prettyprint">GnMoodgridPresentation</code> representing a 5x5 or 10x10 grid  containing</li>
+                                        </ul>
+                                        <p><b>To implement Mood:</b>
+                                        </p>
+                                        <ol>
+                                            <li value="1">Allocate a <code class="prettyprint">GnMoodgrid</code> class.</li>
+                                            <li value="2"><a name="kanchor343"></a>Enumerate the data sources using Mood Providers</li>
+                                            <li value="3">Create and populate a Mood Presentation</li>
+                                            <li value="4">Filtering the results, if needed</li>
+                                        </ol>
+                                        <h2>Prerequisites</h2>
+                                        <p>Using the Mood APIs requires the following modules:</p>
+                                        <ul>
+                                            <li value="1"><a name="kanchor344"></a>GNSDK Manager</li>
+                                            <li value="2"><a name="kanchor345"></a>SQLite (for local caching)</li>
+                                            <li value="3"><a name="kanchor346"></a>MusicID</li>
+                                            <li value="4">Playlist</li>
+                                            <li value="5">Mood</li>
+                                        </ul>
+                                        <p>If you are using MusicID to recognize music, you must enable Playlist<MadCap:conditionalText data-mc-conditions="Default.desk-gen-cndt,Default.auto-gen-cndt"><a name="kanchor347"></a> and DSP</MadCap:conditionalText> data in your query. You must be entitled to use Playlist—if you are not, you will not get an error, but Mood will return no results. Please contact your Gracenote Global Service &amp;&#160;Support representative for more information.</p>
+                                        <h2><a name="kanchor348"></a>Enumerating Data Sources using Mood Providers</h2>
+                                        <p>GNSDK automatically registers all local and online data sources available to Mood. For example, if you create a playlist collection using the Playlist API, GNSDK automatically registers that playlist as a data source available to Mood. These data sources are referred to as <i>Providers</i>. Mood is designed to work with multiple providers. You can iterate through the list of available Providers using the <code class="prettyprint">GnMoodgrid</code> class' <code class="prettyprint">Providers</code> method. For example, the following call returns a handle to the first Provider on the list (at index 0):</p>
+                                        <p><b>C++</b>
+                                        </p><pre class="prettyprint">moodgrid::GnMoodgrid myMoodgrid;
+moodgrid::GnMoodgridProvider myProvider = *(myMoodgrid.Providers().at(0));</pre>
+                                        <p><b>C#</b>
+                                        </p><pre class="prettyprint">GnMoodgrid moodgrid = new GnMoodgrid();
+GnMoodgridProvider provider = moodgrid.Providers.at(0).next();</pre>
+                                        <p><b>Java</b>
+                                        </p><pre class="prettyprint">GnMoodgrid myMoodGrid = new GnMoodgrid();
+GnMoodgridProvider myProvider = myMoodGrid.providers().at(0).next();</pre>
+                                        <p>You can use the <code class="prettyprint">GnMoodGridProvider</code> object to retrieve the following information</p>
+                                        <ul>
+                                            <li value="1">Name</li>
+                                            <li value="2">Type</li>
+                                            <li value="3">Requires network</li>
+                                        </ul>
+                                        <h2>Creating and Populating a Mood Presentation</h2>
+                                        <p>Once you have a <code class="prettyprint">GnMoodgrid</code> object, you can create and populate a Mood Presentation with Mood data. A Presentation is a <code class="prettyprint">GnMoodgridPresentation</code> object that represents the Mood, containing the mood name and playlist information associated with each grid cell.</p>
+                                        <p>To create a Mood Presentation, use the <code class="prettyprint">GnMoodgrid</code> class' "create presentation" method, passing in the user handle and the Mood type. The type can be one of the enumerated values in <code class="prettyprint">GnMoodgridPresentationType</code>: either a 5x5 or 10x10 grid. The method returns a <code class="prettyprint">GnMoodgridPresentation</code> object:</p>
+                                        <p><b>C++</b>
+                                        </p><pre class="prettyprint">moodgrid::GnMoodgridPresentation myPresentation =  myMoodgrid.CreatePresentation(user, GnMoodgridPresentationType.kMoodgridPresentationType5x5);</pre>
+                                        <p><b>C#</b>
+                                        </p><pre class="prettyprint">presentation = moodGrid.CreatePresentation(user, GnMoodgridPresentationType.kMoodgridPresentationType10x10);</pre>
+                                        <p><b>Java</b>
+                                        </p><pre class="prettyprint">GnMoodgridPresentation myPresentation = myMoodGrid.createPresentation(user, GnMoodgridPresentationType.kMoodgridPresentationType5x5);</pre>
+                                        <h2>Iterating Through a Mood Presentation</h2>
+                                        <p>Each cell of the Presentation is populated with a mood name an associated playlist. You can iterate through the Presentation to retrieve this information from each cell:</p>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" /><b>C++</b> <![CDATA[ ]]></a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor349"></a><a name="kanchor350"></a><a name="kanchor351"></a><a name="kanchor352"></a>/* Create a moodgrid presentation for the specified type */
+moodgrid::GnMoodgridPresentation myPresentation =  myMoodgrid.CreatePresentation(user, type);
+
+moodgrid::GnMoodgridPresentation::data_iterator itr = myPresentation.Moods().begin();
+
+for (; itr != myPresentation.Moods().end(); ++itr) {
+          
+  /* Find the recommendation for the mood */
+  moodgrid::GnMoodgridResult result = myPresentation.FindRecommendations(myProvider, *itr);
+
+  printf("\n\n\tX:%d  Y:%d\tMood Name: %s\tMood ID: %s\tCount: %d\n", itr-&gt;X, itr-&gt;Y, myPresentation.MoodName(*itr), myPresentation.MoodId(*itr), result.Count());
+
+  moodgrid::GnMoodgridResult::iterator result_itr = result.Identifiers().begin();
+          
+  /* Iterate the results for the identifiers */
+  for (; result_itr != result.Identifiers().end(); ++result_itr) {
+    printf("\n\n\tX:%d  Y:%d", itr-&gt;X, itr-&gt;Y);
+
+    printf("\nident:\t%s\n", result_itr-&gt;MediaIdentifier());
+    printf("group:\t%s\n", result_itr-&gt;Group());
+
+    playlist::GnPlaylistMetadata   data = collection.Metadata(user, result_itr-&gt;MediaIdentifier(), result_itr-&gt;Group());
+
+    printf("Album:\t%s\n", data.AlbumName());
+    printf("Mood :\t%s\n", data.Mood());
+  }
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />C#  </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor353"></a><a name="kanchor354"></a><a name="kanchor355"></a>/* Create a moodgrid presentation for the specified type */
+presentation = moodGrid.CreatePresentation(user, gnMoodgridPresentationType);      
+      
+/* Query the presentation type for its dimensions */
+GnMoodgridDataPoint dataPoint = moodGrid.Dimensions(gnMoodgridPresentationType);
+Console.WriteLine("\n PRINTING MOODGRID " + dataPoint.X + " x " + dataPoint.Y + " GRID ");
+
+/* Enumerate through the moodgrid getting individual data and results */
+GnMoodgridPresentationDataEnumerable moodgridPresentationDataEnumerable = presentation.Moods;       
+       
+foreach (GnMoodgridDataPoint position in moodgridPresentationDataEnumerable)
+{
+  uint x = position.X;
+  uint y = position.Y;
+
+  /* Get the name for the grid coordinates in the language defined by Locale */
+  string name = presentation.MoodName(position);
+
+  /* Get the mood id */
+  string id = presentation.MoodId(position);
+
+  /* Find the recommendation for the mood */
+  GnMoodgridResult moodgridResult = presentation.FindRecommendations(provider, position);
+
+  /* Count the number of results */
+  count = moodgridResult.Count();
+  Console.WriteLine("\n\n\tX:" + x + "  Y:" + y + " name: " + name + " count: " + count + " ");
+
+  /* Iterate the results for the idents */
+  GnMoodgridResultEnumerable identifiers = moodgridResult.Identifiers;
+  foreach (GnMoodgridIdentifier identifier in identifiers)
+  {
+    string ident = identifier.MediaIdentifier;
+    string group = identifier.Group;
+    Console.WriteLine("\n\tX:" + x + " Y:" + y + " \nident:\t" + ident + "  \ngroup:\t" + group );
+  }
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" style="font-weight: bold;"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Java</a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">/* Create a moodgrid presentation for the specified type */
+GnMoodgridPresentation myPresentation = myMoodGrid.createPresentation(user, type);
+
+/* Query the presentation type for its dimensions */
+GnMoodgridDataPoint dataPoint = myMoodGrid.dimensions(type);
+System.out.println("\n PRINTING MOODGRID " + dataPoint.getX() + " x " + dataPoint.getY() + " GRID ");
+    
+GnMoodgridPresentationDataIterator itr = myPresentation.moods().begin();
+    
+while(itr.hasNext()) {
+  GnMoodgridDataPoint position = itr.next();
+      
+  /* Find the recommendation for the mood */
+  GnMoodgridResult moodgridResult = myPresentation.findRecommendations(myProvider, position);
+      
+  System.out.println("\n\n\tX:" + position.getX() 
+    + "  Y:" + position.getY() 
+    + " name: "+ myPresentation.moodName(position) 
+    + " count: " + moodgridResult.count()
+    + " ");
+      
+  GnMoodgridResultIterator resultItr = moodgridResult.identifiers().begin();
+      
+  while(resultItr.hasNext()) {
+    GnMoodgridIdentifier resultIdentfier = resultItr.next();
+        
+    System.out.println("\n\tX:" + position.getX() + " Y:" + position.getY()+" ");
+    System.out.println("ident:\t" + resultIdentfier.mediaIdentifier()+"  ");
+    System.out.println("group:\t" + resultIdentfier.group());
+        
+  }  
+}</pre>
+                                            </div>
+                                        </div>
+                                        <h2><a name="kanchor356"></a>Filtering Mood Results</h2>
+                                        <p>You can use genre, origin, and era to filter Mood results. To do this, use the <code>GnMoodgridPresentation</code>'s <code>addFilter</code> method. If you apply a filter, the results that are returned are pre-filtered, reducing the amount of data transmitted. For example, the following call sets a filter to limit results to tracks that fall within the punk rock genre.</p>
+                                        <p><b>Java:</b>
+                                        </p><pre>myPresentation.addFilter("pres1", kMoodgridListTypeGenre,"punk", kConditionTypeInclude);</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

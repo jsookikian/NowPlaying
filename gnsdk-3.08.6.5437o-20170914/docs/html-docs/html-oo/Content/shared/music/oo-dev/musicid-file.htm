@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Identifying Audio Files (MusicID-File)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="https://cloud.typography.com/7045754/7789972/css/fonts.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+        </script>
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="relative clearfix"><a class="logo" href="../../../landing-page/gnsdk-home.htm" alt="Logo"></a>
+                                    <div class="navigation-wrapper nocontent">
+                                        <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="nav-search row outer-row">
+                                <form class="search" action="#">
+                                    <div class="search-bar search-bar-container needs-pie">
+                                        <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                        <div class="search-filter-wrapper">
+                                            <div class="search-filter">
+                                                <div class="search-filter-content">
+                                                    <ul>
+                                                        <li>All Files</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-submit-wrapper" dir="ltr">
+                                            <div class="search-submit" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row" data-mc-content-body="True">
+                            <p style="font-weight: bold;"><span class="GeneralProductNameFull">GNSDK</span> <span class="GeneralAPI">OO APIs</span></p>
+                            <p>Version 3.08.6.5437 : <span class="SystemShortDate">9/14/2017</span></p>
+                            <hr width="100%" size="0" align="center" />
+                            <div class="content">
+                                <div id="contentBody">
+                                    <div class="row collapse">
+                                        <div class="sideContent">
+                                            <div class="clearfix">
+                                                <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolBar mc-component nocontent">
+                                                    <div class="button-group-container-left">
+                                                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                        </button>
+                                                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                                                        </button>
+                                                        <div class="button-separator">
+                                                        </div>
+                                                        <button class="button needs-pie print-button" title="Print">
+                                                            <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/gnsdk__gnsdk_oo_all.js" data-mc-side-menu="True" data-mc-max-depth="4" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                            </ul>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <h1><a name="kanchor225"></a><a name="kanchor226"></a><a name="kanchor227"></a>Identifying Audio Files (MusicID-File)</h1>
+                                        <p>The  MusicID-File module can perform recognition using individual audio files or leverage collections of files to provide advanced recognition. When an application provides decoded audio and text data for each file to the library, MusicID-File identifies each file and, if requested, identifies groups of files as albums.</p>
+                                        <p>Music-ID File provides three mechanisms for identification: </p>
+                                        <ol>
+                                            <li value="1"><b><a name="kanchor228"></a>TrackID</b>—TrackID identifies the best album(s) for a single track. It returns results for an individual track independent of any other tracks submitted for processing at the same time.</li>
+                                            <li value="2"><b><a name="kanchor229"></a>AlbumID</b>—AlbumID identifies the best album(s) for a group of tracks. Use AlbumID when identifying submitted files as a group is important. For example, if all the submitted tracks were originally recorded on different albums, but exist together on a greatest hits album, then that  will be the first match returned.</li>
+                                            <li value="3"><b><a name="kanchor230"></a>LibraryID</b>—LibraryID identifies the best album(s) for a large collection of tracks. Besides metadata and other submitted tracks, LibraryID also takes into account a number of factors, such as location on device, when returning results.</li>
+                                        </ol>
+                                        <p>For more information about the differences between TrackID, AlbumID, and LibraryID see the <a href="../concepts/music-id-file-overview.htm" name="kanchor231">MusicID-File Overview</a></p>
+                                        <p>MusicID-File is implemented with the  <b><code class="prettyprint">GnMusicIdFile</code></b> class.</p>
+                                        <p><b>To identify audio from a file:</b>
+                                        </p>
+                                        <ol>
+                                            <li value="1">Code an <code class="prettyprint">IGnMusicIdFileEvents</code> delegate class (<code class="prettyprint">GnMusicIdFileEventsDelegate</code> in Objective-C)  containing callbacks for results, events, and identification (metadata, fingerprint, and so on.).</li>
+                                            <li value="2"><a name="kanchor232"></a>Instantiate a <code class="prettyprint">GnMusicIdFile</code><a name="kanchor233"></a> object with your User object and events delegate  object.</li>
+                                            <li value="3">Call the <code class="prettyprint">GnMusicIdFile</code>'s <code class="prettyprint">FileInfos</code> method to get a <code class="prettyprint">GnMusicIdFileInfoManager</code> object.</li>
+                                            <li value="4">For each file you want to identify, instantiate a <code class="prettyprint">GnMusicIdFileInfo</code> object for it using the <code class="prettyprint">GnMusicIdFileInfoManager</code> object's <code class="prettyprint">Add</code><a name="kanchor234"></a> method. 
+        You can use the object
+to add more information about the audio file, such as textual metadata including
+track title and artist name, and a fingerprint if the audio file can be decoded to PCM.</li>
+                                            <li value="5">For each instantiated <code class="prettyprint">GnMusicIdFileInfo</code> object, set the file's path with the object's <code class="prettyprint">FileName</code> method and assign it an identifier to correlate it with returned results.</li>
+                                            <li value="6">Call one of the <code class="prettyprint">GnMusicIdFile</code> query methods.</li>
+                                            <li value="7">Handle metadata results in an events delegate callback.</li>
+                                        </ol>
+                                        <h2>Implementing an Events Delegate</h2>
+                                        <p>To receive <code class="prettyprint">GnMusicIdFile</code> notifications for results, events, and identification (metadata, fingerprint, and so on.), your application needs to implement the <code class="prettyprint">IGnMusicIdFileEvents</code> event delegate (<code class="prettyprint">GnMusicIdFileEventsDelegate</code> in Objective-C) provided upon <code class="prettyprint">GnMusicIdFile</code> object construction. This events delegate can contain callbacks for the following:</p>
+                                        <ul>
+                                            <li value="1"><a name="kanchor235"></a>Results handling</li>
+                                            <li value="2"><a name="kanchor236"></a>Status event handling</li>
+                                            <li value="3">Other event handling</li>
+                                            <li value="4">Fingerprinting for identification</li>
+                                            <li value="5"><a name="kanchor237"></a>Metadata for identification</li>
+                                        </ul>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>Please note that these callbacks are optional, but you will want to code a results handling callback at a minimum, in order to get results. In addition, fingerprint and metadata identification can be done automatically when you create an audio file object (see next section) for each file you want to identify.</p>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" name="kanchor238"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Android Java
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">/** 
+* GNSDK MusicID-File event delegate 
+*/
+private class MusicIDFileEvents extends IGnMusicIdFileEvents {
+    
+   HashMap&lt;String, String&gt; gnStatus_to_displayStatus;  
+    
+   public MusicIDFileEvents(){
+    gnStatus_to_displayStatus = new HashMap&lt;String,String&gt;();
+    gnStatus_to_displayStatus.put("kMusicIdFileCallbackStatusProcessingBegin", "Begin processing file");
+    gnStatus_to_displayStatus.put("kMusicIdFileCallbackStatusFileInfoQuery", "Querying file info");
+    gnStatus_to_displayStatus.put("kMusicIdFileCallbackStatusProcessingComplete", "Identification complete");                        
+   }
+    
+   // ...other delegate events    
+    
+}
+</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Objective-C
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">#pragma mark - MusicIDFileEventsDelegate Methods
+
+-(void) musicIdFileAlbumResult: (GnResponseAlbums*)albumResult currentAlbum: (NSUInteger)currentAlbum totalAlbums: (NSUInteger)totalAlbums cancellableDelegate: (id &lt;GnCancellableDelegate&gt;)canceller
+{
+  [self.cancellableObjects removeObject: canceller];
+
+  if (self.cancellableObjects.count==0)
+  {
+    self.cancelOperationsButton.enabled = NO;
+  }
+
+  [self processAlbumResponseAndUpdateResultsTable:albumResult];
+}
+
+  if(self.cancellableObjects.count==0)
+  {
+    self.cancelOperationsButton.enabled = NO;
+  }
+
+   [self enableOrDisableControls:YES];
+   [self processAlbumResponseAndUpdateResultsTable:result];
+}
+
+   // ...other delegate events
+ </pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" name="kanchor239"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Windows Phone C#
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor241"></a><a name="kanchor242"></a><a name="kanchor243"></a>
+#region IGnMusicIdFileEvents
+
+    void IGnMusicIdFileEvents.GatherFingerprint(GnMusicIdFileInfo fileinfo, uint current_file, uint total_files, IGnCancellable canceller)
+    {
+    return;
+    }
+
+    void IGnMusicIdFileEvents.GatherMetadata(GnMusicIdFileInfo fileinfo, uint current_file, uint total_files, IGnCancellable canceller)
+    {
+    return;
+    }
+
+    void IGnMusicIdFileEvents.MusicIdFileComplete(GnError musicidfile_complete_error)
+    {
+      List&lt;AlphaKeyGroup&lt;RespAlbum&gt;&gt; DataSource = AlphaKeyGroup&lt;RespAlbum&gt;.CreateGroups(respAlbList_,
+      System.Threading.Thread.CurrentThread.CurrentUICulture,
+      (RespAlbum s) =&gt; { return s.Title; }, true);
+
+        Deployment.Current.Dispatcher.BeginInvoke(() =&gt; 
+        { 
+        TBStatus.Text = "Status : MusicIDFile Completed Successfully";
+        ToggleUIBtnsVisibility(true);
+        LLRespAlbum.ItemsSource = DataSource;
+        });
+    }
+          
+    // ...other delegate events
+   </pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" /><b>C++</b></a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">/*
+ * Callback delegate classes
+ */
+
+/* Callback delegate called when performing MusicID-File operation */
+class MusicIDFileEvents : public IGnMusicIdFileEvents
+{
+public:
+  virtual void
+  StatusEvent(GnStatus status, 
+          gnsdk_uint32_t percent_complete, 
+          gnsdk_size_t bytes_total_sent, 
+          gnsdk_size_t bytes_total_received, 
+          IGnCancellable&amp; canceller)
+  {
+    std::cout &lt;&lt; "status (";
+
+    switch (status)
+    {
+    case gnsdk_status_unknown:
+      std::cout &lt;&lt;"Unknown ";
+      break;
+
+    case gnsdk_status_begin:
+      std::cout &lt;&lt;"Begin ";
+      break;
+
+    case gnsdk_status_connecting:
+      std::cout &lt;&lt;"Connecting ";
+      break;
+
+    case gnsdk_status_sending:
+      std::cout &lt;&lt;"Sending ";
+      break;
+
+    case gnsdk_status_receiving:
+      std::cout &lt;&lt;"Receiving ";
+      break;
+
+    case gnsdk_status_disconnected:
+      std::cout &lt;&lt;"Disconnected ";
+      break;
+
+    case gnsdk_status_complete:
+      std::cout &lt;&lt;"Complete ";
+      break;
+
+    default:
+      break;
+    }
+
+    std::cout &lt;&lt; "), % complete (" 
+          &lt;&lt; percent_complete 
+          &lt;&lt; "), sent (" 
+          &lt;&lt; bytes_total_sent 
+          &lt;&lt; "), received (" 
+          &lt;&lt; bytes_total_received 
+          &lt;&lt; ")" 
+          &lt;&lt; std::endl;
+
+    GNSDK_UNUSED(canceller);
+  }
+  //... more delegate events
+
+
+};
+ </pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Java
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor244"></a>//=============================================================================================
+// Callback delegate classes
+//
+  
+// Callback delegate called when performing MusicID-File operation
+class MusicIDFileEvents implements IGnMusicIdFileEvents {
+    
+  @Override
+  public void
+     musicIdFileStatusEvent( GnMusicIdFileInfo fileinfo, GnMusicIdFileCallbackStatus status, long currentFile, long totalFiles, IGnCancellable canceller ) {
+      
+  }
+
+   @Override
+   public void
+   musicIdFileAlbumResult( GnResponseAlbums album_result, long current_album, long total_albums, IGnCancellable canceller ) {
+      System.out.println( "\n*Album " + current_album + " of " + total_albums + "*\n" );
+
+      try {
+          displayResult(album_result);
+         } catch ( GnException gnException ) {
+        System.out.println("GnException \t" + gnException.getMessage());
+      }
+    }
+
+    @Override
+    public void
+    musicIdFileMatchResult( GnResponseDataMatches matches_result, long current_match, long total_matches, IGnCancellable canceller ) {
+      System.out.println( "\n*Match " + current_match + " of " + total_matches + "*\n" );
+    }
+
+    @Override
+    public void
+    musicIdFileResultNotFound( GnMusicIdFileInfo fileinfo, long currentFile, long totalFiles, IGnCancellable canceller ) {
+      
+    }
+
+    @Override
+    public void
+    musicIdFileComplete( GnError completeError ) {
+      
+    }
+
+    @Override 
+    public void
+    gatherFingerprint( GnMusicIdFileInfo fileInfo, long currentFile, long totalFiles, IGnCancellable canceller) {
+      
+      boolean complete = false;
+    
+      try {
+        
+        File audioFile = new File( fileInfo.fileName() );
+        
+        if (audioFile.exists()) {
+          
+          FileInputStream audioFileInputStream = null;
+          DataInputStream audioDataInputStream = null;
+  
+          audioFileInputStream = new FileInputStream(audioFile);
+          
+          // skip the wave header (first 44 bytes). the format of the sample files is known,
+          // but please be aware that many wav file headers are larger then 44 bytes!
+          audioFileInputStream.skip(44);
+
+          // initialize the fingerprinter
+          // Note: The sample files are non-standard 11025 Hz 16-bit mono to save on file size
+          fileInfo.fingerprintBegin(11025, 16, 1);
+          
+          audioDataInputStream = new DataInputStream(audioFileInputStream);
+
+          byte[] audioBuffer = new byte[BUFFER_READ_SIZE];
+          int readSize = 0;
+          do {
+
+            // read data, check for -1 to see if we are at end of file
+            readSize = audioDataInputStream.read( audioBuffer );
+            if ( readSize == -1) {
+              break;
+            }
+            
+            complete = fileInfo.fingerprintWrite( audioBuffer, readSize );
+            
+            // does the fingerprinter have enough audio?
+            if (complete) {
+              break;
+            }
+            
+          }
+          while ( (readSize &gt; 0) &amp;&amp; (complete == false) );
+          
+          audioDataInputStream.close();
+          
+          fileInfo.fingerprintEnd();
+          
+          if (!complete){
+            // Fingerprinter doesn't have enough data to generate a fingerprint.
+            // Note that the sample data does include one track that is too short to fingerprint.
+            System.out.println("Warning: input file does not contain enough data to generate a fingerprint:\n" + audioFile.getPath());
+          }
+          
+        }
+        
+      } catch ( GnException gnException ) {
+        System.out.println("GnException \t" + gnException.getMessage());
+      } catch ( IOException e ){
+        System.out.println( "Execption reading audio file" + e.getMessage() );
+      }      
+    }
+
+    @Override
+    public void
+    gatherMetadata( GnMusicIdFileInfo fileInfo, long currentFile, long totalFiles, IGnCancellable canceller ) {
+
+      try {
+        
+        // A typical use for this callback is to read file tags (ID3, etc) for the basic
+        // metadata of the track.  To keep the sample code simple, we went with .wav files
+        // and hardcoded in metadata for just one of the sample tracks, index 5 from
+        // sampleAudioFile. So, if this is not the correct sample track, return.
+        if ( fileInfo.identifier().equals( '5' ) == false ) {
+          return;
+        }
+  
+        fileInfo.albumArtist( "kardinal offishall" );
+        fileInfo.albumTitle ( "quest for fire" );
+        fileInfo.trackTitle ( "intro" );
+      
+      } catch ( GnException gnException ) {
+        System.out.println("GnException \t" + gnException.getMessage());
+      }
+    }
+
+    @Override
+    public void statusEvent(GnStatus status, long percentComplete, long bytesTotalSent, long bytesTotalReceived, IGnCancellable canceller) {
+      // override to receive status events for queries to Gracenote service
+    }
+
+  };  
+        </pre>
+                                            </div>
+                                        </div>
+                                        <h2>Adding Audio Files for Identification</h2>
+                                        <p><b>To add audio files for identification:</b>
+                                        </p>
+                                        <ol>
+                                            <li value="1">Call the <code class="prettyprint">GnMusicIdFile</code>'s <code class="prettyprint">FileInfos</code> method to get a <code class="prettyprint">GnMusicIdFileInfoManager</code> object.</li>
+                                            <li value="2">For each file you want to identify, instantiate a <code class="prettyprint">GnMusicIdFileInfo</code> object for it using the <code class="prettyprint">GnMusicIdFileInfoManager</code> object's <code class="prettyprint">Add</code> method.
+         <b>Each audio file must be added with a unique identifer string</b> that your application can use to correlate results in callbacks with a specific file. Audio files can be added as a <code class="prettyprint">GnAudioFile</code> (only available on some platforms) instance.</li>
+                                            <li value="3">Set the file's path with the <code class="prettyprint">GnMusicIdFileInfo</code>'s <code class="prettyprint">FileName</code> method. <code class="prettyprint">GnMusicIdFileInfo</code> objects are used to contain the metadata that will be used in identification and will also contain results after a query has completed. MusicID-File matches each <code class="prettyprint">GnMusicIdFileInfo</code> object to a track within an album.</li>
+                                        </ol>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>Adding audio files as a <code class="prettyprint">GnAudioFile</code> instance (only available on some platforms) allows <code class="prettyprint">GnMusicIdFile</code> to automatically extract metadata available in audio tags (artist, album, track, track number, and so on.,) and fingerprint the raw audio data, saving your application the need to do this in event delegate methods. </p>
+                                        <h3>Setting Audio File Identification</h3>
+                                        <p>To aid in identification, your application can call <code class="prettyprint">GnMusicIdFileInfo</code><a name="kanchor245"></a><a name="kanchor246"></a> methods to get/set CDDB IDs, fingerprint, path and filename, FileInfo identifier (set when FileInfo created), media ID (from Gracenote), source filename (from parsing) and application, Media Unique ID (MUI), Tag ID (aka Product ID), TOC offsets, track artist/number/title, and TUI (Title Unique Identifier).</p>
+                                        <p>Where online processing is enabled, portions of the audio file resolution into albums is performed within Gracenote Service rather than on the device. Your license must allow online processing.</p>
+                                        <p>An identification algorithm can be invoked multiple times on a single <code class="prettyprint">GnMusicIdFile</code> instance, but it will only attempt to identify audio files added since the previous identification concluded. To re-recognize an entire collection ensure you use a new <code class="prettyprint">GnMusicIdFile</code> object.</p>
+                                        <p>The identification process executes asynchronously in a worker thread and completed asynchronously. However, both sychronous and asynchronous identification methods are provided. Where synchronous identification is invoked, the identification is still performed asynchronously and results delivered via delegate implementing <code class="prettyprint">IGnMusicIdFileEvents</code>, but the method does not return until identification is complete.</p>
+                                        <p> An identification process can be canceled. In this case the identification
+process stops and, if synchronous identification was invoked, the identify method returns.</p>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Android Java
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint"><a name="kanchor247"></a>@Override
+public void gatherMetadata(GnMusicIdFileInfo fileInfo, long currentFile, long totalFiles, IGnCancellable cancelable) {
+
+   MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+   try {      
+      mmr.setDataSource(fileInfo.fileName());
+      fileInfo.albumTitle(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM));
+      fileInfo.albumArtist(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUMARTIST));
+      fileInfo.trackTitle(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE));
+      fileInfo.trackArtist(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST));
+      try {
+          long trackNumber = Long.parseLong(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_CD_TRACK_NUMBER));
+          fileInfo.trackNumber(trackNumber);
+         } catch (NumberFormatException e) {}
+
+       } catch (IllegalArgumentException e1) {
+         Log.e(appString, "illegal argument to MediaMetadataRetriever.setDataSource");
+    } catch (GnException e1) {
+         Log.e(appString, "error retrieving filename from fileInfo");
+       }
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Objective-C
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">-(void) gatherMetadata: (GnMusicIdFileInfo*) fileInfo
+       currentFile: (NSUInteger) currentFile
+      totalFiles: (NSUInteger) totalFiles
+   cancellableDelegate: (id &lt;GnCancellableDelegate&gt;) canceller
+{
+  NSError *error = nil;
+  NSString* filePath = [fileInfo fileName:&amp;error];
+
+  if (error)
+  {
+    NSLog(@"Error while retrieving filename %@ ", [error localizedDescription]);
+  }
+  else
+  {
+    AVAsset *asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:filePath]];
+    if (asset)
+    {
+      NSArray *metadataArray =  [asset metadataForFormat:AVMetadataFormatID3Metadata];
+
+      for(AVMetadataItem* item in metadataArray)
+      {
+        NSLog(@"AVMetadataItem Key = %@ Value = %@",item.key, item.value );
+
+        if([[item commonKey] isEqualToString:@"title"])
+        {
+          [fileInfo trackTitleWithValue:(NSString*) [item value] error:nil];
+        }
+        else if([[item commonKey] isEqualToString:@"albumName"])
+        {
+          [fileInfo albumTitleWithValue:(NSString*) [item value] error:nil];
+        }
+        else if([[item commonKey] isEqualToString:@"artist"])
+        {
+          [fileInfo trackArtistWithValue:(NSString*) [item value] error:nil];
+        }
+      }
+    }
+  }
+} </pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" /><b>C++</b></a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">GnMusicIdFileInfo fileinfo;
+fileinfo = midf.FileInfos().Add(fileIdent);
+fileinfo.FileName(filePath);
+fileInfo.AlbumArtist( "kardinal offishall" );
+fileInfo.AlbumTitle ( "quest for fire" );
+fileInfo.TrackTitle ( "intro" );</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Java
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">@Override
+public void
+gatherMetadata(GnMusicIdFileInfo fileInfo, long currentFile, long totalFiles, IGnCancellable canceller) {
+    try {
+        /* A typical use for this callback is to read file tags (ID3, etc) for the basic
+         * metadata of the track.  To keep the sample code simple, we went with .wav files
+         * and hardcoded in metadata for just one of the sample tracks, index 5 from
+         * sampleAudioFile. So, if this isn't the correct sample track, return. */
+         if (fileInfo.identifier().equals('5') == false) {
+            return;
+         }
+
+         fileInfo.albumArtist("kardinal offishall");
+                fileInfo.albumTitle("quest for fire");
+                fileInfo.trackTitle("intro");
+         } catch (GnException gnException) {
+                System.out.println("GnException \t" + gnException.getMessage());
+    }
+}<![CDATA[
+        ]]></pre>
+                                            </div>
+                                        </div>
+                                        <h3>MusicID-File Fingerprinting</h3>
+                                        <p>The MusicID-File fingerprinting APIs give your application the ability to provide audio data as an identification mechanism. This enables MusicID-File to perform identification based on the audio itself, as opposed to performing identification using only the associated metadata. Use the MusicID-File fingerprinting APIs during an events delegate callback.</p>
+                                        <p>There are four <code class="prettyprint">GnMusicIdFileInfo</code> fingerprinting methods:</p>
+                                        <ul>
+                                            <li value="1"><code class="prettyprint"><b>FingerprintFromSource</b></code>—Generates a fingerprint from a provided audio source. <b>Gracenote recommends using this</b>, as it encapsulates the below three calls (and additionally required code) into one.</li>
+                                            <li value="2"><code class="prettyprint"><b>FingerprintBegin</b></code><a name="kanchor248"></a>—Initialize fingerprint generation.</li>
+                                            <li value="3"><code class="prettyprint"><b>FingerprintWrite</b></code>—Provides uncompressed audio data for fingerprint generation.</li>
+                                            <li value="4"><code class="prettyprint"><b>FingerprintEnd</b></code>—Finalizes fingerprint generation. </li>
+                                        </ul>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Android Java
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">@Override
+public void gatherFingerprint(GnMusicIdFileInfo fileInfo, long currentFile, long totalFiles, IGnCancellable cancelable){
+   try {
+      fileInfo.fingerprintFromSource( new GnAudioFile( new File(fileInfo.fileName())) );
+     } catch (GnException e) {
+     Log.e(appString, "error in fingerprinting file: " + e.getErrorAPI() + ", " + e.getErrorModule() + ", " + e.getErrorDescription());
+     }
+}</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Objective-C
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">/*-----------------------------------------------------------------------------
+ *  GatherFingerprint
+ */
+-(void) gatherFingerprint: (GnMusicIdFileInfo*)fileInfo currentFile: (NSUInteger)currentFile totalFiles: (NSUInteger)totalFiles cancellableDelegate: (id &lt;GnCancellableDelegate&gt;)canceller
+{
+	(void)currentFile;
+	(void)totalFiles;
+	(void)canceller;
+
+	NSString* file = [fileInfo getFileName:nil];
+	BOOL complete = false;
+
+	if( file )
+	{
+
+		NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:file];
+		if( fileHandle != nil )
+		{
+			/* skip the wave header (first 44 bytes). the format of the sample files is known,
+			 * but please be aware that many wav file headers are larger then 44 bytes!
+			 */
+			unsigned long long offset = 44;
+			[fileHandle seekToFileOffset:offset];
+
+			/* initialize the fingerprinter
+			 * Note: The sample files are non-standard 11025 Hz 16-bit mono to save on file size
+			 */
+			[fileInfo fingerprintBegin:11025 audioSampleSize:16 audioChannels:1 error:nil];
+
+			NSData* fileData = nil;
+			do
+			{
+				fileData = [fileHandle readDataOfLength:2048];
+				if( nil != [fileData bytes])
+				{
+					complete = [fileInfo fingerprintWrite:fileData error:nil];
+
+					if( complete )
+					{
+						break;
+					}
+				}
+
+			}
+			while ( nil != [fileData bytes] );
+
+			if ( false == complete )
+			{
+				NSLog(@"Warning: input file does contain enough data to generate a fingerprint:%@",file);
+			}
+
+			[fileInfo fingerprintEnd:nil];
+
+			[fileHandle closeFile];
+		}
+		else
+		{
+			NSLog(@"Error: Failed to open input file:%@",file);
+		}
+	}
+}
+</pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" /><b>C++</b></a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">file = fileInfo.FileName();
+
+std::ifstream audioFile (file, std::ios::in | std::ios::binary);
+if ( audioFile.is_open() )
+{
+  /* skip the wave header (first 44 bytes). the format of the sample files is known,
+   * but please be aware that many wav file headers are larger then 44 bytes!
+   */
+  audioFile.seekg(44);
+  if ( audioFile.good() )
+  {
+    /* initialize the fingerprinter
+     * Note: The sample files are non-standard 11025 Hz 16-bit mono to save on file size
+     */
+     fileInfo.FingerprintBegin(11025, 16, 1);
+
+    do
+    {
+      audioFile.read(pcmAudio, 2048);
+      complete = fileInfo.FingerprintWrite((gnsdk_byte_t*)pcmAudio,
+                       (gnsdk_size_t)audioFile.gcount()
+          );
+
+      /* does the fingerprinter have enough audio? */
+      if (GNSDK_TRUE == complete)
+      {
+        break;
+      }
+    }
+    while ( audioFile.good() );
+
+     if (GNSDK_TRUE != complete)
+     {
+      /* Fingerprinter doesn't have enough data to generate a fingerprint.
+         Note that the sample data does include one track that is too short to fingerprint. */
+       std::cout &lt;&lt; "Warning: input file does contain enough data to generate a fingerprint:\n" &lt;&lt; file &lt;&lt;"\n";
+       fileInfo.FingerprintEnd();
+    }
+  }
+  else
+  {
+    std::cout &lt;&lt; "\n\nError: Failed to skip wav file header: " &lt;&lt; file &lt;&lt;"\n\n";
+  }
+}  </pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />C#
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">/*-----------------------------------------------------------------------------
+ *  GatherFingerprint
+ */
+public override void
+GatherFingerprint(GnMusicIdFileInfo fileInfo, uint currentFile, uint totalFiles, IGnCancellable canceller)
+{
+  byte[]   audioData  = new byte[2048];
+  bool     complete   = false;
+  int    numRead  = 0;
+  FileStream fileStream = null;
+
+  try
+  {
+    string filename = fileInfo.FileName;
+    if (filename.Contains('\\'))
+      fileStream = new FileStream(filename, FileMode.Open, FileAccess.Read);
+    else
+      fileStream = new FileStream(folderPath + filename, FileMode.Open, FileAccess.Read);
+
+     /* check file for existence */
+     if (fileStream == null || !fileStream.CanRead)
+     {
+       Console.WriteLine("\n\nError: Failed to open input file: " + filename);
+     }
+     else
+     {
+      /* skip the wave header (first 44 bytes). we know the format of our sample files, but please
+       be aware that many wav file headers are larger then 44 bytes! */
+       if (44 != fileStream.Seek(44, SeekOrigin.Begin))
+       {
+         Console.WriteLine("\n\nError: Failed to seek past header: %s\n", filename);
+       }
+       else
+       {
+         /* initialize the fingerprinter
+          Note: Our sample files are non-standard 11025 Hz 16-bit mono to save on file size */
+         fileInfo.FingerprintBegin(11025, 16, 1);
+
+         numRead = fileStream.Read(audioData, 0, 2048);
+         while ((numRead) &gt; 0)
+         {
+           /* write audio to the fingerprinter */
+           complete = fileInfo.FingerprintWrite(audioData, Convert.ToUInt32(numRead));
+
+          /* does the fingerprinter have enough audio? */
+           if (complete)
+           {
+             break;
+           }
+
+           numRead = fileStream.Read(audioData, 0, 2048);
+        }
+        fileStream.Close();
+
+        /* signal that we are done */
+        fileInfo.FingerprintEnd();
+        Debug.WriteLine("Fingerprint: " + fileInfo.Fingerprint + " File: " + fileInfo.FileName);
+       }
+    }
+
+    if (!complete)
+    {
+      /* Fingerprinter doesn't have enough data to generate a fingerprint.
+      Note that the sample data does include one track that is too short to fingerprint. */
+       Console.WriteLine("Warning: input file does contain enough data to generate a fingerprint:\n" + filename);
+    }
+
+  }
+  catch (FileNotFoundException e)
+  {
+    Console.WriteLine("FileNotFoundException " + e.Message);
+  }
+  catch (IOException e)
+  {
+    Console.WriteLine("IOException " + e.Message);
+  }
+  finally
+  {
+    try
+    {
+      fileStream.Close();
+    }
+    catch (IOException e)
+    {
+      Console.WriteLine("IOException " + e.Message);
+    }
+  }
+} </pre>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="15" width="16" alt="Closed" data-mc-alt2="Open" />Java
+        </a></span>
+                                            <div class="MCDropDownBody dropDownBody"><pre class="prettyprint">@Override
+public void
+gatherFingerprint(GnMusicIdFileInfo fileInfo, long currentFile, long totalFiles, IGnCancellable canceller) {
+    boolean complete = false;
+    try {
+            File audioFile = new File(fileInfo.fileName());
+
+            FileInputStream audioFileInputStream = null;
+            DataInputStream audioDataInputStream = null;
+
+            audioFileInputStream = new FileInputStream(audioFile);
+
+           /* skip the wave header (first 44 bytes). the format of the sample files is known,
+            * but please be aware that many wav file headers are larger then 44 bytes! */
+            audioFileInputStream.skip(44);
+
+           /* initialize the fingerprinter
+            * Note: The sample files are non-standard 11025 Hz 16-bit mono to save on file size */
+            fileInfo.fingerprintBegin(11025, 16, 1);
+
+            audioDataInputStream = new DataInputStream(audioFileInputStream);
+
+            byte[] audioBuffer = new byte[BUFFER_READ_SIZE];
+            int readSize = 0;
+            do {
+                   /* read data, check for -1 to see if we are at end of file */
+                    readSize = audioDataInputStream.read(audioBuffer);
+                    if (readSize == -1) {
+                        break;
+                    }
+
+                    complete = fileInfo.fingerprintWrite(audioBuffer, readSize);
+
+                        /* does the fingerprinter have enough audio? */
+                    if (complete) {
+                        break;
+                    }
+                }
+            while ((readSize &gt; 0) &amp;&amp; (complete == false));
+
+            audioDataInputStream.close();
+
+            fileInfo.fingerprintEnd();
+
+            if (!complete) {
+                    /* Fingerprinter doesn't have enough data to generate a fingerprint.
+                     * Note that the sample data does include one track that is too short to fingerprint. */
+                System.out.println("Warning: input file does not contain enough data to generate a fingerprint:\n" + audioFile.getPath());
+            }
+        } catch (GnException gnException) {
+            System.out.println("GnException \t" + gnException.getMessage());
+        } catch (IOException e) {
+            System.out.println("Exception reading audio file" + e.getMessage());
+        }
+    }
+        </pre>
+                                            </div>
+                                        </div>
+                                        <h2>Setting Options for MusicID-File Queries</h2>
+                                        <p>To set an option for your MusicID-File query, instantiate a <code class="prettyprint">GnMusicIdFileOptions</code> object using the <code class="prettyprint">GnMusicIdFile</code>'s <code class="prettyprint">Options</code> method and call its methods. For example, you can set an option for local lookup. By default, a lookup is handled online, but many applications will want to start with a local query first then, if no match is returned, fall back to an online query.</p>
+                                        <p><b>MusicID-File Query Options:</b>
+                                        </p>
+                                        <ul>
+                                            <li value="1"><code class="prettyprint"><b>LookupData</b></code>—Set <code class="prettyprint">GnLookupData</code> options to enable what data can be returned, for example, classical data, mood and tempo data, playlist, external IDs, and so on.</li>
+                                            <li value="2"><code class="prettyprint"><b>LookupMode</b></code>—Set a lookup option with one of the <code class="prettyprint">GnLookupMode</code> enums. These include ones for local only, online only, online nocache, and so on.</li>
+                                            <li value="3"><code class="prettyprint"><b>BatchSize</b></code>— In LibraryID, you can set the batch size to control how many files are processed at a time. The higher the size, the more memory will be used. The lower the size, the less memory will be used and the faster results will be returned. </li>
+                                            <li value="4"><code class="prettyprint"><b>ThreadPriority</b></code>—Use one of the <code class="prettyprint">GnThreadPriority</code> enums to set thread priority, for example, default, low, normal, high, and so on.</li>
+                                            <li value="5"><code class="prettyprint"><b>OnlineProcessing</b></code>—Enable (<code class="prettyprint">true</code>) or disable (<code class="prettyprint">false</code>) online processing.</li>
+                                            <li value="6"><code class="prettyprint"><b>PreferResultLanguage</b></code>—Use one of the <code class="prettyprint">GnLanguage</code> enums to set the preferred language for results.</li>
+                                            <li value="7"><code class="prettyprint"><b>PreferResultExternalId</b></code>—Set external ID for results from external provider. External IDs are 3rd party IDs used to cross link this metadata to 3rd party services.</li>
+                                        </ul>
+                                        <h2>Making a MusicID-File Query</h2>
+                                        <p><code class="prettyprint">GnMusicIdFile</code> provides the following query methods:</p>
+                                        <ul>
+                                            <li value="1"><code class="prettyprint"><b>DoTrackId</b></code>—Perform a Track ID query.</li>
+                                            <li value="2"><code class="prettyprint"><b>DoTrackIdAsync</b></code>—Perform an asynchronous Track ID query.</li>
+                                            <li value="3"><code class="prettyprint"><b>DoAlbumId</b></code>—Perform an Album ID query.</li>
+                                            <li value="4"><code class="prettyprint"><b>DoAlbumIdAsync</b></code>—Perform an asynchronous Album ID query.</li>
+                                            <li value="5"><code class="prettyprint"><b>DoLibraryId</b></code>—Perform a Library ID query.</li>
+                                            <li value="6"><code class="prettyprint"><b>DoLibraryIdAsync</b></code>—Perform an asynchronous Library ID query.</li>
+                                        </ul>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #e31b23;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><span class="autonumber"><span><b><span style="color: #e31b23;" class="mcFormatColor">Note: </span></b></span></span>Note that GNSDK processing is always done asynchronously and returns results via callbacks. With the blocking functions, your app waits until processing has completed before continuining.</p>
+                                        <h3>Options When Making Query Call</h3>
+                                        <p>When you make a  <code class="prettyprint">GnMusicIdFile</code> query method call, you can set the following options at the time of the call (as opposed to setting options with <code class="prettyprint">GnMusicIdFileOptions</code> object—see above):</p>
+                                        <ul>
+                                            <li value="1"><b>Return matches</b> - Have MusicID-File return all results found for each given <code class="prettyprint">GnMusicIdFileInfo</code></li>
+                                            <li value="2"><b>Return albums</b> - Only album matches are returned (default)</li>
+                                            <li value="3"><b>Return all</b> - Have MusicID-File return all results found for each given <code class="prettyprint">GnMusicIdFileInfo</code></li>
+                                            <li value="4"><b>Return single</b> - Have MusicID-File return the single best result for each given <code class="prettyprint">GnMusicIdFileInfo</code> (default)</li>
+                                        </ul>
+                                        <p><b>C++</b>
+                                        </p><pre class="prettyprint">/* Launch AlbumID */
+midf.DoAlbumId(kQueryReturnSingle, kResponseAlbums );</pre>
+                                        <p><b>Objective-C</b>
+                                        </p><pre class="prettyprint">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),  ^{
+   NSError *error = nil;
+   [musicIDFileInfo fingerprintFromSource:(id &lt;GnAudioSourceDelegate&gt; )gnAudioFile error:&amp;error];
+   error = nil;
+   [gnMusicIDFile doAlbumId:kQueryReturnSingle responseType:kResponseAlbums error:&amp;error];
+}); </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr width="100%" size="0" align="center" />
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>
