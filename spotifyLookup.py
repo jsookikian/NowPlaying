@@ -11,10 +11,12 @@ import spotipy.util as util
 #     sys.exit()
 # token = util.prompt_for_user_token(username, scope)
 
-def search(uid):
-    scope = 'user-library-read playlist-read-private playlist-modify-public playlist-modify-private playlist-modify'
-    token = util.prompt_for_user_token('jsookikian', scope)
-    sp = spotipy.Spotify(auth=token)
+scope = 'user-library-read playlist-read-private playlist-modify-public playlist-modify-private playlist-modify'
+token = util.prompt_for_user_token('jsookikian', scope)
+sp = spotipy.Spotify(auth=token)
 
-    res = sp.search(uid)
-    print res['name']
+x = sp.current_user_recently_played(limit=100000)
+y = 1
+
+
+

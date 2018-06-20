@@ -56,7 +56,7 @@ _do_sample_musicid_fpx(
 	);
 
 /* Local data */
-static gnsdk_cstr_t s_audio_file = "./RECORDING.wav";
+static gnsdk_cstr_t s_audio_file = "../../../RECORDING.wav";
 
 /******************************************************************
  *
@@ -67,18 +67,16 @@ int
 main(int argc, char* argv[])
 {
 	gnsdk_user_handle_t		user_handle			= GNSDK_NULL;
-	const char*				client_id			= NULL;
-	const char*				client_id_tag		= NULL;
+	const char*				client_id			= "1078812063";
+	const char*				client_id_tag		= "39627BF3E8DB84AAC9326192BBAB0CCA";
 	const char*				client_app_version = "1.0.0.0"; /* Version of your application */
 	const char*				license_path		= NULL;
 	int						rc					= 0;
-    
-	if ((argc == 4) || (argc == 5))
+
+	if ((argc == 2) || (argc == 3))
 	{
-		client_id = argv[1];
-		client_id_tag = argv[2];
-		license_path = argv[3];
-        
+		license_path = argv[1];
+
 		/* GNSDK initialization */
         rc = _init_gnsdk(
             client_id,
@@ -101,9 +99,9 @@ main(int argc, char* argv[])
 		printf( "\nUsage:\n%s clientid clientidtag license\n", argv[0] );
 		rc = -1;
 	}
-    
+
 	return rc;
-    
+
 }  /* main() */
 
 
@@ -121,7 +119,7 @@ _display_last_error(
 {
 	/* Get the last error information from the SDK */
 	const gnsdk_error_info_t*       error_info = gnsdk_manager_error_info();
-    
+
 	/* Error_info will never be GNSDK_NULL.
 	 * The SDK will always return a pointer to a populated error info structure.
 	 */
@@ -132,7 +130,7 @@ _display_last_error(
         error_info->error_code,
         error_info->error_description
     );
-    
+
 } /* _display_last_error() */
 
 
@@ -164,21 +162,21 @@ _get_user_handle(
 	gnsdk_error_t		error                     = GNSDK_SUCCESS;
 	FILE*               file                      = NULL;
 	int					rc					      = 0;
-    
+
 	/* Creating a GnUser is required before performing any queries to Gracenote services,
 	 * and such APIs in the SDK require a GnUser to be provided. GnUsers can be created
 	 * 'Online' which means they are created by the Gracenote backend and fully vetted.
 	 * Or they can be create 'Local Only' which means they are created locally by the
 	 * SDK but then can only be used locally by the SDK.
 	 */
-    
+
     /* Do we have a user saved locally? */
 	file = fopen("user.txt", "r");
 	if (file)
     {
 		fgets(serialized_user_buf, sizeof(serialized_user_buf), file);
 		fclose(file);
-        
+
 		/* Create the user handle from the saved user */
 		error = gnsdk_manager_user_create(serialized_user_buf, client_id, &user_handle);
 		if (GNSDK_SUCCESS == error)
@@ -189,13 +187,13 @@ _get_user_handle(
 				*p_user_handle = user_handle;
 				return 0;
             }
-			
+
 			/* Need a user that has been registered online, but existing user is localonly.
              * Discard and register new online user.
              */
 			gnsdk_manager_user_release(user_handle);
         }
-		
+
 		if (GNSDK_SUCCESS != error)
         {
 			_display_last_error(__LINE__);
@@ -205,7 +203,7 @@ _get_user_handle(
     {
         printf("\nInfo: No stored user - this must be the app's first run.\n");
     }
-    
+
 	/*
 	 * Register new user
 	 */
@@ -230,10 +228,10 @@ _get_user_handle(
 				fclose(file);
 			}
         }
-		
+
 		gnsdk_manager_string_free(serialized_user);
     }
-    
+
 	if (GNSDK_SUCCESS == error)
 	{
 		*p_user_handle = user_handle;
@@ -244,30 +242,12 @@ _get_user_handle(
 		_display_last_error(__LINE__);
 		rc = -1;
 	}
-    
+
 	return rc;
-    
+
 }  /* _get_user_handle() */
 
 /******************************************************************
- *
- *    _DISPLAY_GNSDK_PRODUCT_INFO
- *
- *    Display product version information
- *
- ******************************************************************/
-static void
-_display_gnsdk_product_info(void)
-{
-	/* Display GNSDK Version infomation */
-	printf(
-        "\nGNSDK Product Version    : %s \t(built %s)\n",
-        gnsdk_manager_get_product_version(),
-        gnsdk_manager_get_build_date()
-    );
-    
-}  /* _display_gnsdk_product_info() */
-
 
 /******************************************************************
  *
@@ -282,7 +262,7 @@ _enable_logging(void)
 {
 	gnsdk_error_t	error	= GNSDK_SUCCESS;
 	int				rc		= 0;
-    
+
 	error = gnsdk_manager_logging_enable(
         "sample.log",									/* Log file path */
         GNSDK_LOG_PKG_ALL,								/* Include entries for all packages and subsystems */
@@ -296,9 +276,9 @@ _enable_logging(void)
 		_display_last_error(__LINE__);
 		rc = -1;
 	}
-    
+
 	return rc;
-    
+
 }  /* _enable_logging() */
 
 
@@ -320,7 +300,7 @@ _set_locale(
 	gnsdk_locale_handle_t	locale_handle	= GNSDK_NULL;
 	gnsdk_error_t			error			= GNSDK_SUCCESS;
 	int						rc				= 0;
-    
+
 	error = gnsdk_manager_locale_load(
         GNSDK_LOCALE_GROUP_MUSIC,		/* Locale group */
         GNSDK_LANG_ENGLISH,             /* Language */
@@ -342,7 +322,7 @@ _set_locale(
 			_display_last_error(__LINE__);
 			rc = -1;
 		}
-        
+
 		/* The manager will hold onto the locale when set as default
 		 * so it's ok to release our reference to it here
 		 */
@@ -353,9 +333,9 @@ _set_locale(
 		_display_last_error(__LINE__);
 		rc = -1;
 	}
-    
+
 	return rc;
-    
+
 }  /* _set_locale() */
 
 
@@ -386,10 +366,7 @@ _init_gnsdk(
 	gnsdk_error_t			error			= GNSDK_SUCCESS;
 	gnsdk_user_handle_t		user_handle		= GNSDK_NULL;
 	int						rc				= 0;
-    
-	/* Display GNSDK Product Version Info */
-	_display_gnsdk_product_info();
-    
+
 	/* Initialize the GNSDK Manager */
 	error = gnsdk_manager_initialize(
         &sdkmgr_handle,
@@ -401,13 +378,13 @@ _init_gnsdk(
 		_display_last_error(__LINE__);
 		return -1;
 	}
-    
+
 	/* Enable logging */
 	if (0 == rc)
 	{
 		rc = _enable_logging();
 	}
-    
+
 	/* Initialize the Storage SQLite Library */
 	if (0 == rc)
 	{
@@ -429,7 +406,7 @@ _init_gnsdk(
             rc = -1;
         }
     }
-    
+
 	/* Initialize the MusicID Library */
 	if (0 == rc)
 	{
@@ -440,7 +417,7 @@ _init_gnsdk(
 			rc = -1;
 		}
 	}
-    
+
 	/* Get a user handle for our client ID.  This will be passed in for all queries */
 	if (0 == rc)
 	{
@@ -457,7 +434,7 @@ _init_gnsdk(
 	{
 		rc = _set_locale(user_handle);
 	}
-    
+
 	if (0 != rc)
 	{
 		/* Clean up on failure. */
@@ -468,9 +445,9 @@ _init_gnsdk(
 		/* return the User handle for use at query time */
 		*p_user_handle = user_handle;
 	}
-    
+
 	return rc;
-    
+
 }  /* _init_gnsdk() */
 
 
@@ -492,16 +469,16 @@ _shutdown_gnsdk(
     )
 {
 	gnsdk_error_t	error	= GNSDK_SUCCESS;
-    
+
 	error = gnsdk_manager_user_release(user_handle);
 	if (GNSDK_SUCCESS != error)
 	{
 		_display_last_error(__LINE__);
 	}
-    
+
 	/* Shutdown the Manager to shutdown all libraries */
 	gnsdk_manager_shutdown();
-    
+
 }  /* _shutdown_gnsdk() */
 
 
@@ -517,11 +494,20 @@ _display_album_gdo(
 {
 	gnsdk_error_t		error		= GNSDK_SUCCESS;
 	gnsdk_gdo_handle_t	title_gdo	= GNSDK_NULL;
+	gnsdk_gdo_handle_t	artist_gdo	= GNSDK_NULL;
+	gnsdk_gdo_handle_t	track_gdo	= GNSDK_NULL;
+	gnsdk_int32_t		track_num   = GNSDK_NULL;
 	gnsdk_cstr_t		value		= GNSDK_NULL;
-    
-	
+    gnsdk_str_t*		xml         = GNSDK_NULL;
+	gnsdk_manager_gdo_render(album_gdo, GNSDK_GDO_RENDER_FULL, &xml);
+
+	// printf("XML: %s", xml);
+	gnsdk_manager_gdo_child_get( album_gdo, GNSDK_GDO_CHILD_TRACK, 1, &track_gdo );
+	gnsdk_manager_gdo_render(track_gdo, GNSDK_GDO_RENDER_FULL, &xml);
+
+	// printf("XML: %s", xml);
 	/* Album Title */
-	error = gnsdk_manager_gdo_child_get( album_gdo, GNSDK_GDO_CHILD_TITLE_OFFICIAL, 1, &title_gdo );
+	error = gnsdk_manager_gdo_child_get( album_gdo, GNSDK_GDO_CHILD_TRACK, 1, &title_gdo );
 	if (GNSDK_SUCCESS == error)
 	{
 		error = gnsdk_manager_gdo_value_get( title_gdo, GNSDK_GDO_VALUE_DISPLAY, 1, &value );
@@ -539,7 +525,10 @@ _display_album_gdo(
 	{
 		_display_last_error(__LINE__);
 	}
-    
+
+
+
+
 }  /* _display_album_gdo() */
 
 
@@ -557,38 +546,38 @@ _display_for_resolve(
 	gnsdk_gdo_handle_t album_gdo = GNSDK_NULL;
 	gnsdk_uint32_t     count     = 0;
 	gnsdk_uint32_t     ordinal   = 0;
-    
+
 	error = gnsdk_manager_gdo_child_count(response_gdo, GNSDK_GDO_CHILD_ALBUM, &count);
 	if (GNSDK_SUCCESS == error)
 	{
-		printf( "%16s %d\n", "Album count:", count);
-        
+//		printf( "%16s %d\n", "Album count:", count);
+
 		/*	Note that the GDO accessors below are *ordinal* based, not index based.  so the 'first' of
          *	anything has a one-based ordinal of '1' - *not* an index of '0'
          */
-		for (ordinal = 1; ordinal <= count; ordinal++)
-		{
-			/* Get the Album GDO */
-			error = gnsdk_manager_gdo_child_get( response_gdo, GNSDK_GDO_CHILD_ALBUM, ordinal, &album_gdo );
-			if (GNSDK_SUCCESS == error)
-			{
-				_display_album_gdo(album_gdo);
-                
-				/* Release the current album */
-				gnsdk_manager_gdo_release(album_gdo);
-				album_gdo = GNSDK_NULL;
-			}
-			else
-			{
-				_display_last_error(__LINE__);
-			}
-		}
+		// for (ordinal = 1; ordinal <= 1; ordinal++)
+		// {
+		// 	/* Get the Album GDO */
+		// 	error = gnsdk_manager_gdo_child_get( response_gdo, GNSDK_GDO_CHILD_ALBUM, ordinal, &album_gdo );
+		// 	if (GNSDK_SUCCESS == error)
+		// 	{
+		// 		_display_album_gdo(album_gdo);
+
+		// 		/* Release the current album */
+		// 		gnsdk_manager_gdo_release(album_gdo);
+		// 		album_gdo = GNSDK_NULL;
+		// 	}
+		// 	else
+		// 	{
+		// 		_display_last_error(__LINE__);
+		// 	}
+		// }
 	}
 	else
 	{
 		_display_last_error(__LINE__);
 	}
-    
+
 }  /* _display_for_resolve() */
 
 
@@ -603,13 +592,13 @@ _do_match_selection(gnsdk_gdo_handle_t response_gdo)
 	/*
      This is where any matches that need resolution/disambiguation are iterated
      and a single selection of the best match is made.
-     
+
      For this simplified sample, we'll just echo the matches and select the first match.
      */
 	_display_for_resolve(response_gdo);
-    
+
 	return 1;
-    
+
 }  /* _do_match_selection() */
 
 
@@ -725,7 +714,7 @@ _do_sample_musicid_fpx(
 	gnsdk_cstr_t					is_full					= GNSDK_NULL;
 	int								rc						= 0;
 
-	printf("\n*****Sample MID Audio Fingerprint Query*****\n");
+//	printf("\n*****Sample MID Audio Fingerprint Query*****\n");
 
 	/* Create the query handle */
 	error = gnsdk_musicid_query_create(
@@ -781,103 +770,16 @@ _do_sample_musicid_fpx(
                         1,
                         &needs_decision
                     );
-					if (GNSDK_SUCCESS != error)
-					{
-						_display_last_error(__LINE__);
-					}
-					else
-					{
-						/* See if selection of one of the albums needs to happen */
-						if (0 == strcmp(needs_decision, GNSDK_VALUE_TRUE))
-						{
-							choice_ordinal = _do_match_selection(response_gdo);
+						gnsdk_str_t*		xml         = GNSDK_NULL;
+						gnsdk_manager_gdo_render(response_gdo, GNSDK_GDO_RENDER_FULL, &xml);
+
+						FILE *xmlFile = fopen("track.xml", "w");
+						if (!xmlFile) {
+							printf("could not open file");
+							exit(1);
 						}
-						else
-						{
-							/* no need for disambiguation, we'll take the first album */
-							choice_ordinal = 1;
-						}
+						fputs(xml, xmlFile);
 
-						error = gnsdk_manager_gdo_child_get(
-                            response_gdo,
-                            GNSDK_GDO_CHILD_ALBUM,
-                            choice_ordinal,
-                            &album_gdo
-                        );
-						if (GNSDK_SUCCESS != error)
-						{
-							_display_last_error(__LINE__);
-						}
-						else
-						{
-							/* See if the album has full data or only partial data. */
-							error = gnsdk_manager_gdo_value_get(
-                                album_gdo,
-                                GNSDK_GDO_VALUE_FULL_RESULT,
-                                1,
-                                &is_full
-                            );
-							if (GNSDK_SUCCESS != error)
-							{
-								_display_last_error(__LINE__);
-							}
-							else
-							{
-								/* if we only have a partial result, we do a follow-up query to retrieve the full album */
-								if (0 == strcmp(is_full, GNSDK_VALUE_FALSE))
-								{
-									/* do followup query to get full object. Setting the partial album as the query input. */
-									error = gnsdk_musicid_query_set_gdo(
-                                        query_handle,
-                                        album_gdo
-                                    );
-									if (GNSDK_SUCCESS != error)
-									{
-										_display_last_error(__LINE__);
-									}
-									else
-									{
-										/* we can now release the partial album */
-										gnsdk_manager_gdo_release(album_gdo);
-										album_gdo = GNSDK_NULL;
-
-										error = gnsdk_musicid_query_find_albums(
-                                            query_handle,
-                                            &followup_response_gdo
-                                        );
-										if (GNSDK_SUCCESS != error)
-										{
-											_display_last_error(__LINE__);
-										}
-										else
-										{
-											/* now our first album is the desired result with full data */
-											error = gnsdk_manager_gdo_child_get(
-                                                followup_response_gdo,
-                                                GNSDK_GDO_CHILD_ALBUM,
-                                                1,
-                                                &album_gdo
-                                            );
-
-											/* Release the followup query's response object */
-											gnsdk_manager_gdo_release(followup_response_gdo);
-										}
-									}
-								}
-							}
-
-							/* We should now have our final, full album result. */
-							if (GNSDK_SUCCESS == error)
-							{
-								printf( "%16s\n", "Final album:");
-
-								_display_album_gdo(album_gdo);
-							}
-
-							gnsdk_manager_gdo_release(album_gdo);
-							album_gdo = GNSDK_NULL;
-						 }
-					}
 				}
 			}
 		}

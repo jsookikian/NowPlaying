@@ -1,67 +1,54 @@
-#!/usr/bin/env python
-#-*- coding:utf-8 -*-
+import os
+import subprocess
+import csv
+import xmltodict
 
-import os, sys
-import pprint
-import json
-import spotifyLookup
-from acrcloud.recognizer import ACRCloudRecognizer
-pp = pprint.PrettyPrinter(indent=2)
 class Track:
-    def __init__(self, title, artist, album, offset, duration):
+    def __init__(self, title, artist, album, offset, duration, trackNumber):
         self.title = title
         self.artist = artist
         self.album = album
         self.offset = offset
         self.duration = duration
+        self.trackNumber = trackNumber
 
+    def printTrack(self):
+        print("Track Number: " + str(self.trackNumber))
+        print("Title: " + self.title)
+        print("Artist: " + self.artist)
+        print("Album: " + self.album)
+        print("Offset " + str(self.offset))
+        print("Duration: " + str(self.duration))
 
-def recognize(file):
-    config = {
-        'host':'identify-us-west-2.acrcloud.com',
-        'access_key':'4dcc4050a44fd6bc03e72ccd90cc0393',
-        'access_secret':'Hb8FxFc6Kdj5VaW6DS2SemiCe49lLAN3MXTR4k2A',
-        'timeout':10 # seconds
-    }
+def run_gracenote_recognize():
+    curdir = os.getcwd()
+    os.chdir("gnsdk-3.08.6.5437o-20170914/samples/musicid_lookup_album_fpx/");
+    os.system("make");
+    os.system("./sample licfile.txt");
+    os.chdir(curdir)
 
-    '''This module can recognize ACRCloud by most of audio/video file.
-        Audio: mp3, wav, m4a, flac, aac, amr, ape, ogg ...
-        Video: mp4, mkv, wmv, flv, ts, avi ...'''
-    re = ACRCloudRecognizer(config)
+def get_track_from_xml():
+    ret = None
 
-    #recognize by file path, and skip 0 seconds from from the beginning of sys.argv[1].
-    # re.recognize_by_file(sys.argv[1], 0)
-
-    buf = open(file, 'rb').read()
-    #recognize by file_audio_buffer that read from file path, and skip 0 seconds from from the beginning of sys.argv[1].
-    result = json.loads(re.recognize_by_filebuffer(buf, 0))
-    if (result['status']['code'] != 1001):
-        data = result['metadata']['music'][0]
-
-        play_offset_ms = data['play_offset_ms']
-        duration_ms = data['duration_ms']
-        title = data['title']
-        artist = data['artists'][0]['name']
-        album = data['album']['name']
-
-        print('Title: ' + data['title'])
-        print('Artist: ' + data['artists'][0]['name'])
-        print("Time Left: " + str((duration_ms - play_offset_ms) *1.0 / 1000.0))
-        if ('spotify' in data['external_metadata']):
-            if  ('name' in data['external_metadata']['spotify']['album']):
-                album = data['external_metadata']['spotify']['album']['name']
-            if ('id' in data['external_metadata']['spotify']['album']):
-                spotifyId = data['external_metadata']['spotify']['album']['id']
-            remasterIndex = data['album']['name'].find('[')
-        # if (remasterIndex > 0):
-        #     print('Album: ' + data['album']['name'][:remasterIndex])
-        # else:
-        #     print('Album: ' + data['album']['name'])
-        print('Album: ' + album)
-        return Track(title, artist, album, play_offset_ms, duration_ms)
-
+    with open("./gnsdk-3.08.6.5437o-20170914/samples/musicid_lookup_album_fpx/track.xml", "r") as trackFile:
+        content = trackFile.read()
+        xml = xmltodict.parse(content)
+        track_ord = int(xml['ALBUM_RESPONSE']['ALBUM'][0]['TRACK_MATCHED'])
+        artist = xml['ALBUM_RESPONSE']['ALBUM'][0]['ARTIST']['NAME_OFFICIAL']['DISPLAY']
+        track = xml['ALBUM_RESPONSE']['ALBUM'][0]['TRACK'][track_ord-1]['TITLE_OFFICIAL']['DISPLAY']
+        offset = int(xml['ALBUM_RESPONSE']['ALBUM'][0]['TRACK'][track_ord- 1]['MATCH_DURATION'])  + \
+                 int(xml['ALBUM_RESPONSE']['ALBUM'][0]['TRACK'][track_ord - 1]['MATCH_POSITION'])
+        duration = int(xml['ALBUM_RESPONSE']['ALBUM'][0]['TRACK'][track_ord- 1]['DURATION']['#text'])
+        album =  xml['ALBUM_RESPONSE']['ALBUM'][0]['TITLE_OFFICIAL']['DISPLAY']
+    if artist != "None":
+        return Track(track, artist, album, offset, duration, track_ord)
     else:
-        print ("Music not playing")
-    # spotifyLookup.search(spotifyId)
+        return ret
 
-# recognize("RECORDING.wav")
+
+def recognize():
+    print ("Recognizing...")
+    run_gracenote_recognize()
+    return get_track_from_xml()
+
+

@@ -6,26 +6,29 @@ import math
 import struct
 FORMAT=pyaudio.paInt16
 CHANNELS=1
-RATE=44100
+SAMPLE_RATE=44100
 CHUNK=1024
-RECORD_SECONDS=5
+RECORD_SECONDS=15
 FILE_NAME="RECORDING.wav"
-#
-# def rms(data):
-#     count = len(data)/2
-#     format = "%dh" %(count)
-#     shorts = struct.unpack(format, data)
-#     sum_squares = 0.0
-#     for sample in shorts:
-#         n = sample * (1.0/32764)
-#         sum_squares += n*n
-#     return math.sqrt(sum_squares / count)
+
+def rms(data):
+    count = len(data)/2
+    format = "%dh" %(count)
+    shorts = struct.unpack(format, data)
+    sum_squares = 0.0
+    for sample in shorts:
+        n = sample * (1.0/32764)
+        sum_squares += n*n
+    return math.sqrt(sum_squares / count)
+
+
 def record(filename):
     audio=pyaudio.PyAudio() #instantiate the pyaudio
 
     #recording prerequisites
-    stream=audio.open(format=FORMAT,channels=CHANNELS,
-                      rate=RATE,
+    stream=audio.open(format=FORMAT,
+                      channels=CHANNELS,
+                      rate=SAMPLE_RATE,
                       input=True,
                       frames_per_buffer=CHUNK)
 
@@ -63,13 +66,10 @@ def record(filename):
     wavfile = wave.open(filename, 'wb')
     wavfile.setnchannels(CHANNELS)
     wavfile.setsampwidth(audio.get_sample_size(FORMAT))
-    wavfile.setframerate(RATE)
+    wavfile.setframerate(SAMPLE_RATE)
     wavfile.writeframes(b''.join(frames))  # append frames recorded to file
     wavfile.close()
     return (dbAvg, 1)
-    # else:
-    #     print ("no music playing")
-    #     return (dbAvg, -1)
 
     #end of recording
 
